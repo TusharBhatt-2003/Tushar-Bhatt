@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  @font-face {
+    font-family: Integral;
+    src: url(assets/fonts/Fontspring-DEMO-integralcf-bold.otf);
+  }
+
+@font-face {
+    font-family: Bright;
+    src: url(assets/fonts/Bright.otf);
+}
+@font-face {
+    font-family: Kruti;
+    src: url(./assets//fonts/KRDEV030-BOLD.TTF);
+}
+
+@font-face {
+    font-family: Schabo;
+    src: url(assets/fonts/SCHABO-Condensed.otf);
+}
+
+@font-face {
+    font-family: Aero;
+    src: url(assets/fonts/POIAeronautTrial-Regular.otf);
+}
+
+::selection {
+    color: #050151;
+    background: #fff8e1;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* html {
+    scroll-behavior: smooth;
+  }
+   */
+
