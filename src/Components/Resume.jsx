@@ -1,6 +1,6 @@
 // src/pages/Resume.jsx
 import { useColor } from "../context/ColorContext";
-import ResumeCard from '../components/ResumeCard/Resumecard';
+import ResumeCard from './ResumeCard/Resumecard';
 import resumeData from '../data/resumeData';
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
