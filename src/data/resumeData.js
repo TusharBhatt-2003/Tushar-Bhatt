@@ -3,15 +3,15 @@
 const resumeData = {
     education: [
       { title: 'MDU - BCA, 2024' },
-      { title: 'CBSE - PCM, 2024' }
+      { title: 'CBSE - PCM, 2021' }
     ],
     courses: [
       { 
-        title: 'Web Dev, Intershala',
+        title: 'Web Dev, Internshala',
         link: 'https://trainings.internshala.com/view_certificate/5cl6veps7r3/5ktk9oduyn_/'
        },
       { 
-        title: 'Java Core, Intershala',
+        title: 'Java Core, Internshala',
         link: 'https://trainings.internshala.com/s/v/3293835/2174703c'
        },
       { 
@@ -30,9 +30,9 @@ const resumeData = {
       { title: 'Photoshop'}
     ],
     certificates: [
-      { 
-        title: 'Web Development Fundamentals – IBM SkillBuild',
-        link: "https://www.credly.com/badges/f3eab3a5-ec76-4efa-89f7-5900f55a9e1b/public_url" },
+        { 
+          title: 'Web Development Fundamentals – IBM SkillBuild',
+          link: "https://www.credly.com/badges/f3eab3a5-ec76-4efa-89f7-5900f55a9e1b/public_url" },
         { 
           title: 'CSS – HackerRank',
           link: "https://www.hackerrank.com/certificates/533026481c8a" },
