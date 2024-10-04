@@ -11,7 +11,7 @@ function Dropdown() {
     const menuItems = [
         { id: 1, label: 'Home', href: '/' },
         { id: 2, label: 'About', href: '#aboutme' },
-        { id: 3, label: 'Services', href: '#resume' },
+        { id: 3, label: 'Resume', href: '#resume' },
         { id: 4, label: 'Contact', href: '#contactme' },
         { id: 5, label: 'Projects', href: '#projects' },
     ];
