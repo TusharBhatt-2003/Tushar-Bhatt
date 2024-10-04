@@ -1,6 +1,6 @@
 // File: projectData.js
 // Import the images object
-import { quizGame, navBar, grids } from '../assets/images/index';
+import { quizGame, navBar, grids, docs } from '../assets/images/index';
 
 const projectData = [
     {
@@ -81,7 +81,7 @@ const projectData = [
         pageBGcolor: 'black'
       },
       {
-        name: 'Sign Up / Log In',
+        name: 'Sign Up . Log In',
         image: 'https://i.pinimg.com/564x/1a/c0/d6/1ac0d6106f215d16abaffa20a8e7ab76.jpg',
         description: 'This webpage is a responsive sign-up form with input validation for first name, email, password, and password confirmation. The page features a visually appealing design with custom icons and animations, ensuring a user-friendly experience. It also includes error messaging to guide users during form submission.',
         link: 'https://tusharbhatt-2003.github.io/SignUp-Login/',
@@ -102,28 +102,72 @@ const projectData = [
         bgColor: '#3DA97A',
         pageBGcolor:'#0B0E0B'
       },
-      // {
-      //   name: 'Project Kappa',
-      //   image: 'https://i.pinimg.com/564x/69/26/7c/69267c04db13b1ee3274d65214d1fbe8.jpg',
-      //   description: 'An educational platform for learning coding through interactive lessons.',
-      //   link: 'https://project-kappa.com',
-      //   github: 'https://github.com/user/project-kappa',
-      //   technologies: 'Vue, Vuex, Node.js',
-      //   category: 'education',
-      //   bgColor: '#F4F5E8',
-      //   pageBGcolor: '#2FF568'
-      // },
-      // {
-      //   name: 'Project Lambda',
-      //   image: 'https://i.pinimg.com/564x/07/5f/85/075f857053bd445e494cf39fdc0bacd9.jpg',
-      //   description: 'A decentralized finance (DeFi) application built on Ethereum.',
-      //   link: 'https://project-lambda.com',
-      //   github: 'https://github.com/user/project-lambda',
-      //   technologies: 'Solidity, React, Web3.js',
-      //   category: 'DeFi',
-      //   bgColor: '#000000',
-      //   pageBGcolor: '#0E3EE6'
-      // }
+      {
+        name: 'Grapes',
+        image: 'https://www.svgrepo.com/show/530353/grape.svg',
+        description: 'Grapes is a blog posting site where users can post their thoughts, also pictures and videos. i use Appwrite as database service. First evry user has to sign in to see or upload posts',
+        link: 'https://grapes-two.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/Grapes',
+        technologies: 'React (Vite), TinyMCE, Vercel, React Router, Redux, Appwrite, Tailwind CSS',
+        category: 'Database',
+        bgColor: '#CE87FF',
+        pageBGcolor: '#FFFFFF'
+      },
+      {
+        name: 'Dummy Studio',
+        image: 'https://tusharbhatt-2003.github.io/SUNDOWN/assets/logo.svg',
+        description: 'This page is a remake of Sundown Studio.',
+        link: 'https://tusharbhatt-2003.github.io/SUNDOWN/',
+        github: 'https://github.com/TusharBhatt-2003/SUNDOWN',
+        technologies: 'HTML, CSS, Javascript, Locomotive Scroll, Swiper, Lenis, GitHub Pages',
+        category: 'Remake',
+        bgColor: '#E6E1FE',
+        pageBGcolor: '#26008F'
+      },
+      {
+        name: 'Glass Morphism',
+        image: 'https://i.pinimg.com/564x/b1/ab/dc/b1abdca30fe519eae39f34f69b902c93.jpg',
+        description: 'A sign in page with glass UI and moving background.',
+        link: 'https://tusharbhatt-2003.github.io/Glass-Effect/',
+        github: 'https://github.com/TusharBhatt-2003/Glass-Effect',
+        technologies: 'HTML, CSS',
+        category: 'UI',
+        bgColor: '#AE7627',
+        pageBGcolor: '#D9D7D8'
+      },
+      {
+        name: 'Ghibli Movies',
+        image: 'https://i.pinimg.com/originals/85/64/ff/8564ffe4e8e749363f5ed0ac49f6c266.gif',
+        description: 'A beautiful Carousel-Slider that showcase Ghibli Movies .',
+        link: 'https://tusharbhatt-2003.github.io/Ghibli-Movies/',
+        github: 'https://github.com/TusharBhatt-2003/Ghibli-Movies',
+        technologies: 'HTML, CSS, JavaScript',
+        category: 'UI',
+        bgColor: '#000000',
+        pageBGcolor: '#C39890'
+      },
+      {
+        name: 'Retro Calculator',
+        image: 'https://i.pinimg.com/564x/09/d3/99/09d399e33cec469839fcfe82765521b5.jpg',
+        description: 'Just a normal calculator.',
+        link: 'https://tusharbhatt-2003.github.io/Retro-Calculator-/',
+        github: 'https://github.com/TusharBhatt-2003/Ghibli-Movies',
+        technologies: 'HTML, Tailwind CSS, JavaScript',
+        category: 'Fuctionality',
+        bgColor: '#86C7D6',
+        pageBGcolor: '#FAF5E0'
+      },
+      {
+        name: 'Docs.',
+        image: docs,
+        description: 'Bouncy Drag And Drop Elements.',
+        link: 'https://docs-28k2lamr0-tusharbhatt968-gmailcoms-projects.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/Docs.',
+        technologies: 'Recat (Vite), Tailwind CSS, Framer Motion',
+        category: 'UI',
+        bgColor: '#515709',
+        pageBGcolor: '#FFFCEB'
+      }
     ];
   
   export default projectData;

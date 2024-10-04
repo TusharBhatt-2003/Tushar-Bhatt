@@ -3,15 +3,15 @@
 const resumeData = {
     education: [
       { title: 'MDU - BCA, 2024' },
-      { title: 'CBSE - PCM, 2024' }
+      { title: 'CBSE - PCM, 2021' }
     ],
     courses: [
       { 
-        title: 'Web Dev, Intershala',
+        title: 'Web Dev, Internshala',
         link: 'https://trainings.internshala.com/view_certificate/5cl6veps7r3/5ktk9oduyn_/'
        },
       { 
-        title: 'Java Core, Intershala',
+        title: 'Java Core, Internshala',
         link: 'https://trainings.internshala.com/s/v/3293835/2174703c'
        },
       { 

@@ -6,7 +6,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: "spring", stiffness: 400, damping: 5 }}
-      className={`project-card p-3 w-fit h-fit rounded-xl shadow-2xl`}
+      className={`project-card p-1 w-fit h-fit rounded-xl shadow-2xl`}
       style={{
         backgroundColor: isActive ? bgColor : "white",
         transition: 'background-color 1.5s ease-in-out',

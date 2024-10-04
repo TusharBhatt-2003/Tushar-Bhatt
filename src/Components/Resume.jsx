@@ -1,6 +1,6 @@
 // src/pages/Resume.jsx
 import { useColor } from "../context/ColorContext";
-import ResumeCard from '../components/ResumeCard/Resumecard';
+import ResumeCard from './ResumeCard/Resumecard';
 import resumeData from '../data/resumeData';
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
@@ -76,7 +76,7 @@ function Resume() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}
-                  className="border-2 rounded-lg w-fit my-5 px-2 py-1"
+                  className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
                   style={{ borderColor: textColor,  }}
                   >My CV.
           </motion.button>
