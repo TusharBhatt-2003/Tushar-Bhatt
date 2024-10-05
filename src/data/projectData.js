@@ -163,10 +163,43 @@ const projectData = [
         description: 'Bouncy Drag And Drop Elements.',
         link: 'https://docs-28k2lamr0-tusharbhatt968-gmailcoms-projects.vercel.app/',
         github: 'https://github.com/TusharBhatt-2003/Docs.',
-        technologies: 'Recat (Vite), Tailwind CSS, Framer Motion',
+        technologies: 'React (Vite), Tailwind CSS, Framer Motion',
         category: 'UI',
         bgColor: '#515709',
         pageBGcolor: '#FFFCEB'
+      },
+      {
+        name: 'Restaurant Website',
+        image: 'https://i.pinimg.com/originals/ae/3d/62/ae3d6215a590f15a8ef3928789829ec9.gif',
+        description: 'Responsive and appealing Restaurant.',
+        link: 'https://restaurant-website-swart-nu.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/Restaurant-Website-',
+        technologies: 'React (Vite) & CSS',
+        category: 'CSS',
+        bgColor: '#FEA401',
+        pageBGcolor: '#08183B'
+      },
+      {
+        name: 'GPT.3 Blog',
+        image: 'https://i.pinimg.com/564x/fd/22/27/fd22270b02ab43eaffc61b72e3dd4010.jpg',
+        description: 'Responsive Blog Page',
+        link: 'https://gpt-3-blog-mnq2s821x-tusharbhatt968-gmailcoms-projects.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/GPT-3-Blog',
+        technologies: 'React (Vite) & CSS',
+        category: 'CSS',
+        bgColor: '#66FFC8',
+        pageBGcolor: '#010535'
+      },
+      {
+        name: 'Theme Changer',
+        image: 'https://i.pinimg.com/564x/4d/36/fc/4d36fcf93fbe892841186f8db0cde507.jpg',
+        description: 'Responsive Blog Page',
+        link: 'https://tusharbhatt-2003.github.io/BG-Color-Changing/',
+        github: 'https://github.com/TusharBhatt-2003/BG-Color-Changing',
+        technologies: 'React (Vite) & Tailwind CSS',
+        category: 'Fuctionality',
+        bgColor: '#FE6150',
+        pageBGcolor: '#FCFBF7'
       }
     ];
   
