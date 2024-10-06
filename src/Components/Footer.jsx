@@ -23,7 +23,7 @@ const Footer = () => {
         Tushar
       </h1>
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-fit'>
-         <div className="nav w-full h-full border-r"
+         <div className="nav w-full h-full md:border-r"
               style={{ borderColor: textColor,}}>
            <div className="flex flex-col text-start mx-16 my-10">
             <a href="#landingPage">Home</a>
@@ -33,7 +33,7 @@ const Footer = () => {
             <a href="#contactme">Contact me.</a>
            </div>
          </div>
-        <div className='w-full h-full border-r'
+        <div className='w-full h-full md:border-r'
              style={{ borderColor: textColor,}}>
           <div className='address text-start mx-16 my-10'>
             <p>Faridabad, Haryana <br /> Delhi NCR</p>
@@ -41,7 +41,7 @@ const Footer = () => {
             <p>Not giving you the whole address</p>
           </div>
         </div>
-        <div className='w-full h-full border-r'
+        <div className='w-full h-full md:border-r'
              style={{ borderColor: textColor,}}>
           <div className='social-media text-start mx-16 my-10'>
             <p>Follow me on</p>
