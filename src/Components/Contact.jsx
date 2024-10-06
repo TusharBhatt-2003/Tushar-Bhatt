@@ -61,7 +61,7 @@ function Contact() {
      ref={sectionRef} // Attach the section reference for the IntersectionObserver
      className='h-screen w-screen flex lg:flex-row flex-col  justify-center items-center font-["Aero"]'
          style={{ backgroundColor: color, color: textColor }}>
-       <div className="border-4 m-5 rounded px-4 lg:px-10 lg:py-5 w-fit h-fit"
+       <div className="border-4 m-5 rounded-3xl px-4 lg:px-10 lg:py-5 w-fit h-fit"
              style={{ borderColor: textColor, }}>
           <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
             {/* Animate each letter in "Find me." */}
@@ -110,7 +110,7 @@ function Contact() {
              </motion.a>
                        </div>
         </div>
-        <div className="py-5 border-4 m-5 rounded px-8 lg:px-10 lg:py-5 w-fit lg:h-fit"
+        <div className="py-5 border-4 m-5 rounded-3xl px-8 lg:px-10 lg:py-5 w-fit lg:h-fit"
              style={{ borderColor: textColor, }}>
           <h1 className="text-4xl">
             Collab?
@@ -125,7 +125,7 @@ function Contact() {
               whileTap={{ scale: 5, rotate: -10 }}
               transition={{ type: 'spring', stiffness: 100, damping: 1 }}
               key={index}
-              className="cursor-pointer font-bold"
+              className="cursor-pointer font-bold select-none"
               style={{ display: 'inline-block' }}
               >
               {letter}

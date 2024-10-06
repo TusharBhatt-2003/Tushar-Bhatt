@@ -17,7 +17,7 @@ const Footer = () => {
       style={{ backgroundColor: color, color: textColor }}
     >
       <h1
-        className='font-["Bagel_Fat_One"] w-fit self-center text-7xl font-bold mb-24 cursor-pointer' // Add cursor-pointer class
+        className='font-["Bagel_Fat_One"] w-fit self-center text-7xl mb-24 cursor-pointer' // Add cursor-pointer class
         onClick={handleColorChange} // Add onClick event for color change
       >
         Tushar
@@ -59,11 +59,51 @@ const Footer = () => {
             <div className='flex flex-col'>
               <br />
               <ul>
-                <li>React (VITE)</li>
-                <li>Tailwind CSS</li>
-                <li>Locomotive</li>
-                <li>Gsap</li>
-                <li>Framer Motion</li>
+                <li>
+                  <a 
+                  className="hover:underline" 
+                  href='https://vite.dev/' 
+                  target='_blank' 
+                  rel="noopener noreferrer">
+                  React (VITE)
+                  </a>
+                </li>
+                <li>
+                  <a 
+                   className="hover:underline" 
+                   href='https://tailwindcss.com/' 
+                   target='_blank' 
+                   rel="noopener noreferrer">
+                   Tailwind CSS
+                  </a>
+                </li>
+                <li>
+                  <a 
+                   className="hover:underline" 
+                   href='https://locomotivemtl.github.io/locomotive-scroll/' 
+                   target='_blank' 
+                   rel="noopener noreferrer">
+                   Locomotive
+                  </a>
+                </li>
+                <li>
+                  <a 
+                   className="hover:underline" 
+                   href='https://gsap.com/' 
+                   target='_blank' 
+                   rel="noopener noreferrer">
+                   Gsap
+                  </a>
+                </li>
+                <li>
+                  <a 
+                   className="hover:underline" 
+                   href='https://www.framer.com/motion/' 
+                   target='_blank' 
+                   rel="noopener noreferrer">
+                   Framer Motion
+                  </a>
+               </li>
               </ul>
             </div>
           </div>

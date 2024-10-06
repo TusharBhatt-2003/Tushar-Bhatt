@@ -32,10 +32,6 @@ body {
     src: url(assets/fonts/POIAeronautTrial-Regular.otf);
 }
 
-::selection {
-    color: #050151;
-    background: #fff8e1;
-}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {

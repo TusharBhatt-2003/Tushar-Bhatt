@@ -109,7 +109,7 @@ const Projects = () => {
             whileTap={{ scale: 0.9, rotate: 9 }}  // Tap animation with reverse scaling and rotation
             ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
             key={index}
-            className="lg:text-left text-center drop-shadow-2xl cursor-pointer font-['Integral']"
+            className="lg:text-left text-center drop-shadow-2xl cursor-pointer font-['Integral'] select-none"
           >
             {item}
           </motion.span>
@@ -117,7 +117,7 @@ const Projects = () => {
       </h1>
 
       {/* Category Filter Buttons */}
-      <div className="categoryButtons py-5 w-full lg:w-1/6 flex justify-center lg:justify-start flex-wrap gap-2">
+      <div className="categoryButtons py-5 w-full lg:w-1/6 flex justify-center lg:justify-start flex-wrap gap-2 select-none">
         {categories.map((category, index) => (
           <button
             ref={(el) => (catagoryRefs.current[index] = el)}
@@ -136,7 +136,7 @@ const Projects = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="projectWindow justify-center w-[65vw] h-fit flex flex-wrap gap-4 px-5">
+      <div className="projectWindow justify-center w-[65vw] h-fit flex flex-wrap gap-4 px-5 select-none">
         {filteredProjects.map((project, index) => (            
             <ProjectCard
               ref={(el) => (cardRefs.current[index] = el)}

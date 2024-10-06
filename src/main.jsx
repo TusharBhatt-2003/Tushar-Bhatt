@@ -5,6 +5,7 @@ import './index.css'
 import NavBar from './Components/NavBar.jsx'
 import { ColorProvider } from './context/ColorContext.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ColorProvider>

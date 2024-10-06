@@ -22,7 +22,7 @@ const About = () => {
               y: 0,
               duration: 1.5,
               stagger: 0.1, // Animate letters one by one
-              ease: "elastic.out(1, 0.3)" 
+              ease: "elastic.out(1, 0.3)",
             }
           );
         }
@@ -39,17 +39,37 @@ const About = () => {
     };
   }, []);
 
+  // Convert hex or CSS color names to rgba with desired opacity
+  const rgbaColor = (color, opacity = 0.7) => {
+    const tempDiv = document.createElement('div');
+    tempDiv.style.color = color;
+    document.body.appendChild(tempDiv);
+    const rgb = window.getComputedStyle(tempDiv).color.match(/\d+/g);
+    document.body.removeChild(tempDiv);
+    return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
+  };
+
   return (
     <div
-      id='aboutme'
+      id="aboutme"
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       className="h-screen w-screen flex flex-col justify-center items-center font-['Aero']"
       style={{ backgroundColor: color, color: textColor }}
     >
       <div
-        className="border-4 m-5 rounded px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
+        className="border-4 m-5 rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
         style={{ borderColor: textColor }}
       >
+        {/* Global style tag to apply specific ::selection styles */}
+        <style>
+          {`
+            .inverted-selection::selection {
+              background: ${rgbaColor(color, 0.7)} !important; /* Text color with 30% opacity */
+              color: ${rgbaColor(textColor, 1)} !important; /* Background color with 70% opacity */
+            }
+          `}
+        </style>
+
         {/* Animate each letter in "About Me" */}
         <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
           {"About me.".split("").map((letter, index) => (
@@ -84,13 +104,12 @@ const About = () => {
           Additionally, I'm exploring animation and motion libraries such as Framer Motion, GSAP, and Locomotive, as well as 3D rendering with React Three.
         </p>
 
-        {/* Call to action */}
+        {/* Last paragraph with inverted selection */}
         <motion.p
-            whileHover={{ scale: 1.1 }}
-           whileTap={{ scale: 0.9 }}
-           transition={{ type: "spring", stiffness: 800, damping: 20 }}
-           className="my-5 py-5 px-10 rounded-lg"
-           style={{ backgroundColor: textColor, color: color }}
+          whileHover={{ scale: 1.03 }}
+          transition={{ type: "spring", stiffness: 800, damping: 20 }}
+          className="my-5 py-5 px-10 rounded-lg inverted-selection" // Add a unique class for custom selection
+          style={{ backgroundColor: textColor, color: color }}
         >
           Please take a moment to explore my portfolio, where you'll find a curated selection of my projects. If you are interested in working together or have any inquiries, I would love to hear from you. Thank you for visiting my portfolio!
         </motion.p>

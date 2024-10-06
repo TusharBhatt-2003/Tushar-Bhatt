@@ -76,18 +76,19 @@ const LandingPage = () => {
 
   return (
     <div
-      
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       id='landingPage'
       className='w-screen items-center justify-evenly gap-7 h-screen flex flex-col lg:flex-row lg:justify-center'
       style={{ backgroundColor: color, color: textColor }} // Use context textColor
     >
-      <div className='lg:ml-10 w-fit lg:w-full flex flex-col justify-center lg:items-start items-center lg:items-left'>
+      <div 
+        data-scroll data-scroll-speed="0.1"
+        className='lg:ml-10 w-fit lg:w-full flex flex-col justify-center lg:items-start items-center lg:items-left'>
         <h1 className='text-5xl lg:text-6xl font-bold font-["Bright"]'>Hey There!</h1>
         <h1 className='text-4xl lg:text-5xl mt-7 md:mt-5'>
-  I'm{' '}
-  {translations[currentLanguage].text
-    // Conditionally split based on the language
+          I'm{' '}
+       {translations[currentLanguage].text
+       // Conditionally split based on the language
     .split(currentLanguage === 'hindi' ? ' ' : '')
     .map((letter, index) => (
       <motion.span
@@ -100,7 +101,7 @@ const LandingPage = () => {
           damping: 10,
         }}
         key={index}
-        className="cursor-pointer text-4xl lg:text-6xl font-bold"
+        className="cursor-pointer text-4xl lg:text-6xl font-bold select-none"
         style={{
           display: 'inline-block', // Ensure inline display
           fontFamily: translations[currentLanguage].font, // Set unique font for each language
@@ -115,18 +116,22 @@ const LandingPage = () => {
 
         <p className='text-xl lg:text-3xl mt-10 md:mt-5 font-light'>A Frontend Developer</p>
       </div>
+
       <div className='lg:ml-56 flex flex-col justify-center items-center lg:items-start text-center w-full'>
         <div className='flex flex-col items-center justify-center'>
-          <p className='text-2xl font-light mx-10 font-["Aero"]'>
+          <p 
+            data-scroll data-scroll-speed="1"
+            className='text-2xl font-light mx-10 font-["Aero"]'>
             {paragraphs[currentColorIndex]} {/* Change the paragraph based on the color index */}
           </p>
           <div className='w-fit flex gap-5'>
             {/* Button with dynamic border color and text color */}
             <motion.button
+              data-scroll data-scroll-speed="2"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}
-              className='mt-10 flex items-center text-center border-2 rounded-lg px-3 py-2 text-xl'
+              className='mt-10 flex items-center text-center border-2 rounded-lg px-3 py-2 text-xl select-none'
               style={{
                 borderColor: textColor, // Use textColor from context for border color
                 color: textColor, // Use textColor from context for text color
@@ -137,10 +142,11 @@ const LandingPage = () => {
 
             {/* Button with dynamic border color and text color */}
             <motion.button
+              data-scroll data-scroll-speed="2"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}
-              className='w-full mt-10 px-5 flex justify-center items-center text-center border-2 rounded-lg text-xl'
+              className='w-full mt-10 px-5 flex justify-center items-center text-center border-2 rounded-lg text-xl select-none'
               style={{
                 backgroundColor: textColor, // Use textColor from context for background color
                 borderColor: color, // Use textColor from context for border color

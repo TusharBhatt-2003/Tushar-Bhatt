@@ -6,7 +6,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: "spring", stiffness: 400, damping: 5 }}
-      className={`project-card p-1 w-fit h-fit rounded-xl shadow-2xl`}
+      className={`project-card p-2  w-fit h-fit rounded-xl shadow-2xl font-['Aero']`}
       style={{
         backgroundColor: isActive ? bgColor : "white",
         transition: 'background-color 1.5s ease-in-out',
@@ -24,9 +24,9 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       )}
 
       {/* Project Name and Category */}
-      <div className="mb-2 mt-5 sm:hidden">
+      <div className="flex flex-col mt-5 pl-2 sm:hidden">
         <h3
-          className="text-2xl font-semibold uppercase text-black"
+          className="text-xl uppercase text-black font-['Integral']"
           style={{
             color: isActive ? pageBGcolor : "black", // Set text color to pageBGcolor when active
             transition: 'color 0.5s ease-in-out',
@@ -34,10 +34,10 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
         >
           {name}
         </h3>
-        <span className="text-semibold text-zinc-400" style={{ color: isActive && pageBGcolor }}>
+        <span className="text-semibold text-zinc-400 mt-1" style={{ color: isActive && pageBGcolor }}>
           {category}
         </span>
-      </div>
+    
 
       {/* GitHub Link */}
       {github && (
@@ -45,7 +45,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
           href={github}
           target="_blank"
           rel="noopener noreferrer"
-          className="sm:hidden hover:underline"
+          className="hover:underline my-2"
           style={{
             color: isActive ? pageBGcolor : "black", // Set GitHub link color to pageBGcolor when active
             transition: 'color 0.5s ease-in-out',
@@ -54,6 +54,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
           GitHub Repo
         </a>
       )}
+      </div>
     </motion.a>
   );
 };

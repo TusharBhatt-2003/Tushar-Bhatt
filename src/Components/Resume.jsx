@@ -48,7 +48,7 @@ function Resume() {
      ref={sectionRef} // Attach the section reference for the IntersectionObserver
      className='h-fit w-screen flex justify-center items-center py-20 font-["Aero"]'
          style={{ backgroundColor: color, color: textColor }}>
-      <div className="border-4 m-5  rounded px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
+      <div className="border-4 m-5  rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
            style={{ borderColor: textColor }}>
         <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
         {/* Animate each letter in "Resume" */}

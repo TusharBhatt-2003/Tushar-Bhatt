@@ -22,7 +22,12 @@ export default function NavBar() {
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        gsap.to(homeLinkRef.current, { opacity: 0, y: -20, duration: 0.5 }); // Animate out
+        gsap.to(homeLinkRef.current,
+           { opacity: 0,
+             y: -100,
+             duration: 1,
+             ease: "bounce.out"
+             }); // Animate out
         setShowHomeLink(false); // Hide Home link
       } else {
         setShowHomeLink(true); // Show Home link
@@ -44,20 +49,22 @@ export default function NavBar() {
     if (showHomeLink) {
       gsap.from(homeLinkRef.current, 
         { 
-          opacity: 0, x: -100, 
-          duration: 1 }); // Animate in
+          opacity: 0,
+          x: -100, 
+          duration: 1,
+          ease: "bounce.out" }); // Animate in
     }
   }, [showHomeLink]);
 
   return (
-    <nav className="border z-50 fixed top-0 right-0 left-0 px-3 py-1 items-center text-center flex justify-between mt-2 m-1 rounded font-['Aero']"
+    <nav className="border z-50 fixed top-0 right-0 left-0 px-3 py-1 items-center text-center flex justify-between m-2 rounded-lg font-['Aero']"
          style={{ color: textColor, '--after-bg-color': textColor, borderColor: textColor }}>
       <a onClick={handleColorChange}> {/* Add onClick event to logo */}
-        <h1 className='logo text-md cursor-pointer'>
+        <h1 className='logo text-md cursor-pointer select-none'>
           Tushar
         </h1>
       </a> 
-      <ul className="md:flex space-x-4 justify-center  hidden" style={{ color: textColor }}>
+      <ul className="md:flex space-x-4 justify-center select-none hidden" style={{ color: textColor }}>
         {showHomeLink && 
         <li ref={homeLinkRef}>
             <a href='/'>Home</a>

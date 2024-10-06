@@ -26,25 +26,13 @@ function Dropdown() {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 2,
-                    stagger: 0.1, // Animate letters one by one
+                    duration: 1.5,
+                    stagger: .2, // Animate letters one by one
                     ease: "bounce.out"
 
                 }
             );
-        } else {
-            // Animate menu items out when the dropdown is closed
-            // gsap.to(
-            //     menuRefs.current,
-            //     {
-            //         opacity: 0,
-            //         x: 50,
-            //         duration: 1.5,
-            //         stagger: 0.1,
-            //         ease: "elastic.out(1, 0.3)"
-            //     }
-            // );
-        }
+        } 
     }, [dropdownToggled]); // Run effect on toggle change
 
     return (
