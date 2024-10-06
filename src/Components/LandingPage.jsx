@@ -76,13 +76,14 @@ const LandingPage = () => {
 
   return (
     <div
+      data-scroll data-scroll-speed="-0.5"
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       id='landingPage'
       className='w-screen items-center justify-evenly gap-7 h-screen flex flex-col lg:flex-row lg:justify-center'
       style={{ backgroundColor: color, color: textColor }} // Use context textColor
     >
       <div 
-        data-scroll data-scroll-speed="0.1"
+        data-scroll data-scroll-speed="0.5"
         className='lg:ml-10 w-fit lg:w-full flex flex-col justify-center lg:items-start items-center lg:items-left'>
         <h1 className='text-5xl lg:text-6xl font-bold font-["Bright"]'>Hey There!</h1>
         <h1 className='text-4xl lg:text-5xl mt-7 md:mt-5'>
@@ -117,17 +118,16 @@ const LandingPage = () => {
         <p className='text-xl lg:text-3xl mt-10 md:mt-5 font-light'>A Frontend Developer</p>
       </div>
 
-      <div className='lg:ml-56 flex flex-col justify-center items-center lg:items-start text-center w-full'>
+      <div className='lg:ml-56 flex flex-col justify-center items-center lg:items-start text-center w-full  data-scroll data-scroll-speed="2"'>
         <div className='flex flex-col items-center justify-center'>
           <p 
-            data-scroll data-scroll-speed="1"
             className='text-2xl font-light mx-10 font-["Aero"]'>
             {paragraphs[currentColorIndex]} {/* Change the paragraph based on the color index */}
           </p>
           <div className='w-fit flex gap-5'>
             {/* Button with dynamic border color and text color */}
             <motion.button
-              data-scroll data-scroll-speed="2"
+             
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}
@@ -142,7 +142,7 @@ const LandingPage = () => {
 
             {/* Button with dynamic border color and text color */}
             <motion.button
-              data-scroll data-scroll-speed="2"
+             
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}

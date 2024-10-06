@@ -6,6 +6,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* scroll-behavior: smooth; */
   }
 
   @font-face {
@@ -38,8 +39,8 @@ body {
     display: none;
 }
 
-/* html {
-    scroll-behavior: smooth;
+html {
+  
   }
-   */
+  
 
