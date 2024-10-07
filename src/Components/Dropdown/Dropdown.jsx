@@ -36,13 +36,13 @@ function Dropdown() {
     }, [dropdownToggled]); // Run effect on toggle change
 
     return (
-        <div className='md:hidden flex justify-center items-center'>
+        <div className='md:hidden flex justify-center items-center drop-shadow-2xl'>
             <button onClick={() => setDropdownToggled(!dropdownToggled)}>
                 <Hamburger size={30} color={textColor} />
             </button>
             {dropdownToggled && ( // Conditionally render the menu items
                 <div 
-                    className="dropdown-menu absolute right-1 top-16 flex justify-center text-center flex-col-reverse rounded-xl border-2"
+                    className="dropdown-menu absolute -right-3 top-16 flex justify-center text-center flex-col-reverse rounded-xl border-2 drop-shadow-2xl"
                     style={{ backgroundColor: textColor, opacity: 0.7, color: color, borderColor: color }}
                 >
                     {menuItems.map((menu, index) => (
