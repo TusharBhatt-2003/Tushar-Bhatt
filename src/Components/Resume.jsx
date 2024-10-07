@@ -71,11 +71,16 @@ function Resume() {
           <ResumeCard title="Courses" items={resumeData.courses} />
           <ResumeCard title="Skills" items={resumeData.skills} /> 
           <ResumeCard title="Certificates" items={resumeData.certificates} />
-          <div className="flex  justify-center items-center">
+          <div className="flex  justify-center items-center select-none">
           <motion.button
                   whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}
+                  whileTap={{ scale: 0.5 }}
+                  transition={
+                    { type: "spring",
+                      stiffness: 400,
+                      damping: 25, 
+                      mass: 1 }
+                      }
                   className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
                   style={{ borderColor: textColor,  }}
                   >My CV.

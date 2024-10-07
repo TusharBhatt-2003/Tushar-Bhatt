@@ -79,7 +79,7 @@ function Contact() {
             </motion.span>
           ))}
           </h1>
-          <div className="social-media grid grid-cols-2">
+          <div className="social-media grid grid-cols-2 drop-shadow-2xl">
              <motion.a   
                     whileHover={{ scale: 0.9 }}
                     whileTap={{ scale: 1.1 }}

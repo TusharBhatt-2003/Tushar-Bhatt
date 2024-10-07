@@ -85,8 +85,8 @@ const LandingPage = () => {
       <div 
         data-scroll data-scroll-speed="0.5"
         className='lg:ml-10 w-fit lg:w-full flex flex-col justify-center lg:items-start items-center lg:items-left'>
-        <h1 className='text-5xl lg:text-6xl font-bold font-["Bright"]'>Hey There!</h1>
-        <h1 className='text-4xl lg:text-5xl mt-7 md:mt-5'>
+        <h1 className='text-5xl lg:text-6xl font-bold font-["Bright"] drop-shadow-2xl'>Hey There!</h1>
+        <h1 className='text-4xl lg:text-5xl mt-7 md:mt-5 drop-shadow-2xl'>
           I'm{' '}
        {translations[currentLanguage].text
        // Conditionally split based on the language
@@ -102,7 +102,7 @@ const LandingPage = () => {
           damping: 10,
         }}
         key={index}
-        className="cursor-pointer text-4xl lg:text-6xl font-bold select-none"
+        className="cursor-pointer text-4xl lg:text-6xl font-bold select-none drop-shadow-2xl"
         style={{
           display: 'inline-block', // Ensure inline display
           fontFamily: translations[currentLanguage].font, // Set unique font for each language
@@ -115,7 +115,7 @@ const LandingPage = () => {
     ))}
 </h1>
 
-        <p className='text-xl lg:text-3xl mt-10 md:mt-5 font-light'>A Frontend Developer</p>
+        <p className='text-xl lg:text-3xl mt-10 md:mt-5 font-light drop-shadow-2xl'>A Frontend Developer</p>
       </div>
 
       <div className='lg:ml-56 flex flex-col justify-center items-center lg:items-start text-center w-full  data-scroll data-scroll-speed="2"'>
@@ -145,7 +145,11 @@ const LandingPage = () => {
              
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}
+              transition={
+                { type: "spring",
+                  stiffness: 400,
+                  damping: 10, mass: 1 }
+                  }
               className='w-full mt-10 px-5 flex justify-center items-center text-center border-2 rounded-lg text-xl select-none'
               style={{
                 backgroundColor: textColor, // Use textColor from context for background color

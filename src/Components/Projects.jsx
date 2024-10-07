@@ -136,7 +136,7 @@ const Projects = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="projectWindow justify-center w-[65vw] h-fit flex flex-wrap gap-4 px-5 select-none">
+      <div className="projectWindow justify-center w-[65vw] h-fit flex flex-wrap gap-4 px-5 select-none lg:pb-0 pb-10">
         {filteredProjects.map((project, index) => (            
             <ProjectCard
               ref={(el) => (cardRefs.current[index] = el)}

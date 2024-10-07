@@ -16,8 +16,12 @@ const ResumeCard = ({ title, items }) => {
         `}
       </style>
       <motion.div
-      whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 800, damping: 20 }}
+      whileHover={{ scale: 1.05 }}
+      transition={
+        { type: "spring",
+          stiffness: 800,
+          damping: 25 }
+          }
       className="resume-card rounded-lg px-5 py-2 w-fit h-fit inverted-selection" // Add custom class name
       style={{ backgroundColor: textColor, color: color }}
     >  
