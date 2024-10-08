@@ -62,7 +62,7 @@ const Loader = () => {
         <motion.div
           onClick={() => { }} // Placeholder click function
           key={currentIndex} // Use the index as the key to uniquely identify each text
-          className={`absolute text-5xl md:text-7xl select-none drop-shadow-2xl select-none`} // Centered text with custom font
+          className={`absolute top-80 text-5xl md:text-7xl drop-shadow-2xl select-none`} // Centered text with custom font
           variants={textVariants} // Apply variants to control entry and exit animations
           initial="initial"
           animate="animate"
