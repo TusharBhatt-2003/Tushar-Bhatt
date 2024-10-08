@@ -84,7 +84,7 @@ const LandingPage = () => {
       style={{ backgroundColor: color, color: textColor }} // Use context textColor
     >
       <div 
-        data-scroll data-scroll-speed="1.5"
+        data-scroll data-scroll-speed="0.5"
         className='lg:ml-10 w-fit lg:w-full flex flex-col justify-center lg:items-start items-center lg:items-left'>
         <h1 className='text-5xl lg:text-6xl font-bold font-["Bright"] drop-shadow-2xl'>Hey There!</h1>
         <h1 className='text-4xl lg:text-5xl mt-7 md:mt-5 drop-shadow-2xl'>
@@ -120,7 +120,7 @@ const LandingPage = () => {
       </div>
 
       <div 
-      data-scroll data-scroll-speed="0.5"
+      data-scroll data-scroll-speed="0"
       className='lg:ml-56 flex flex-col justify-center items-center lg:items-start text-center w-full'>
         <div className='flex flex-col items-center justify-center'>
           <p 
