@@ -64,7 +64,7 @@ const Loader = () => {
         <motion.div
           onClick={handleColorChange}
           key={currentIndex} // Use the index as the key to uniquely identify each text
-          className={`absolute text-5xl md:text-7xl select-none drop-shadow-2xl`} // Centered text with custom font
+          className={`absolute top-72 md:top-80  text-5xl md:text-7xl select-none drop-shadow-2xl`} // Centered text with custom font
           variants={textVariants} // Apply variants to control entry and exit animations
           initial="initial"
           animate="animate"
@@ -81,8 +81,8 @@ const Loader = () => {
 
       {/* Display the loading percentage below or alongside the text */}
       <motion.div
-        initial={{ opacity: 0, y: 10 }} // Start slightly below and transparent
-        animate={{ opacity: 0.5, y: 0, transition: { duration: 0.6 } }} // Move to center and appear
+        initial={{ opacity: 0, y: 0 }} // Start slightly below and transparent
+        animate={{ opacity: 0.7, y: 0, transition: { duration: 4 } }} // Move to center and appear
         className="text-7xl lg:text-9xl font-['round'] absolute bottom-2 md:right-5 mt-10 text-center" // Margin-top and text size
         style={{
           opacity: 0.6, // Decrease the opacity of the percentage text
