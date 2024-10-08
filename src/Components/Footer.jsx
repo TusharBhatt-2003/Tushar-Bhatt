@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <div
-      className='relative h-fit lg:h-screen w-screen flex flex-col text-center justify-center font-["Aero"]'
+      className='relative h-fit md:h-screen w-screen flex flex-col text-center justify-center font-["Aero"]'
       style={{ backgroundColor: color, color: textColor }}
     >
       <h1

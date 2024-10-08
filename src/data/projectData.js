@@ -110,6 +110,7 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/Grapes',
         technologies: 'React (Vite), TinyMCE, Vercel, React Router, Redux, Appwrite, Tailwind CSS',
         category: 'Database',
+        featured: true,
         bgColor: '#CE87FF',
         pageBGcolor: '#FFFFFF'
       },
@@ -143,6 +144,7 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/Ghibli-Movies',
         technologies: 'HTML, CSS, JavaScript',
         category: 'UI',
+        featured: true,
         bgColor: '#000000',
         pageBGcolor: '#C39890'
       },
@@ -165,6 +167,7 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/Docs.',
         technologies: 'React (Vite), Tailwind CSS, Framer Motion',
         category: 'UI',
+        featured: true,
         bgColor: '#515709',
         pageBGcolor: '#FFFCEB'
       },
@@ -176,6 +179,7 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/Restaurant-Website-',
         technologies: 'React (Vite) & CSS',
         category: 'CSS',
+        featured: true,
         bgColor: '#FEA401',
         pageBGcolor: '#08183B'
       },
@@ -193,13 +197,37 @@ const projectData = [
       {
         name: 'Theme Changer',
         image: 'https://i.pinimg.com/564x/4d/36/fc/4d36fcf93fbe892841186f8db0cde507.jpg',
-        description: 'Responsive Blog Page',
+        description: 'Change the Theme From Different Colors',
         link: 'https://tusharbhatt-2003.github.io/BG-Color-Changing/',
         github: 'https://github.com/TusharBhatt-2003/BG-Color-Changing',
         technologies: 'React (Vite) & Tailwind CSS',
         category: 'Fuctionality',
         bgColor: '#FE6150',
         pageBGcolor: '#FCFBF7'
+      },
+      {
+        name: 'Mac Book',
+        image: 'https://i.pinimg.com/originals/5e/e0/cb/5ee0cbb531b8fab27efccf073e075965.gif',
+        description: "Showcasing an Apple Mac Book Using 3D Rendering, On Scrolling the Laptop's lid opens",
+        link: 'https://mac-book-flame.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/Mac-Book',
+        technologies: 'React Three Fiber & Tailwind CSS',
+        category: '3D',
+        featured: true,
+        bgColor: '#8E877C',
+        pageBGcolor: '#7F4F26'
+      },
+      {
+        name: 'Tuskie',
+        image: 'https://i.pinimg.com/originals/7e/ea/32/7eea322895edc3529a6e1df8d456fc7a.gif',
+        description: "A remake of ochi designs with Visualy appling animations.",
+        link: 'https://tushkie.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/Tushkie',
+        technologies: 'React (Vite), Tailwind CSS, Framer motion, Locomotive Scroll & GSAP',
+        category: 'Remake',
+        featured: true,
+        bgColor: '#034A07',
+        pageBGcolor: '#FFE19B'
       }
     ];
   

@@ -16,20 +16,22 @@ const Projects = () => {
   const cardRefs = useRef([]); // Reference for project cards
   const catagoryRefs = useRef([]);
   const [activeProjectName, setActiveProjectName] = useState(null);
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('Featured');
 
   // Determine colors based on the active project or category
   const activeProject = projectData.find((project) => project.name === activeProjectName);
   const activeBgColor = activeProject ? activeProject.bgColor : color;
   const activePageBGcolor = activeProject ? activeProject.pageBGcolor : textColor || color;
 
-  // Filter project data based on the selected category
+  // Filter project data based on the selected category, including "Featured"
   const filteredProjects = activeCategory === 'All'
     ? projectData
+    : activeCategory === 'Featured'
+    ? projectData.filter((project) => project.featured)
     : projectData.filter((project) => project.category.includes(activeCategory));
 
   // Get all unique categories for filtering
-  const categories = ['All', ...new Set(projectData.map((project) => project.category))];
+  const categories = ['Featured', ...new Set(projectData.map((project) => project.category)),  'All'];
   const activeFilteredBgColor = activeProject ? activeProject.bgColor : textColor;
   const activeFilteredPageBGcolor = activeProject ? activeProject.pageBGcolor : color;
 
@@ -58,8 +60,8 @@ const Projects = () => {
               opacity: 1,
               y: 0,
               duration: 2.5,
-              stagger: .1, // Animate letters one by one
-             ease: "bounce.out"
+              stagger: 0.1, // Animate letters one by one
+              ease: 'bounce.out',
             }
           );
 
@@ -74,7 +76,6 @@ const Projects = () => {
               ease: 'elastic.out(5, .7)',
             }
           );
-          
         }
       },
       { threshold: 0.5 } // Trigger animation when 50% of the section is visible
@@ -104,9 +105,9 @@ const Projects = () => {
         {/* Animate each letter in "Projects" */}
         {'projects'.split('').map((item, index) => (
           <motion.span
-            transition={{ type: "spring", stiffness: 900, damping: 5 }} // Define the type and intensity of the animation
+            transition={{ type: 'spring', stiffness: 900, damping: 5 }} // Define the type and intensity of the animation
             whileHover={{ scale: 1.2, rotate: -9 }} // Hover animation with scaling and slight rotation
-            whileTap={{ scale: 0.9, rotate: 9 }}  // Tap animation with reverse scaling and rotation
+            whileTap={{ scale: 0.9, rotate: 9 }} // Tap animation with reverse scaling and rotation
             ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
             key={index}
             className="lg:text-left text-center drop-shadow-2xl cursor-pointer font-['Integral'] select-none"
@@ -137,25 +138,23 @@ const Projects = () => {
 
       {/* Project Cards */}
       <div className="projectWindow justify-center w-[65vw] h-fit flex flex-wrap gap-4 px-5 select-none lg:pb-0 pb-10">
-        {filteredProjects.map((project, index) => (            
-            <ProjectCard
-              ref={(el) => (cardRefs.current[index] = el)}
-              key={index}
-              className="break-inside"
-              name={project.name}
-              image={project.image}
-              link={project.link}
-              github={project.github}
-              category={project.category}
-              bgColor={project.bgColor}
-              pageBGcolor={project.pageBGcolor} // Pass pageBGcolor to ProjectCard
-              onMouseEnter={() => setActiveProjectName(project.name)} // Set active project by name on mouse enter
-              onMouseLeave={() => setActiveProjectName(project.name)} // Clear active project on mouse leave
-              isActive={activeProjectName === project.name} // Check if the project is active by name
-            />
- 
+        {filteredProjects.map((project, index) => (
+          <ProjectCard
+            ref={(el) => (cardRefs.current[index] = el)}
+            key={index}
+            className="break-inside"
+            name={project.name}
+            image={project.image}
+            link={project.link}
+            github={project.github}
+            category={project.category}
+            bgColor={project.bgColor}
+            pageBGcolor={project.pageBGcolor} // Pass pageBGcolor to ProjectCard
+            onMouseEnter={() => setActiveProjectName(project.name)} // Set active project by name on mouse enter
+            onMouseLeave={() => setActiveProjectName(project.name)} // Clear active project on mouse leave
+            isActive={activeProjectName === project.name} // Check if the project is active by name
+          />
         ))}
-       
       </div>
 
       {/* Project Description */}

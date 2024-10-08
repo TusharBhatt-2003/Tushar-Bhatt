@@ -16,6 +16,7 @@ const Loader = () => {
   // State to keep track of which text to show and the loading percentage
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadingPercentage, setLoadingPercentage] = useState(0);
+  const { color, textColor } = useColor();
 
   useEffect(() => {
     // Interval to change the text index every 700ms
@@ -48,28 +49,26 @@ const Loader = () => {
     exit: { opacity: 0, x: -10, transition: { duration: 0.6 } }, // Move to left and disappear
   };
 
-  const { color, textColor, changeColor } = useColor(); // Destructure changeColor from context
-
-  const handleColorChange = () => {
-    const currentColorIndex = colors.findIndex((c) => c.bgColor === color);
-    const nextColorIndex = (currentColorIndex + 1) % colors.length;
-    const { bgColor, textColor } = colors[nextColorIndex];
-    changeColor(bgColor, textColor);
-  };
+  // Calculate current color index based on loading percentage
+  const currentColorIndex = Math.floor((loadingPercentage / 100) * (colors.length - 1));
+  const loadingTextColor = colors[currentColorIndex].textColor; // Get text color based on percentage
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen"
+         style={{ backgroundColor:  color }} // Set background color
+    >
       {/* AnimatePresence to animate the presence and exit of elements */}
       <AnimatePresence>
         <motion.div
-          onClick={handleColorChange}
+          onClick={() => { }} // Placeholder click function
           key={currentIndex} // Use the index as the key to uniquely identify each text
-          className={`absolute top-72 md:top-80  text-5xl md:text-7xl select-none drop-shadow-2xl`} // Centered text with custom font
+          className={`absolute text-5xl md:text-7xl select-none drop-shadow-2xl`} // Centered text with custom font
           variants={textVariants} // Apply variants to control entry and exit animations
           initial="initial"
           animate="animate"
           exit="exit"
           style={{
+            color: textColor, // Set loading text color based on percentage
             display: 'inline-block', // Ensure inline display
             fontFamily: textData[currentIndex].font, // Set unique font for each language
             textRendering: 'optimizeLegibility',
@@ -80,15 +79,24 @@ const Loader = () => {
       </AnimatePresence>
 
       {/* Display the loading percentage below or alongside the text */}
+      
       <motion.div
         initial={{ opacity: 0, y: 0 }} // Start slightly below and transparent
-        animate={{ opacity: 0.7, y: 0, transition: { duration: 4 } }} // Move to center and appear
-        className="text-7xl lg:text-9xl font-['round'] absolute bottom-2 md:right-5 mt-10 text-center" // Margin-top and text size
+        animate={{ opacity: 1, y: 0, transition: { duration: 4 } }} // Move to center and appear
+        className="text-7xl lg:text-7xl flex font-['round'] absolute bottom-2 md:right-5 mt-10 text-center" // Margin-top and text size
         style={{
-          opacity: 0.6, // Decrease the opacity of the percentage text
+          color: loadingTextColor, // Change the color of the loading percentage text
+          opacity: 1, // Decrease the opacity of the percentage text
         }}
       >
-        Loading {loadingPercentage}%
+      <h1 
+      className='pr-2' 
+      style={{
+          color: textColor, // Change the color of the loading percentage text
+          opacity: 1, // Decrease the opacity of the percentage text
+        }}
+      >Loading</h1>
+      {loadingPercentage}%
       </motion.div>
     </div>
   );

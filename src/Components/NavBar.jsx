@@ -19,43 +19,47 @@ export default function NavBar() {
 
   useEffect(() => {
     const landingPage = document.getElementById('landingPage');
-
+  
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        gsap.to(homeLinkRef.current, {
-          opacity: 0,
-          y: -100,
-          duration: 1,
-          ease: "bounce.out"
-        }); // Animate out
         setShowHomeLink(false); // Hide Home link
       } else {
         setShowHomeLink(true); // Show Home link
       }
     });
-
+  
     if (landingPage) {
       observer.observe(landingPage);
     }
-
+  
     return () => {
       if (landingPage) {
-        observer.unobserve(landingPage); // Cleanup observer on component unmount
+        observer.unobserve(landingPage);
       }
     };
-  }, []); // Empty dependency array ensures this runs once on mount
-
+  }, []);
+  
   useEffect(() => {
-    if (showHomeLink) {
-      gsap.from(homeLinkRef.current, 
-        { 
-          opacity: 0,
-          x: -100, 
+    if (homeLinkRef.current) {
+      if (showHomeLink) {
+        // Animate in
+        gsap.fromTo(
+          homeLinkRef.current,
+          { opacity: 0, x: -100 },
+          { opacity: 1, x: 0, duration: 1, ease: "bounce.out" }
+        );
+      } else {
+        // Animate out
+        gsap.to(homeLinkRef.current, {
+          opacity: 1,
+          x: 100,
           duration: 1,
-          ease: "bounce.out" }); // Animate in
+          ease: "bounce.out"
+        });
+      }
     }
-  }, [showHomeLink]);
-
+  }, [showHomeLink]); // Dependency on showHomeLink
+  
   // Function to convert hex to RGBA
   const hexToRgba = (hex, alpha) => {
     // Remove the leading '#' if it's there

@@ -59,7 +59,7 @@ function Contact() {
     <div 
      id="contactme"
      ref={sectionRef} // Attach the section reference for the IntersectionObserver
-     className='h-screen w-screen flex lg:flex-row flex-col  justify-center items-center font-["Aero"]'
+     className='h-screen w-screen flex md:flex-row flex-col  justify-center items-center font-["Aero"]'
          style={{ backgroundColor: color, color: textColor }}>
        <div className="border-4 m-5 rounded-3xl px-4 lg:px-10 lg:py-5 w-fit h-fit"
              style={{ borderColor: textColor, }}>
