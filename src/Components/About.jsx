@@ -51,7 +51,7 @@ const About = () => {
 
   return (
     <div
-      data-scroll data-section data-scroll-speed="1.5"
+      data-scroll data-section data-scroll-speed="1"
       id="aboutme"
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       className="h-screen w-screen flex flex-col justify-center items-center font-['Aero']"

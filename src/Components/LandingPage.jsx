@@ -120,7 +120,7 @@ const LandingPage = () => {
       </div>
 
       <div 
-      data-scroll data-scroll-speed="0"
+      data-scroll data-scroll-speed="0.1"
       className='lg:ml-56 flex flex-col justify-center items-center lg:items-start text-center w-full'>
         <div className='flex flex-col items-center justify-center'>
           <p 
