@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
+
 import LandingPage from './Components/LandingPage';
 import About from './Components/About';
 import Resume from './Components/Resume';
@@ -13,13 +14,10 @@ import { useColor } from "./context/ColorContext";
 const App = () => {
   const { color, textColor } = useColor();
   const [loading, setLoading] = useState(true);
+  const scrollContainerRef = useRef(null); // Reference to scroll container
+  const scrollInstance = useRef(null); // Reference to LocomotiveScroll instance
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2800); // Adjust time to match the number of text animations in Loader.jsx
-  }, []);
-
+  // Function to convert color to RGBA with opacity
   const rgbaColor = (color, opacity = 0.7) => {
     const tempDiv = document.createElement('div');
     tempDiv.style.color = color;
@@ -29,8 +27,37 @@ const App = () => {
     return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2800); // Adjust time to match the number of text animations in Loader.jsx
+  }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      // Initialize Locomotive Scroll
+      scrollInstance.current = new LocomotiveScroll({
+        el: scrollContainerRef.current,
+        smooth: true, // Enable smooth scrolling
+        lerp: 0.08,   // Adjust scrolling speed (default is 0.1)
+        multiplier: 1, // Adjust scroll speed (higher values speed it up)
+        smartphone: {
+          smooth: true, // Enable smooth scrolling on smartphones
+        },
+        tablet: {
+          smooth: true, // Enable smooth scrolling on tablets
+        }
+      });
+
+      // Clean up Locomotive Scroll on component unmount
+      return () => {
+        if (scrollInstance.current) scrollInstance.current.destroy();
+      };
+    }
+  }, [loading]);
+
   return (
-    <div className="w-full h-full" data-scroll-container style={{ backgroundColor: color, color: textColor }}>
+    <div ref={scrollContainerRef} data-scroll-container style={{ backgroundColor: color, color: textColor }}>
       {loading ? (
         <Loader />
       ) : (
