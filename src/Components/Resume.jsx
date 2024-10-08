@@ -45,6 +45,7 @@ function Resume() {
   return (
     <div
      id="resume"
+     
      ref={sectionRef} // Attach the section reference for the IntersectionObserver
      className='h-fit w-screen flex justify-center items-center py-20 font-["Aero"]'
          style={{ backgroundColor: color, color: textColor }}>
