@@ -8,7 +8,6 @@ import { ColorProvider } from './context/ColorContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ColorProvider>
-    
       <App />
     </ColorProvider>
   </StrictMode>,

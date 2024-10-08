@@ -38,9 +38,9 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-
-html {
   
+  [data-scroll-container] {
+    height: 100%; /* Important for Locomotive to work properly */
   }
   
 

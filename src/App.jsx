@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
-import NavBar from './Components/NavBar.jsx'
+import NavBar from './Components/NavBar.jsx';
 import LandingPage from './Components/LandingPage';
 import About from './Components/About';
 import Resume from './Components/Resume';
@@ -16,23 +16,31 @@ const App = () => {
 
   // State to manage the loading state of the app
   const [loading, setLoading] = useState(true);
+  const [locomotiveScroll, setLocomotiveScroll] = useState(null); // Add state to manage LocomotiveScroll instance
 
   useEffect(() => {
     // Set a loading timeout to simulate loading process
-    setTimeout(() => {
+    const loadingTimeout = setTimeout(() => {
       setLoading(false); // Once done, set loading to false to hide the Loader
     }, 3000); // Adjust the time as necessary
 
-    // Initialize LocomotiveScroll
-    const locomotiveScroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-    });
+    // Initialize LocomotiveScroll only after loading is complete
+    if (!loading) {
+      const scrollInstance = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+      });
+      setLocomotiveScroll(scrollInstance);
+    }
 
+    // Cleanup function to destroy LocomotiveScroll on unmount
     return () => {
-      locomotiveScroll.destroy();
+      clearTimeout(loadingTimeout); // Clear the timeout
+      if (locomotiveScroll) {
+        locomotiveScroll.destroy();
+      }
     };
-  }, []);
+  }, [loading]); // Dependency array includes loading state
 
   // Convert hex or CSS color names to rgba with desired opacity
   const rgbaColor = (color, opacity = 0.7) => {
