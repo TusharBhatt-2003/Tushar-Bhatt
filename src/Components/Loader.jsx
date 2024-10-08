@@ -67,6 +67,7 @@ const Loader = () => {
           initial="initial"
           animate="animate"
           exit="exit"
+          translate="no"
           style={{
             color: textColor, // Set loading text color based on percentage
             display: 'inline-block', // Ensure inline display

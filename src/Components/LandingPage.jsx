@@ -97,6 +97,7 @@ const LandingPage = () => {
         ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
         whileHover={{ scale: 1.2, rotate: 3 }} // Slight rotation for emphasis
         whileTap={{ scale: 1.4, rotate: -10 }}
+        translate="no"
         transition={{
           type: 'spring',
           stiffness: 100,
