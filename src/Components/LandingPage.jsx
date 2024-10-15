@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { colors, paragraphs } from '../data/colorData'; // Import the colors and paragraphs
 import '../css/welcome.css';
 import GithubIcon from '../assets/logos/github-logo-fill'; // Import the GithubIcon component
+import HintPopup from './popUps/HintPopup'; // Import the HintPopup component
+
 
 // Translations for "TUSHAR" in different languages
 const translations = {
@@ -75,6 +77,9 @@ const LandingPage = () => {
     changeColor(bgColor, textColor);
   };
 
+
+  const [showHint, setShowHint] = useState(false);
+
   return (
     <div
       data-scroll data-scroll-section data-scroll-speed="-0.5"
@@ -111,11 +116,14 @@ const LandingPage = () => {
           textRendering: 'optimizeLegibility'
         }}
         onClick={handleColorChange}
+        onMouseEnter={() => setShowHint(true)} // Show hint on hover
+        onMouseLeave={() => setShowHint(false)} // Hide hint when not hovering
       >
         {letter}
       </motion.span>
     ))}
 </h1>
+   <HintPopup isVisible={showHint} /> {/* Show the hint when hovered */}
 
         <p className='text-xl lg:text-3xl mt-10 md:mt-5 font-light drop-shadow-2xl'>A Frontend Developer</p>
       </div>
@@ -143,7 +151,7 @@ const LandingPage = () => {
             >
               <a href="#projects">Projects</a>
             </motion.button>
-
+              
             {/* Button with dynamic border color and text color */}
             <motion.button
              
