@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
 
 const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onMouseLeave, isActive, pageBGcolor, link }) => {
+  // Helper function to check if the file is a video
+  const isVideo = (file) => {
+    const videoExtensions = ['mp4', 'webm', 'ogg'];
+    const fileExtension = file?.split('.').pop();
+    return videoExtensions.includes(fileExtension);
+  };
+
   return (
     <motion.a
       whileHover={{ scale: 1.2 }}
@@ -16,10 +23,25 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       onMouseLeave={onMouseLeave}
       href={link}
     >
-      {/* Project Image */}
+      {/* Project Media (Image or Video) */}
       {image && (
-        <div className="image-container first-line: lg:w-full lg:h-16 overflow-hidden rounded-lg">
-          <img src={image} alt={name} className="w-full h-full object-cover" />
+        <div className="image-container lg:w-full lg:h-16 overflow-hidden rounded-lg">
+          {isVideo(image) ? (
+            <video
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+            />
+          ) : (
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
       )}
 
@@ -37,23 +59,22 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
         <span className="text-semibold text-zinc-400 mt-1" style={{ color: isActive && pageBGcolor }}>
           {category}
         </span>
-    
 
-      {/* GitHub Link */}
-      {github && (
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline my-2"
-          style={{
-            color: isActive ? pageBGcolor : "black", // Set GitHub link color to pageBGcolor when active
-            transition: 'color 0.5s ease-in-out',
-          }}
-        >
-          GitHub Repo
-        </a>
-      )}
+        {/* GitHub Link */}
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline my-2"
+            style={{
+              color: isActive ? pageBGcolor : "black", // Set GitHub link color to pageBGcolor when active
+              transition: 'color 0.5s ease-in-out',
+            }}
+          >
+            GitHub Repo
+          </a>
+        )}
       </div>
     </motion.a>
   );

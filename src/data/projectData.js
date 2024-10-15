@@ -220,7 +220,7 @@ const projectData = [
       {
         name: 'Tuskie',
         image: 'https://i.pinimg.com/originals/7e/ea/32/7eea322895edc3529a6e1df8d456fc7a.gif',
-        description: "A remake of ochi designs with Visualy appling animations.",
+        description: "A remake of ochi designs with Visualy appealing animations.",
         link: 'https://tushkie.vercel.app/',
         github: 'https://github.com/TusharBhatt-2003/Tushkie',
         technologies: 'React (Vite), Tailwind CSS, Framer motion, Locomotive Scroll & GSAP',
@@ -228,7 +228,19 @@ const projectData = [
         featured: true,
         bgColor: '#034A07',
         pageBGcolor: '#FFE19B'
-      }
+      },
+      {
+        name: 'iPhone 15 Pro',
+        image: 'https://v1.pinimg.com/videos/mc/expMp4/ee/ea/6c/eeea6cfd868d12cbda36b7a111d1142c_t1.mp4',
+        description: "A appealing iPhone 15 Pro Web Page with animated text, Video carousel, responsive Hero & Highlights section & 3D model of iPhone 15 pro and Max.",
+        link: 'https://iphone-15-pro-steel.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/iPhone-15',
+        technologies: 'React (Vite), Tailwind CSS, GSAP & React THREE',
+        category: '3D',
+        featured: true,
+        bgColor: 'black',
+        pageBGcolor: 'white'
+      },
     ];
   
   export default projectData;
