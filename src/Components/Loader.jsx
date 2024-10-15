@@ -22,7 +22,7 @@ const Loader = () => {
     // Interval to change the text index every 700ms
     const textInterval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % textData.length);
-    }, 700);
+    }, 750);
 
     // Interval to update the loading percentage
     const percentageInterval = setInterval(() => {
@@ -62,7 +62,7 @@ const Loader = () => {
         <motion.div
           onClick={() => { }} // Placeholder click function
           key={currentIndex} // Use the index as the key to uniquely identify each text
-          className={`absolute top-80 text-5xl md:text-7xl drop-shadow-2xl select-none`} // Centered text with custom font
+          className={`absolute top-50 text-5xl md:text-7xl drop-shadow-2xl select-none`} // Centered text with custom font
           variants={textVariants} // Apply variants to control entry and exit animations
           initial="initial"
           animate="animate"

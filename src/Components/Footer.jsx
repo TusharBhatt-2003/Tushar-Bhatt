@@ -36,7 +36,7 @@ const Footer = () => {
         <div className='w-full h-full md:border-r'
              style={{ borderColor: textColor,}}>
           <div className='address text-start mx-16 my-10'>
-            <p>Faridabad, Haryana <br /> Delhi NCR</p>
+            <p>Faridabad, Haryana <br /> Delhi NCR <br /> INDIA</p>
             <br />
             <p>Not giving you the whole address</p>
           </div>

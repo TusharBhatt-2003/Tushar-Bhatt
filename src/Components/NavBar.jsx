@@ -77,7 +77,7 @@ export default function NavBar() {
 
   return (
     <nav 
-      className="border z-50 fixed top-0 right-0 left-0 px-3 py-1 items-center text-center flex justify-between m-2 rounded-lg font-['Aero'] backdrop-blur"
+      className="border-2 z-50 fixed top-0 right-0 left-0 px-3 py-1 items-center text-center flex justify-between m-2 rounded-lg font-['Aero'] backdrop-blur"
       style={{ color: textColor, '--after-bg-color': textColor, borderColor: textColor, backgroundColor: backgroundColorWithOpacity }}
     >
       <a onClick={handleColorChange}> {/* Add onClick event to logo */}
