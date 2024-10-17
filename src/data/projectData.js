@@ -145,7 +145,7 @@ const projectData = [
         technologies: 'HTML, CSS, JavaScript',
         category: 'UI',
         featured: true,
-        bgColor: '#000000',
+        bgColor: '#29392C',
         pageBGcolor: '#C39890'
       },
       {
@@ -167,7 +167,6 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/Docs.',
         technologies: 'React (Vite), Tailwind CSS, Framer Motion',
         category: 'UI',
-        featured: true,
         bgColor: '#515709',
         pageBGcolor: '#FFFCEB'
       },
@@ -179,7 +178,6 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/Restaurant-Website-',
         technologies: 'React (Vite) & CSS',
         category: 'CSS',
-        featured: true,
         bgColor: '#FEA401',
         pageBGcolor: '#08183B'
       },
@@ -240,6 +238,17 @@ const projectData = [
         featured: true,
         bgColor: 'black',
         pageBGcolor: 'white'
+      },   {
+        name: 'AlgoInsight',
+        image: 'https://i.pinimg.com/originals/fa/e5/a8/fae5a8a9c434298546076fb910acddd6.gif',
+        description: "This page provides an interactive and educational experience for learning fundamental Data Structures and Algorithms (DSA) concepts. Users can explore specific algorithms such as Bubble Sort, Binary Search, Merge Sort, Depth-First Search (DFS), Dynamic Programming (Fibonacci), and Dijkstra's Algorithm through engaging examples.",
+        link: 'algoinsight.vercel.app',
+        github: 'https://github.com/TusharBhatt-2003/AlgoInsight/tree/main',
+        technologies: 'React (Vite), Tailwind CSS, DSA & Prism',
+        category: 'Fuctionality',
+        featured: true,
+        bgColor: 'white',
+        pageBGcolor: 'black'
       },
     ];
   
