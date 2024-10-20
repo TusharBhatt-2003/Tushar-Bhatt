@@ -211,7 +211,7 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/Mac-Book',
         technologies: 'React Three Fiber & Tailwind CSS',
         category: '3D',
-        featured: true,
+        // featured: true,
         bgColor: '#8E877C',
         pageBGcolor: '#7F4F26'
       },
@@ -238,17 +238,30 @@ const projectData = [
         featured: true,
         bgColor: 'black',
         pageBGcolor: 'white'
-      },   {
+      },
+      {
         name: 'AlgoInsight',
         image: 'https://i.pinimg.com/originals/fa/e5/a8/fae5a8a9c434298546076fb910acddd6.gif',
         description: "This page provides an interactive and educational experience for learning fundamental Data Structures and Algorithms (DSA) concepts. Users can explore specific algorithms such as Bubble Sort, Binary Search, Merge Sort, Depth-First Search (DFS), Dynamic Programming (Fibonacci), and Dijkstra's Algorithm through engaging examples.",
-        link: 'algoinsight.vercel.app',
+        link: 'https://algoinsight.vercel.app/',
         github: 'https://github.com/TusharBhatt-2003/AlgoInsight/tree/main',
         technologies: 'React (Vite), Tailwind CSS, DSA & Prism',
         category: 'Fuctionality',
         featured: true,
         bgColor: 'white',
         pageBGcolor: 'black'
+      },
+      {
+        name: 'Employee Management System',
+        image: 'https://i.pinimg.com/control/564x/0f/93/44/0f9344cfbcfc32363bf2edc92edd1414.jpg',
+        description: "an intuitive platform for organizations to manage employee tasks and roles efficiently. Designed for both administrators and employees, the system offers a comprehensive view of task assignments, statuses, and overall employee performance.",
+        link: 'https://ems-five-zeta.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/EMS',
+        technologies: 'React (Vite), Tailwind CSS',
+        category: 'Fuctionality',
+        featured: true,
+        bgColor: '#302C29',
+        pageBGcolor: '#EAEAEA'
       },
     ];
   
