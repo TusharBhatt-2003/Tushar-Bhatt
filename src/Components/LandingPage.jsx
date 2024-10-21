@@ -6,6 +6,7 @@ import { colors, paragraphs } from '../data/colorData'; // Import the colors and
 import '../css/welcome.css';
 import GithubIcon from '../assets/logos/github-logo-fill'; // Import the GithubIcon component
 import HintPopup from './popUps/HintPopup'; // Import the HintPopup component
+import Location from '../assets/logos/location';
 
 
 // Translations for "TUSHAR" in different languages
@@ -125,7 +126,12 @@ const LandingPage = () => {
 </h1>
    <HintPopup isVisible={showHint} /> {/* Show the hint when hovered */}
 
-        <p className='text-xl lg:text-3xl mt-10 md:mt-5 font-light drop-shadow-2xl'>A Frontend Developer</p>
+        <p className='text-xl lg:text-3xl mt-10 md:mt-5 font-medium drop-shadow-2xl'>A Frontend Developer</p>
+        <div className='flex flex-col justify-center items-center font-thin lg:items-start text-sm lg:text-xl'>
+          <p className='flex justify-center items-center'>Faridabad, Haryana. <Location  color={textColor}  size="20"/></p>
+          <p>INDIA</p>
+        </div>
+
       </div>
 
       <div 

@@ -223,7 +223,7 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/Tushkie',
         technologies: 'React (Vite), Tailwind CSS, Framer motion, Locomotive Scroll & GSAP',
         category: 'Remake',
-        featured: true,
+        // featured: true,
         bgColor: '#034A07',
         pageBGcolor: '#FFE19B'
       },
@@ -262,6 +262,18 @@ const projectData = [
         featured: true,
         bgColor: '#302C29',
         pageBGcolor: '#EAEAEA'
+      },
+      {
+        name: 'Resume Builder Application',
+        image: 'https://i.pinimg.com/originals/88/6b/15/886b1598b09c5c588004570c4fd1e28c.gif',
+        description: "A React-based web application for creating professional resumes. Users can input their details, including education, experience, and skills, with real-time previews. The app generates a downloadable PDF with clickable links for projects and certificates. Built with Vite and styled using Tailwind CSS, this project combines functionality and a clean design for an optimal user experience.",
+        link: 'https://resume-builder-teal-delta.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/Resume-Builder',
+        technologies: 'React (Vite), Tailwind CSS',
+        category: 'Fuctionality',
+        featured: true,
+        bgColor: '#242424',
+        pageBGcolor: '#F2EEE5'
       },
     ];
   
