@@ -144,23 +144,23 @@ const LandingPage = () => {
           </p>
           <div className='w-fit flex gap-5'>
             {/* Button with dynamic border color and text color */}
-            <motion.button
-             
+            <motion.a
+              href="#projects"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}
-              className='mt-10 flex items-center text-center border-2 rounded-lg px-3 py-2 text-xl select-none'
+              className='mt-10 flex items-center text-center border-2 rounded-lg text-xl select-none'
               style={{
                 borderColor: textColor, // Use textColor from context for border color
                 color: textColor, // Use textColor from context for text color
               }}
             >
-              <a href="#projects">Projects</a>
-            </motion.button>
+              <p className='px-3 py-2'>Projects</p>
+            </motion.a>
               
             {/* Button with dynamic border color and text color */}
-            <motion.button
-             
+            <motion.a
+              href="https://github.com/TusharBhatt-2003"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={
@@ -176,8 +176,8 @@ const LandingPage = () => {
               }}
             >
               <GithubIcon color={color} size="32" /> {/* Use the GithubIcon component */}
-              <a className='flex' href="https://github.com/TusharBhatt-2003"> Git Hub</a>
-            </motion.button>
+              <p className='flex'> Git Hub</p>
+            </motion.a>
           </div>
         </div>
       </div>

@@ -80,11 +80,11 @@ export default function NavBar() {
       className="border-2 z-50 fixed top-0 right-0 left-0 px-3 py-1 items-center text-center flex justify-between m-2 rounded-lg font-['Aero'] backdrop-blur"
       style={{ color: textColor, '--after-bg-color': textColor, borderColor: textColor, backgroundColor: backgroundColorWithOpacity }}
     >
-      <a onClick={handleColorChange}> {/* Add onClick event to logo */}
+      <div onClick={handleColorChange}> {/* Add onClick event to logo */}
         <h1 className='logo text-md cursor-pointer select-none'>
           Tushar
         </h1>
-      </a> 
+      </div> 
       <ul className="md:flex space-x-4 justify-center select-none hidden" style={{ color: textColor }}>
         {showHomeLink && 
         <li ref={homeLinkRef}>
