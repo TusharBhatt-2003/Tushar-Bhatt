@@ -54,7 +54,7 @@ const Loader = () => {
   const loadingTextColor = colors[currentColorIndex].textColor; // Get text color based on percentage
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen"
+    <div className="flex flex-col justify-center items-center h-[100dvh]"
          style={{ backgroundColor:  color }} // Set background color
     >
       {/* AnimatePresence to animate the presence and exit of elements */}
