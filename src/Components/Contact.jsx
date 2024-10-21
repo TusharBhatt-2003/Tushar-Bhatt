@@ -61,9 +61,9 @@ function Contact() {
      ref={sectionRef} // Attach the section reference for the IntersectionObserver
      className='h-screen w-screen flex md:flex-row flex-col  justify-center items-center font-["Aero"]'
          style={{ backgroundColor: color, color: textColor }}>
-       <div className="border-4 m-5 rounded-3xl px-4 lg:px-10 lg:py-5 w-fit h-fit"
+       <div className="border-4 m-5 rounded-3xl pb-5 px-4 lg:px-10 lg:py-5 w-fit h-fit"
              style={{ borderColor: textColor, }}>
-          <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
+          <h1 className="mt-5 text-4xl lg:text-6xl font-bold font-['Integral']">
             {/* Animate each letter in "Find me." */}
             {"Find me.".split("").map((letter, index) => (
             <motion.span
@@ -79,34 +79,34 @@ function Contact() {
             </motion.span>
           ))}
           </h1>
-          <div className="social-media grid grid-cols-2 drop-shadow-2xl">
+          <div className="social-media grid grid-cols-2 gap-10 drop-shadow">
              <motion.a   
                     whileHover={{ scale: 0.9 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     href="mailto:tusharbhatt968@gmail.com" className="email">
-             <E_mail_logo color={textColor} size="180"/>       
+             <E_mail_logo color={textColor} size="140"/>       
              </motion.a>
              <motion.a  
                     whileHover={{ scale: 0.9 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     href="https://www.instagram.com/_tush_ar._._/" className="insta">
-              <Insta color={textColor} size="180"/>
+              <Insta color={textColor} size="140"/>
              </motion.a>
              <motion.a   
                     whileHover={{ scale: 0.9 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     href="https://www.linkedin.com/in/tushar-bhatt-05b8b11a5/" className="linkedin">
-               <Linkedin color={textColor} size="180"/>
+               <Linkedin color={textColor} size="140"/>
              </motion.a>
              <motion.a   
                     whileHover={{ scale: 0.9 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     href="https://github.com/TusharBhatt-2003" className="GitHub">
-             <GithubIcon color={textColor} size="180" />
+             <GithubIcon color={textColor} size="140" />
              </motion.a>
                        </div>
         </div>

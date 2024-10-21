@@ -13,10 +13,10 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: "spring", stiffness: 400, damping: 5 }}
-      className={`project-card p-2  w-fit h-fit rounded-xl shadow-2xl font-['Aero']`}
+      className={`project-card p-2  w-fit h-fit rounded-xl shadow-lg font-['Aero']`}
       style={{
         backgroundColor: isActive ? bgColor : "white",
-        transition: 'background-color 1.5s ease-in-out',
+        transition: 'background-color 2s ease-in-out, color 2s ease-in-out',
         cursor: 'pointer',
       }}
       onMouseEnter={onMouseEnter}

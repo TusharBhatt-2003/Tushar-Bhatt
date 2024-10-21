@@ -17,7 +17,7 @@ const Footer = () => {
       style={{ backgroundColor: color, color: textColor }}
     >
       <h1
-        className='font-["Bagel_Fat_One"] w-fit self-center text-7xl mb-24 select-none drop-shadow-2xl cursor-pointer' // Add cursor-pointer class
+        className='font-["Bagel_Fat_One"] w-fit self-center text-7xl mb-24 select-none drop-shadow cursor-pointer' // Add cursor-pointer class
         onClick={handleColorChange} // Add onClick event for color change
       >
         Tushar

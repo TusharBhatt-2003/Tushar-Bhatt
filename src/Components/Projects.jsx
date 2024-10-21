@@ -95,12 +95,12 @@ const Projects = () => {
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       id="projects"
       className="projectContainer h-fit lg:h-screen lg:px-10 flex lg:flex-row flex-col lg:justify-between items-center uppercase font-['Aero']"
-      style={{ backgroundColor: activeFilteredPageBGcolor, transition: 'background-color .5s ease-in-out' }} // Background changes based on activeProject in filteredProjects
+      style={{ backgroundColor: activeFilteredPageBGcolor, transition: 'background-color 2s ease-in-out' }} // Background changes based on activeProject in filteredProjects
     >
       {/* Title Section */}
       <h1
         className="mt-10 lg:-mt-5 lg:w-1/6 text-6xl lg:text-8xl flex lg:flex-col justify-center lg:leading-[4.3rem] font-extrabold transition-colors duration-500 ease-in-out"
-        style={{ color: activeFilteredBgColor, transition: 'color .5s ease-in-out' }} // Change color based on activeProject in filteredProjects
+        style={{ color: activeFilteredBgColor, transition: 'color 2s ease-in-out' }} // Change color based on activeProject in filteredProjects
       >
         {/* Animate each letter in "Projects" */}
         {'projects'.split('').map((item, index) => (
@@ -110,7 +110,7 @@ const Projects = () => {
             whileTap={{ scale: 0.9, rotate: 9 }} // Tap animation with reverse scaling and rotation
             ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
             key={index}
-            className="lg:text-left text-center drop-shadow-2xl cursor-pointer font-['Integral'] select-none"
+            className="lg:text-left text-center drop-shadow cursor-pointer font-['Integral'] select-none"
           >
             {item}
           </motion.span>
@@ -130,6 +130,7 @@ const Projects = () => {
               backgroundColor: activeCategory === category ? activeFilteredBgColor : activeFilteredPageBGcolor,
               color: activeCategory === category ? activeFilteredPageBGcolor : activeFilteredBgColor,
               border: `2px solid ${activeFilteredBgColor}`,
+              transition: 'background-color 3s ease-in-out, color 3s ease-in-out, border 3s sease-in-out',
             }}
             onClick={() => setActiveCategory(category)} // Set active category on button click
           >

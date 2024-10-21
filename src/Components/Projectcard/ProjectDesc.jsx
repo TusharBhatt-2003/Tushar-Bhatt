@@ -24,10 +24,10 @@ const ProjectDesc = ({
           restDelta: 0.001,
         },
       }}
-      className="project-desc self-center space-y-5 px-10 py-5 h-fit w-fit rounded-3xl shadow-2xl" // Tailwind CSS classes for transition
+      className="project-desc self-center space-y-5 px-10 py-5 h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
       style={{
         backgroundColor: bgColor,
-        transition: 'background-color .5s ease-in-out', // Smooth background transition
+        transition: 'background-color 2s ease-in-out, color 2s ease-in-out', // Smooth background transition
       }}
     >
       {/* Global style tag for the inverted-selection ::selection */}
@@ -36,6 +36,7 @@ const ProjectDesc = ({
           .project-desc .inverted-selection::selection {
             background: ${pageBGcolor} !important; /* Apply the background color for selected text */
             color: ${bgColor} !important; /* Text color during selection */
+            transition: 'background-color 2s ease-in-out, color 2s ease-in-out'
           }
         `}
       </style>
@@ -43,7 +44,7 @@ const ProjectDesc = ({
       {/* Content with the custom ::selection class */}
       <div
         className="inverted-selection"
-        style={{ color: pageBGcolor, transition: 'color .5s ease-in-out' }} // Text color transition
+        style={{ color: pageBGcolor, transition: 'color 2s ease-in-out, background-color 2s ease-in-out'}} // Text color transition
       >
         <h2 className="text-3xl font-bold mb-4 font-['Integral'] inverted-selection">
           {name}
