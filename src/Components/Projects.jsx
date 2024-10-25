@@ -140,7 +140,7 @@ const Projects = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="projectWindow justify-center w-[65vw] h-fit flex flex-wrap gap-4 px-5 select-none lg:pb-0 pb-10">
+      <div className="projectWindow justify-center w-[60vw] h-fit flex flex-wrap gap-2 px-5 select-none lg:pb-0 pb-10">
         {filteredProjects.map((project, index) => (
           <ProjectCard
             ref={(el) => (cardRefs.current[index] = el)}
@@ -161,7 +161,7 @@ const Projects = () => {
       </div>
 
       {/* Project Description */}
-      <div className={`lg:flex hidden flex-row lg:w-1/3 lg:h-3/4 ${activeProject ? '' : 'hidden'}`}>
+      <div className={`lg:flex hidden w-[20vw] flex-row lg:w-1/3 lg:h-3/4 ${activeProject ? '' : 'hidden'}`}>
         {activeProject && (
           <ProjectDesc
             className="projectDesc"

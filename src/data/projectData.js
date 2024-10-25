@@ -275,6 +275,18 @@ const projectData = [
         bgColor: '#242424',
         pageBGcolor: '#F2EEE5'
       },
+      {
+        name: 'DripStreet',
+        image: 'https://v1.pinimg.com/videos/mc/720p/2d/f3/05/2df3055ebe86cdac4fbc85a3a75c34b0.mp4',
+        description: "DripStreet is an e-commerce platform designed for fashion enthusiasts, offering a seamless shopping experience for clothing and accessories. The website features a user-friendly interface with distinct sections for men's and women's apparel, allowing users to easily browse through various categories like t-shirts, pants, skirts, and shoes.",
+        link: 'https://dripstreet.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/DripStreet',
+        technologies: 'React (Vite), Tailwind CSS',
+        category: 'E-Commerce',
+        featured: true,
+        bgColor: '#F24405',
+        pageBGcolor: '#FFFFFC'
+      },
     ];
   
   export default projectData;

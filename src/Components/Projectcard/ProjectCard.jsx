@@ -10,10 +10,10 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
 
   return (
     <motion.a
-      whileHover={{ scale: 1.2 }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.9 }}
-      transition={{ type: "spring", stiffness: 400, damping: 5 }}
-      className={`project-card p-2  w-fit h-fit rounded-xl shadow-lg font-['Aero']`}
+      transition={{ type: "spring", stiffness: 900, damping: 10 }}
+      className={`project-card lg:p-1 p-2  w-fit h-fit rounded-xl shadow-lg font-['Aero']`}
       style={{
         backgroundColor: isActive ? bgColor : "white",
         transition: 'background-color 2s ease-in-out, color 2s ease-in-out',
@@ -46,7 +46,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       )}
 
       {/* Project Name and Category */}
-      <div className="flex flex-col mt-5 pl-2 sm:hidden">
+      <div className="flex flex-col mt-5 pl-2 lg:hidden">
         <h3
           className="text-xl uppercase text-black font-['Integral']"
           style={{
