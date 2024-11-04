@@ -84,28 +84,36 @@ function Contact() {
                     whileHover={{ scale: 0.9, opacity: .75 }}
                     whileTap={{ scale: 1.1}}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    href="mailto:tusharbhatt968@gmail.com" className="email">
+                    href="mailto:tusharbhatt968@gmail.com"
+                    target='_blank' rel="noopener noreferrer"  
+                    className="email">
              <E_mail_logo color={textColor} size="140"/>       
              </motion.a>
              <motion.a  
                     whileHover={{ scale: 0.9, opacity: .75 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    href="https://www.instagram.com/_tush_ar._._/" className="insta">
+                    href="https://www.instagram.com/_tush_ar._._/" 
+                    target='_blank' rel="noopener noreferrer"
+                    className="insta">
               <Insta color={textColor} size="140"/>
              </motion.a>
              <motion.a   
                     whileHover={{ scale: 0.9, opacity: .75 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    href="https://www.linkedin.com/in/tushar-bhatt-05b8b11a5/" className="linkedin">
+                    href="https://www.linkedin.com/in/tushar-bhatt-05b8b11a5/" 
+                    target='_blank' rel="noopener noreferrer"
+                    className="linkedin">
                <Linkedin color={textColor} size="140"/>
              </motion.a>
              <motion.a   
                     whileHover={{ scale: 0.9, opacity: .75 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    href="https://github.com/TusharBhatt-2003" className="GitHub">
+                    href="https://github.com/TusharBhatt-2003"
+                    target='_blank' rel="noopener noreferrer"
+                    className="GitHub">
              <GithubIcon color={textColor} size="140" />
              </motion.a>
                        </div>
@@ -117,7 +125,8 @@ function Contact() {
           </h1>
           <p className="text-3xl">Let me know</p>
           <p className="text-4xl">DM me</p>
-          <a className="text-4xl" href="https://www.instagram.com/_tush_ar._._/">
+          <a className="text-4xl" href="https://www.instagram.com/_tush_ar._._/"
+             target='_blank' rel="noopener noreferrer">
           {" _tush_ar._._".split("").map((letter, index) => (
             <motion.span
               ref={(el) => (instaRefs.current[index] = el)} // Assign each letter ref

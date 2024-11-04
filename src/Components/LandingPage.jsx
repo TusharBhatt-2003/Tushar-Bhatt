@@ -164,6 +164,7 @@ const LandingPage = () => {
               onHoverStart={() => setIsHovered(true)} // Set hover state to true
               onHoverEnd={() => setIsHovered(false)}  // Reset hover state
               href="https://github.com/TusharBhatt-2003"
+              target='_blank' rel="noopener noreferrer"
               whileHover={{ scale: 1.1, color: textColor, borderColor: color, transition: 0.5  }}
               whileTap={{ scale: 0.9 }}
               transition={
