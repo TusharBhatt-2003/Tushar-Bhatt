@@ -110,7 +110,7 @@ const Projects = () => {
             whileTap={{ scale: 0.9, rotate: 9 }} // Tap animation with reverse scaling and rotation
             ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
             key={index}
-            className="lg:text-left text-center drop-shadow cursor-pointer font-['Integral'] select-none"
+            className="lg:text-left text-center drop-shadow cursor-pointer font-['Integral'] select-none hover:drop-shadow-2xl"
           >
             {item}
           </motion.span>

@@ -72,7 +72,7 @@ function Contact() {
               className="cursor-pointer font-bold"
               style={{
                 display: "inline-block", // Ensure inline display
-                marginRight: letter === " " ? "1rem" : "0", // Add space between "About" and "Me"
+                marginRight: letter === " " ? "1rem" : "0", // Add space
               }}
             >
               {letter}
@@ -81,28 +81,28 @@ function Contact() {
           </h1>
           <div className="social-media grid grid-cols-2 gap-10 drop-shadow">
              <motion.a   
-                    whileHover={{ scale: 0.9 }}
-                    whileTap={{ scale: 1.1 }}
+                    whileHover={{ scale: 0.9, opacity: .75 }}
+                    whileTap={{ scale: 1.1}}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     href="mailto:tusharbhatt968@gmail.com" className="email">
              <E_mail_logo color={textColor} size="140"/>       
              </motion.a>
              <motion.a  
-                    whileHover={{ scale: 0.9 }}
+                    whileHover={{ scale: 0.9, opacity: .75 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     href="https://www.instagram.com/_tush_ar._._/" className="insta">
               <Insta color={textColor} size="140"/>
              </motion.a>
              <motion.a   
-                    whileHover={{ scale: 0.9 }}
+                    whileHover={{ scale: 0.9, opacity: .75 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     href="https://www.linkedin.com/in/tushar-bhatt-05b8b11a5/" className="linkedin">
                <Linkedin color={textColor} size="140"/>
              </motion.a>
              <motion.a   
-                    whileHover={{ scale: 0.9 }}
+                    whileHover={{ scale: 0.9, opacity: .75 }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     href="https://github.com/TusharBhatt-2003" className="GitHub">
@@ -121,7 +121,7 @@ function Contact() {
           {" _tush_ar._._".split("").map((letter, index) => (
             <motion.span
               ref={(el) => (instaRefs.current[index] = el)} // Assign each letter ref
-              whileHover={{ scale: 1.2, rotate: 50 }} // Slight rotation for emphasis
+              whileHover={{ scale: 1.2, rotate: 5 }} // Slight rotation for emphasis
               whileTap={{ scale: 5, rotate: -10 }}
               transition={{ type: 'spring', stiffness: 100, damping: 1 }}
               key={index}

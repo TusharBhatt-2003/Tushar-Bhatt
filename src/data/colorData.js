@@ -1,7 +1,7 @@
 // Color and paragraph data
 export const colors = [
   { bgColor: 'black', textColor: '#F5F0E3' },       // Black
-  { bgColor: '#C3BFB5', textColor: '#353535' },     // White Grey
+  { bgColor: '#ebebdf', textColor: 'black' },     // White Grey
   { bgColor: '#E7D7C2', textColor: '#4342A5' },  
   { bgColor: '#5C0914', textColor: '#FFE7B7' },    // Red
   { bgColor: '#354739', textColor: '#cecbab' },    // Green

@@ -23,7 +23,7 @@ const LandingPage = () => {
   const [currentLanguage, setCurrentLanguage] = useState("japanese"); // Start with Japanese language
   const letterRefs = useRef([]); // Reference for each letter
   const sectionRef = useRef(null); // Reference for the entire contact section
-
+  const [isHovered, setIsHovered] = useState(false); // Track hover state
   // GSAP Animation on mount and language change
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -110,7 +110,7 @@ const LandingPage = () => {
           damping: 10,
         }}
         key={index}
-        className="cursor-pointer text-4xl lg:text-6xl font-bold select-none drop-shadow-2xl"
+        className="cursor-pointer text-4xl lg:text-6xl font-bold select-none hover:drop-shadow-2xl"
         style={{
           display: 'inline-block', // Ensure inline display
           fontFamily: translations[currentLanguage].font, // Set unique font for each language
@@ -142,15 +142,16 @@ const LandingPage = () => {
             className='text-2xl font-light mx-10 font-["Aero"]'>
             {paragraphs[currentColorIndex]} {/* Change the paragraph based on the color index */}
           </p>
-          <div className='w-fit flex gap-5'>
+          <div className='w-fit btn flex gap-5'>
             {/* Button with dynamic border color and text color */}
             <motion.a
               href="#projects"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, color: color, borderColor: 'transparent', transition: 0.5}}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10, mass: 1 }}
-              className='mt-10 flex items-center text-center border-2 rounded-lg text-xl select-none'
+              className='mt-10 justify-center motion-btn flex items-center text-center border-2 rounded-lg text-xl select-none'
               style={{
+                '--after-bg-col': textColor ,
                 borderColor: textColor, // Use textColor from context for border color
                 color: textColor, // Use textColor from context for text color
               }}
@@ -160,23 +161,26 @@ const LandingPage = () => {
               
             {/* Button with dynamic border color and text color */}
             <motion.a
+              onHoverStart={() => setIsHovered(true)} // Set hover state to true
+              onHoverEnd={() => setIsHovered(false)}  // Reset hover state
               href="https://github.com/TusharBhatt-2003"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, color: textColor, borderColor: color, transition: 0.5  }}
               whileTap={{ scale: 0.9 }}
               transition={
                 { type: "spring",
                   stiffness: 400,
                   damping: 10, mass: 1 }
                   }
-              className='w-full mt-10 px-5 flex justify-center items-center text-center border-2 rounded-lg text-xl select-none'
+              className='w-fit motion-btn mt-10 px-5 flex justify-center items-center text-center border-2 rounded-lg text-xl select-none'
               style={{
+                '--after-bg-col': color ,
                 backgroundColor: textColor, // Use textColor from context for background color
                 borderColor: color, // Use textColor from context for border color
                 color: color, // Use textColor from context for text color
               }}
             >
-              <GithubIcon color={color} size="32" /> {/* Use the GithubIcon component */}
-              <p className='flex'> Git Hub</p>
+              <GithubIcon color={isHovered ? textColor : color} size="32" /> 
+              <p className=''> Git Hub</p>
             </motion.a>
           </div>
         </div>

@@ -26,16 +26,18 @@ const ResumeCard = ({ title, items }) => {
       style={{ backgroundColor: textColor, color: color }}
     >  
       <h3 className="text-lg font-semibold mb-2 inverted-selection">{title}</h3>
-      <ul>
+      <ul className="underlineCssResume"
+        style={{'--after-bg-color': color,}}
+      >
         {items.map((item, index) => (
           <li key={index} className="mb-1 inverted-selection">
             {/* Check if the item has a link property */}
-            {item.link ? (
+            {item.link ?  (
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline inverted-selection"
+                className="inverted-selection"
                 style={{ color }}
               >
                 {item.title}

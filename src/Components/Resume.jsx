@@ -1,4 +1,3 @@
-// src/pages/Resume.jsx
 import { useColor } from "../context/ColorContext";
 import ResumeCard from './ResumeCard/Resumecard';
 import resumeData from '../data/resumeData';
@@ -45,10 +44,10 @@ function Resume() {
   return (
     <div
      id="resume"
-     
      ref={sectionRef} // Attach the section reference for the IntersectionObserver
      className='h-fit w-screen flex justify-center items-center py-20 font-["Aero"]'
-         style={{ backgroundColor: color, color: textColor }}>
+     style={{ backgroundColor: color, color: textColor }}
+    >
       <div className="border-4 m-5  rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
            style={{ borderColor: textColor }}>
         <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
@@ -59,8 +58,8 @@ function Resume() {
               key={index}
               className="cursor-pointer font-bold"
               style={{
-              display: "inline-block", // Ensure inline display
-              marginRight: letter === " " ? "1rem" : "0", // Add space between "About" and "Me"
+                display: "inline-block", // Ensure inline display
+                marginRight: letter === " " ? "1rem" : "0", // Add space between "About" and "Me"
               }}
             >
               {letter}
@@ -72,22 +71,53 @@ function Resume() {
           <ResumeCard title="Courses" items={resumeData.courses} />
           <ResumeCard title="Skills" items={resumeData.skills} /> 
           <ResumeCard title="Certificates" items={resumeData.certificates} />
-          <div className="flex  justify-center items-center select-none">
-          <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.5 }}
-                  transition={
-                    { type: "spring",
-                      stiffness: 400,
-                      damping: 25, 
-                      mass: 1 }
-                      }
-                  className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
-                  style={{ borderColor: textColor,  }}
-                  >My CV.
-          </motion.button>
-          </div>
         </div>
+        <div className="flex justify-around items-center select-none">
+            <motion.a
+              href="/TusharBhatt_CV.pdf" // Link to the CV PDF file in the public folder
+              target="_blank" // Open the PDF in a new tab
+              rel="noopener noreferrer" // Security measure when opening new tab
+              whileHover={{ 
+                scale: 1.1,
+                backgroundColor: textColor, // Change background color to textColor
+                color: color, // Make text transparent
+                borderColor: color, // Make border transparent
+                 }}
+              whileTap={{ scale: 0.5 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 25,
+                mass: 1,
+              }}
+              className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
+              style={{ borderColor: textColor, color: textColor }}
+            >
+              My CV
+            </motion.a>
+            <motion.a
+              href="/TusharBhatt_Resume.pdf" // Link to the CV PDF file in the public folder
+              target="_blank" // Open the PDF in a new tab
+              rel="noopener noreferrer" // Security measure when opening new tab
+              whileHover={{ 
+                scale: 1.1,
+                backgroundColor: textColor, // Change background color to textColor
+                color: color, // Make text transparent
+                borderColor: color, // Make border transparent
+                 }}
+              whileTap={{ scale: 0.5 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 25,
+                mass: 1,
+              }}
+              className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
+              style={{ borderColor: textColor, color: textColor }}
+            >
+             My Resume
+            </motion.a>
+          </div>
       </div>
     </div>
   );

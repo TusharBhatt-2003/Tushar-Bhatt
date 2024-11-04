@@ -31,9 +31,6 @@ const resumeData = {
     ],
     certificates: [
         { 
-          title: 'Web Development Fundamentals – IBM SkillBuild',
-          link: "https://www.credly.com/badges/f3eab3a5-ec76-4efa-89f7-5900f55a9e1b/public_url" },
-        { 
           title: 'CSS – HackerRank',
           link: "https://www.hackerrank.com/certificates/533026481c8a" },
         { 

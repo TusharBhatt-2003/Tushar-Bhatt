@@ -23,7 +23,7 @@ const Footer = () => {
         Tushar
       </h1>
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-fit'>
-         <div className="nav w-full h-full md:border-r"
+         <div className="nav w-full h-full md:border-r-2"
               style={{ borderColor: textColor,}}>
            <div className="flex flex-col text-start mx-16 my-10">
             <a href="#landingPage">Home</a>
@@ -33,7 +33,7 @@ const Footer = () => {
             <a href="#contactme">Contact me.</a>
            </div>
          </div>
-        <div className='w-full h-full md:border-r'
+        <div className='w-full h-full lg:border-r-2'
              style={{ borderColor: textColor,}}>
           <div className='address text-start mx-16 my-10'>
             <p>Faridabad, Haryana <br /> Delhi NCR <br /> INDIA</p>
@@ -41,15 +41,19 @@ const Footer = () => {
             <p>Not giving you the whole address</p>
           </div>
         </div>
-        <div className='w-full h-full md:border-r'
+        <div className='w-full h-full md:border-r-2'
              style={{ borderColor: textColor,}}>
           <div className='social-media text-start mx-16 my-10'>
             <p>Follow me on</p>
             <br />
-            <div className='flex flex-col'>
-              <a className="hover:underline" href='https://github.com/TusharBhatt-2003' target='_blank' rel="noopener noreferrer">Git Hub</a>
-              <a className="hover:underline" href='https://www.linkedin.com/in/tushar-bhatt-05b8b11a5/' target='_blank' rel="noopener noreferrer">Linkedin</a>
-              <a className="hover:underline" href='https://www.instagram.com/_tush_ar._._/' target='_blank' rel="noopener noreferrer">Instagram</a>
+            <div className='flex flex-col underlineCssResume'
+              style={{'--after-bg-color': textColor}}
+            >
+             <ul>
+             <li><a className="" href='https://github.com/TusharBhatt-2003' target='_blank' rel="noopener noreferrer">Git Hub</a></li>
+             <li> <a className="" href='https://www.linkedin.com/in/tushar-bhatt-05b8b11a5/' target='_blank' rel="noopener noreferrer">Linkedin</a></li>
+             <li> <a className="" href='https://www.instagram.com/_tush_ar._._/' target='_blank' rel="noopener noreferrer">Instagram</a></li>
+             </ul>
             </div>
           </div>
         </div>
@@ -58,10 +62,12 @@ const Footer = () => {
             <p>Tech used in this Website</p>
             <div className='flex flex-col'>
               <br />
-              <ul>
+              <ul className="underlineCssResume"
+               style={{'--after-bg-color': textColor,}}
+              >
                 <li>
                   <a 
-                  className="hover:underline" 
+                  className="" 
                   href='https://vite.dev/' 
                   target='_blank' 
                   rel="noopener noreferrer">
@@ -70,7 +76,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                   className="hover:underline" 
+                   className="" 
                    href='https://tailwindcss.com/' 
                    target='_blank' 
                    rel="noopener noreferrer">
@@ -79,7 +85,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                   className="hover:underline" 
+                   className="" 
                    href='https://locomotivemtl.github.io/locomotive-scroll/' 
                    target='_blank' 
                    rel="noopener noreferrer">
@@ -88,7 +94,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                   className="hover:underline" 
+                   className="" 
                    href='https://gsap.com/' 
                    target='_blank' 
                    rel="noopener noreferrer">
@@ -97,7 +103,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                   className="hover:underline" 
+                   className="" 
                    href='https://www.framer.com/motion/' 
                    target='_blank' 
                    rel="noopener noreferrer">
