@@ -4,6 +4,7 @@ import '../css/welcome.css';
 import { useColor } from "../context/ColorContext";
 import { colors } from '../data/colorData'; // Import colors array
 import Dropdown from './Dropdown/Dropdown';
+import { Link } from 'react-scroll'; // Import Link from react-scroll
 
 export default function NavBar() {
   const { textColor, color, changeColor } = useColor(); // Destructure changeColor from context
@@ -88,12 +89,60 @@ export default function NavBar() {
       <ul className="md:flex space-x-4 justify-center select-none hidden" style={{ color: textColor }}>
         {showHomeLink && 
         <li ref={homeLinkRef}>
-            <a href='/'>Home</a>
+            <Link 
+              to="landingPage" // Smooth scroll to landingPage
+              smooth={true} // Enable smooth scrolling
+              duration={500} // Duration of the scroll
+              offset={-50} // Adjust the offset if needed (for fixed navbar)
+              className="cursor-pointer"
+            >
+              Home
+            </Link>
         </li>} {/* Conditionally render Home link */}
-        <li><a href="#aboutme">About me</a></li>
-        <li><a href="#resume">Resume</a></li>  
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contactme">Contact</a></li> 
+        <li>
+          <Link 
+            to="aboutme" // Smooth scroll to aboutme
+            smooth={true}
+            duration={500}
+            offset={-50}
+            className="cursor-pointer"
+          >
+            About me
+          </Link>
+        </li>
+        <li>
+          <Link 
+            to="resume" // Smooth scroll to resume
+            smooth={true}
+            duration={500}
+            offset={-50}
+            className="cursor-pointer"
+          >
+            Resume
+          </Link>
+        </li>
+        <li>
+          <Link 
+            to="projects" // Smooth scroll to projects
+            smooth={true}
+            duration={500}
+            offset={-50}
+            className="cursor-pointer"
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link 
+            to="contactme" // Smooth scroll to contactme
+            smooth={true}
+            duration={500}
+            offset={-50}
+            className="cursor-pointer"
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
       <Dropdown />
     </nav>

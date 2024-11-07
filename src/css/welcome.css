@@ -51,7 +51,7 @@
     position: absolute;
     width: 100%;
     height: 10%;
-    background-color: var(--after-bg-col); /* Use the variable */
+    background-color: var(--after-bg-color); /* Use the variable */
     display: block;
     left: -100%;
     transition: all .5s ease;

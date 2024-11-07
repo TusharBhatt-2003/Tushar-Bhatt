@@ -83,7 +83,7 @@ const LandingPage = () => {
 
   return (
     <div
-      data-scroll data-scroll-section data-scroll-speed="-0.5"
+ 
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       id='landingPage'
       className='w-screen items-center justify-evenly gap-7 h-screen flex flex-col lg:flex-row lg:justify-center'

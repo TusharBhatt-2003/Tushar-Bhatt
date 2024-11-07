@@ -51,15 +51,16 @@ const About = () => {
 
   return (
     <div
-      data-scroll data-section data-scroll-speed="1"
+     
       id="aboutme"
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       className="h-screen w-screen flex flex-col justify-center items-center font-['Aero']"
-      style={{ backgroundColor: color, color: textColor }}
+      style={{ backgroundColor: color, color: textColor, '--after-bg-color': textColor }}
     >
       <div
         className="border-4 m-5 rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
         style={{ borderColor: textColor }}
+         data-scroll data-section data-scroll-speed="1"
       >
         {/* Global style tag to apply specific ::selection styles */}
         <style>
@@ -89,14 +90,13 @@ const About = () => {
         </h1>
 
         {/* About Me paragraph */}
-        <p className="my-5">
-          I’m&nbsp;
-          <span className="font-bold">
-            <a href="https://www.instagram.com/_tush_ar._._/" className="hover:underline">
-              Tushar Bhatt
-            </a>
-          </span>
-          .<br />
+        <p className="my-5 ">
+         <div className='flex underlineCssAbout'>   I’m&nbsp;
+          <p className="font-bold  overflow-hidden">  
+           <a href="https://www.instagram.com/_tush_ar._._/" className="">
+              Tushar Bhatt 
+            </a>,</p> 
+            </div>
           21-year-old front-end developer currently residing in Faridabad. Freshly graduated with a BCA from MDU, I’ve been honing my skills in web development and problem-solving. With a strong foundation in HTML, CSS, and JavaScript, I’ve also delved into popular frameworks like React, Vite, Tailwind, and Bootstrap. Eager to expand my expertise, I’m currently diving into the MERN stack to become a well-rounded full-stack developer.
         </p>
 

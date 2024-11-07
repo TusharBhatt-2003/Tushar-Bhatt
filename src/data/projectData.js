@@ -259,7 +259,7 @@ const projectData = [
         github: 'https://github.com/TusharBhatt-2003/EMS',
         technologies: 'React (Vite), Tailwind CSS',
         category: 'Fuctionality',
-        featured: true,
+        featured: false,
         bgColor: '#302C29',
         pageBGcolor: '#EAEAEA'
       },
@@ -286,6 +286,18 @@ const projectData = [
         featured: true,
         bgColor: '#F24405',
         pageBGcolor: '#FFFFFC'
+      },
+      {
+        name: 'AI ChatBot',
+        image: 'https://i.pinimg.com/originals/49/ac/ab/49acabdb9efbcf9fd7f3ba9a6a7a4cdd.gif',
+        description: "An interactive AI-powered chat bot utilizing Google Gemini AI API to provide real-time responses in a dynamic, color-themed interface",
+        link: 'https://ai-chat-bot-psi-three.vercel.app/',
+        github: 'https://github.com/TusharBhatt-2003/ChatBot',
+        technologies: 'React (Vite), Tailwind CSS, Gemini AI API',
+        category: 'AI',
+        featured: true,
+        bgColor: '#CFFFF5',
+        pageBGcolor: 'black'
       },
     ];
   

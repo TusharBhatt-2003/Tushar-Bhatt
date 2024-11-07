@@ -22,6 +22,8 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       href={link}
+      target='_blank' 
+      rel="noopener noreferrer"
     >
       {/* Project Media (Image or Video) */}
       {image && (
