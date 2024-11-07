@@ -10,10 +10,11 @@ export default function NavBar() {
   const { textColor, color, changeColor } = useColor(); // Destructure changeColor from context
   const [showHomeLink, setShowHomeLink] = useState(false); // State to track Home link visibility
   const homeLinkRef = React.useRef(null); // Reference for the Home link
-
+  const [currentColorIndex, setCurrentColorIndex] = useState(0);
+  
   const handleColorChange = () => {
-    const currentColorIndex = colors.findIndex(c => c.bgColor === color);
     const nextColorIndex = (currentColorIndex + 1) % colors.length;
+    setCurrentColorIndex(nextColorIndex);
     const { bgColor, textColor } = colors[nextColorIndex];
     changeColor(bgColor, textColor);
   };

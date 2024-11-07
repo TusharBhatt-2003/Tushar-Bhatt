@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { useColor } from "../context/ColorContext";
 import { colors } from '../data/colorData'; // Import colors array
 
 const Footer = () => {
   const { color, textColor, changeColor } = useColor(); // Destructure changeColor from context
-
+  const [currentColorIndex, setCurrentColorIndex] = useState(0);
+  
   const handleColorChange = () => {
-    const currentColorIndex = colors.findIndex(c => c.bgColor === color);
     const nextColorIndex = (currentColorIndex + 1) % colors.length;
+    setCurrentColorIndex(nextColorIndex);
     const { bgColor, textColor } = colors[nextColorIndex];
     changeColor(bgColor, textColor);
   };
