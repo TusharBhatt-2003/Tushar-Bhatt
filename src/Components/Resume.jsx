@@ -96,7 +96,7 @@ function Resume() {
               My CV
             </motion.a>
             <motion.a
-              href="/TusharBhatt_Resume.pdf" // Link to the CV PDF file in the public folder
+              href="/TusharBhatt_FrontEndDeveloper_Resume.pdf" // Link to the CV PDF file in the public folder
               target="_blank" // Open the PDF in a new tab
               rel="noopener noreferrer" // Security measure when opening new tab
               whileHover={{ 
