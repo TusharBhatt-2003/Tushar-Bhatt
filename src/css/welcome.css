@@ -31,10 +31,6 @@
 }
 
 .underlineCss li a {
-    font-family: "Advent Pro", sans-serif;
-    font-weight: 600;
-    font-size: .7rem;
-    text-decoration: none;
     position: relative;
     z-index: 1;
 }

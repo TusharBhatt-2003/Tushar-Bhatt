@@ -53,9 +53,9 @@ export default function NavBar() {
       } else {
         // Animate out
         gsap.to(homeLinkRef.current, {
-          opacity: 1,
-          x: 100,
-          duration: 1,
+          opacity: 0,
+          x: 500,
+          duration: .5,
           ease: "bounce.out"
         });
       }
@@ -79,7 +79,7 @@ export default function NavBar() {
 
   return (
     <nav 
-      className="underlineCss border-2 z-50 fixed top-0 right-0 left-0 px-3 py-1 items-center text-center flex justify-between m-2 rounded-lg font-['Aero'] backdrop-blur"
+      className="underlineCss border-2 z-50 fixed top-0 right-0 left-0 px-3 py-1 items-center text-center flex justify-between m-2 rounded-lg font-['Aero'] backdrop-blur overflow-hidden"
       style={{ color: textColor, '--after-bg-color': textColor, borderColor: textColor, backgroundColor: backgroundColorWithOpacity }}
     >
       <div onClick={handleColorChange}> {/* Add onClick event to logo */}
@@ -87,8 +87,8 @@ export default function NavBar() {
           Tushar
         </h1>
       </div> 
-      <ul className="md:flex space-x-4 justify-center select-none hidden" style={{ color: textColor }}>
-        {showHomeLink && 
+      <ul className="md:flex text-xl font-thin space-x-4 pt-1 justify-center select-none hidden" style={{ color: textColor }}>
+
         <li ref={homeLinkRef}>
             <Link 
               to="landingPage" // Smooth scroll to landingPage
@@ -99,7 +99,7 @@ export default function NavBar() {
             >
               Home
             </Link>
-        </li>} {/* Conditionally render Home link */}
+        </li>{/* Conditionally render Home link */}
         <li>
           <Link 
             to="aboutme" // Smooth scroll to aboutme

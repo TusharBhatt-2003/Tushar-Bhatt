@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { colors, paragraphs } from '../data/colorData'; // Import the colors and paragraphs
 import '../css/welcome.css';
 import GithubIcon from '../assets/logos/github-logo-fill'; // Import the GithubIcon component
-import HintPopup from './popUps/HintPopup'; // Import the HintPopup component
+import HintPopup from '../Components/popUps/HintPopup'; // Import the HintPopup component
 import Location from '../assets/logos/location';
 
 

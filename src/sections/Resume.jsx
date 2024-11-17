@@ -1,5 +1,5 @@
 import { useColor } from "../context/ColorContext";
-import ResumeCard from './ResumeCard/Resumecard';
+import ResumeCard from '../Components/ResumeCard/Resumecard';
 import resumeData from '../data/resumeData';
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
@@ -48,25 +48,27 @@ function Resume() {
      className='h-fit w-screen flex justify-center items-center py-20 font-["Aero"]'
      style={{ backgroundColor: color, color: textColor }}
     >
-      <div className="border-4 m-5  rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
-           style={{ borderColor: textColor }}>
+      <div className="m-5  rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
+           style={{  backgroundColor: textColor }}>
         <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
         {/* Animate each letter in "Resume" */}
         {"Resume.".split("").map((letter, index) => (
             <motion.span
               ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
               key={index}
-              className="cursor-pointer font-bold"
+              className="cursor-pointer font-bold mb-5"
               style={{
                 display: "inline-block", // Ensure inline display
-                marginRight: letter === " " ? "1rem" : "0", // Add space between "About" and "Me"
+                marginRight: letter === " " ? "1rem" : "0",
+                color: color
+                 // Add space between "About" and "Me"
               }}
             >
               {letter}
             </motion.span>
           ))}
         </h1>
-        <div className="resume-container flex flex-col md:grid md:grid-cols-2  gap-4">
+        <div className="resume-container  flex flex-col md:grid md:grid-cols-2  gap-4">
           <ResumeCard title="Education" items={resumeData.education} />
           <ResumeCard title="Courses" items={resumeData.courses} />
           <ResumeCard title="Skills" items={resumeData.skills} /> 

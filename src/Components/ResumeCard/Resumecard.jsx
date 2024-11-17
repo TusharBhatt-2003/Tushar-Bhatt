@@ -16,16 +16,16 @@ const ResumeCard = ({ title, items }) => {
         `}
       </style>
       <motion.div
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.05, }}
       transition={
         { type: "spring",
           stiffness: 800,
           damping: 25 }
           }
-      className="resume-card rounded-lg px-5 py-2 w-fit h-fit inverted-selection" // Add custom class name
-      style={{ backgroundColor: textColor, color: color }}
+      className="resume-card rounded-lg px-5 py-2 w-fit h-fit inverted-selection hover:border-2" // Add custom class name
+      style={{ backgroundColor: textColor, color: color, borderColor: color,}}
     >  
-      <h3 className="text-lg font-semibold mb-2 inverted-selection">{title}</h3>
+      <h3 className="text-3xl font-bold mb-2 inverted-selection">{title}</h3>
       <ul className="underlineCssResume"
         style={{'--after-bg-color': color,}}
       >

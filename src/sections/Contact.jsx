@@ -63,7 +63,7 @@ function Contact() {
          style={{ backgroundColor: color, color: textColor }}>
        <div className="border-4 m-5 rounded-3xl pb-5 px-4 lg:px-10 lg:py-5 w-fit h-fit"
              style={{ borderColor: textColor, }}>
-          <h1 className="mt-5 text-4xl lg:text-6xl font-bold font-['Integral']">
+          <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
             {/* Animate each letter in "Find me." */}
             {"Find me.".split("").map((letter, index) => (
             <motion.span
@@ -118,8 +118,8 @@ function Contact() {
              </motion.a>
                        </div>
         </div>
-        <div className="py-5 border-4 m-5 rounded-3xl px-8 lg:px-10 lg:py-5 w-fit lg:h-fit"
-             style={{ borderColor: textColor, }}>
+        <div className="py-5 m-5 rounded-3xl px-8 lg:px-10 lg:py-5 w-fit lg:h-fit"
+             style={{ backgroundColor: textColor, color: color }}>
           <h1 className="text-4xl">
             Collab?
           </h1>

@@ -51,11 +51,10 @@ const About = () => {
 
   return (
     <div
-     
       id="aboutme"
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       className="h-screen w-screen flex flex-col justify-center items-center font-['Aero']"
-      style={{ backgroundColor: color, color: textColor, '--after-bg-color': textColor }}
+      style={{ backgroundColor: textColor, color:  color, '--after-bg-color': color }}
     >
       <div
         className="border-4 m-5 rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
@@ -78,7 +77,7 @@ const About = () => {
             <motion.span
               ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
               key={index}
-              className="cursor-pointer font-bold"
+              className="cursor-pointer mb-5 font-bold"
               style={{
                 display: "inline-block", // Ensure inline display
                 marginRight: letter === " " ? "1rem" : "0", // Add space between "About" and "Me"
@@ -91,7 +90,7 @@ const About = () => {
 
         {/* About Me paragraph */}
         <p className="my-5 ">
-         <div className='flex underlineCssAbout'>   I’m&nbsp;
+         <div className='flex underlineCssAbout text-3xl'>   I’m&nbsp;
           <p className="font-bold  overflow-hidden">  
            <a href="https://www.instagram.com/_tush_ar._._/" className="">
               Tushar Bhatt 
@@ -110,7 +109,7 @@ const About = () => {
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 800, damping: 20 }}
           className="my-5 py-5 px-10 rounded-lg inverted-selection" // Add a unique class for custom selection
-          style={{ backgroundColor: textColor, color: color }}
+          style={{ backgroundColor: color, color: textColor }}
         >
           Please take a moment to explore my portfolio, where you'll find a curated selection of my projects. If you are interested in working together or have any inquiries, I would love to hear from you. Thank you for visiting my portfolio!
         </motion.p>

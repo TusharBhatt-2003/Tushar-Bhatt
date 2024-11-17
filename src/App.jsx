@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 import NavBar from './Components/NavBar.jsx';
-import LandingPage from './Components/LandingPage';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import LandingPage from './sections/LandingPage';
+import About from './sections/About';
+import Resume from './sections/Resume';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 import Loader from './Components/Loader'; // Import the Loader component
 import './App.css';
 import { useColor } from './context/ColorContext';

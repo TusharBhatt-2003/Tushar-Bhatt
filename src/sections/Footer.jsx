@@ -16,17 +16,18 @@ const Footer = () => {
   return (
     <div
       className='relative h-fit md:h-screen w-screen flex flex-col text-center justify-center font-["Aero"]'
-      style={{ backgroundColor: color, color: textColor }}
+      style={{ backgroundColor: textColor , color: color  }}
     >
       <h1
         className='font-["Bagel_Fat_One"] w-fit self-center text-7xl mb-24 select-none drop-shadow cursor-pointer' // Add cursor-pointer class
         onClick={handleColorChange} // Add onClick event for color change
       >
         Tushar
+        <p className="text-lg font-['Aero'] mt-2">Frontend developer</p>
       </h1>
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-fit'>
          <div className="nav w-full h-full md:border-r-2"
-              style={{ borderColor: textColor,}}>
+              style={{ borderColor: color,}}>
            <div className="flex flex-col text-start mx-16 my-10">
             <a href="#landingPage">Home</a>
             <a href="#aboutme">About me.</a>
@@ -36,7 +37,7 @@ const Footer = () => {
            </div>
          </div>
         <div className='w-full h-full lg:border-r-2'
-             style={{ borderColor: textColor,}}>
+             style={{ borderColor: color,}}>
           <div className='address text-start mx-16 my-10'>
             <p>Faridabad, Haryana <br /> Delhi NCR <br /> INDIA</p>
             <br />
@@ -44,12 +45,12 @@ const Footer = () => {
           </div>
         </div>
         <div className='w-full h-full md:border-r-2'
-             style={{ borderColor: textColor,}}>
+             style={{ borderColor: color,}}>
           <div className='social-media text-start mx-16 my-10'>
             <p>Follow me on</p>
             <br />
             <div className='flex flex-col underlineCssResume'
-              style={{'--after-bg-color': textColor}}
+              style={{'--after-bg-color': color}}
             >
              <ul>
              <li><a className="" href='https://github.com/TusharBhatt-2003' target='_blank' rel="noopener noreferrer">Git Hub</a></li>
@@ -65,7 +66,7 @@ const Footer = () => {
             <div className='flex flex-col'>
               <br />
               <ul className="underlineCssResume"
-               style={{'--after-bg-color': textColor,}}
+               style={{'--after-bg-color': color,}}
               >
                 <li>
                   <a 
