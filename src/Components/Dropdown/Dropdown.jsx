@@ -57,7 +57,7 @@ function Dropdown() {
       </button>
       {dropdownToggled && ( // Conditionally render the menu items
         <div
-          className="dropdown-menu absolute -right-3 top-16 flex justify-center text-center flex-col-reverse rounded-xl drop-shadow-2xl border-2 overflow-hidden"
+          className="dropdown-menu absolute -right-3 top-16 flex justify-center text-center flex-col-reverse rounded-xl drop-shadow-2xl overflow-hidden"
           style={{ backgroundColor: textColor, opacity: 0.9, color: color, borderColor: color }}
         >
           {menuItems.map((menu, index) => (

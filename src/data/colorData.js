@@ -1,7 +1,7 @@
 // Color and paragraph data
 export const colors = [
-  { bgColor: 'black', textColor: '#F5F0E3' },       // Black
-  { bgColor: '#ebebdf', textColor: 'black' },     // White Grey
+  { bgColor: '#000000', textColor: '#F5F0E3' },       // Black
+  { bgColor: '#ebebdf', textColor: '#000000' },     // White Grey
   { bgColor: '#E7D7C2', textColor: '#4342A5' },  
   { bgColor: '#5C0914', textColor: '#FFE7B7' },    // Red
   { bgColor: '#354739', textColor: '#cecbab' },    // Green
@@ -18,12 +18,12 @@ export const colors = [
   { bgColor: '#534859', textColor: '#fbf0e8' },     // Purple
   { bgColor: '#ece6d3', textColor: '#771011' },     // Red Cream
   { bgColor: '#6a6f4c', textColor: '#cbb89d' },     // Forest Green
-  { bgColor: 'black', textColor: '#9C3A83' },       // Light Pink
+  { bgColor: '#000000', textColor: '#9C3A83' },       // Light Pink
   { bgColor: '#f2f2e6', textColor: '#ed6767' },     // Orange
   { bgColor: '#f8f7ef', textColor: '#ff5394' },     // Pink White
   { bgColor: '#DADDE2', textColor: '#282737' },     // Grey
   { bgColor: '#B25623', textColor: '#C8B88E' },     // Orange
-  { bgColor: 'white', textColor: '#9B8C87' },       // White Brown
+  { bgColor: '#ffffff', textColor: '#9B8C87' },       // White Brown
   { bgColor: '#EDEDED', textColor: '#60746F' },     // White Green
   { bgColor: '#131417', textColor: '#840016' },     // Black Red
   { bgColor: '#3A2E3C', textColor: '#F5F1E6' },     

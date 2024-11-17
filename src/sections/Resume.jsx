@@ -93,7 +93,7 @@ function Resume() {
                 mass: 1,
               }}
               className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
-              style={{ borderColor: textColor, color: textColor }}
+              style={{ borderColor: color, color: color }}
             >
               My CV
             </motion.a>
@@ -115,7 +115,7 @@ function Resume() {
                 mass: 1,
               }}
               className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
-              style={{ borderColor: textColor, color: textColor }}
+              style={{ borderColor: color, color: color }}
             >
              My Resume
             </motion.a>

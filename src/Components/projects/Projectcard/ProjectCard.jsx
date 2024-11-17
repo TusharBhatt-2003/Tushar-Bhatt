@@ -13,7 +13,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: "spring", stiffness: 900, damping: 10 }}
-      className={`project-card lg:p-1 p-2  w-fit h-fit rounded-xl shadow-lg font-['Aero']`}
+      className={`project-card lg:p-1 p-2  md:w-fit h-fit rounded-xl shadow-lg font-['Aero']`}
       style={{
         backgroundColor: isActive ? bgColor : "white",
         transition: 'background-color 2s ease-in-out, color 2s ease-in-out',
@@ -48,7 +48,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       )}
 
       {/* Project Name and Category */}
-      <div className="flex flex-col mt-5 pl-2 lg:hidden">
+      <div className="flex flex-col h-full mt-5 pl-2 lg:hidden">
         <h3
           className="text-xl uppercase text-black font-['Integral']"
           style={{
@@ -58,9 +58,10 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
         >
           {name}
         </h3>
-        <span className="text-semibold text-zinc-400 mt-1" style={{ color: isActive && pageBGcolor }}>
+     <div>
+     <p className="text-semibold text-zinc-400 mt-1" style={{ color: isActive && pageBGcolor }}>
           {category}
-        </span>
+        </p>
 
         {/* GitHub Link */}
         {github && (
@@ -77,6 +78,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
             GitHub Repo
           </a>
         )}
+     </div>
       </div>
     </motion.a>
   );
