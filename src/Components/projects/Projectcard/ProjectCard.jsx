@@ -9,25 +9,29 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
   };
 
   return (
-    <motion.a
+    <motion.div
+      aria-label={`Project card for ${name}`}
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.9 }}
+      whileTap={{ scale: 0.99 }}
       transition={{ type: "spring", stiffness: 900, damping: 10 }}
-      className={`project-card lg:p-1 p-2  md:w-fit h-fit rounded-xl shadow-lg font-['Aero']`}
+      className={`project-card lg:p-1 p-2 md:w-fit h-fit rounded-xl shadow-lg font-['Aero']`}
       style={{
         backgroundColor: isActive ? bgColor : "white",
-        transition: 'background-color 2s ease-in-out, color 2s ease-in-out',
+        transition: 'background-color 1.5s ease-in-out, color 1.5s ease-in-out',
         cursor: 'pointer',
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={link}
-      target='_blank' 
-      rel="noopener noreferrer"
     >
       {/* Project Media (Image or Video) */}
       {image && (
-        <div className="image-container lg:w-full lg:h-16 overflow-hidden rounded-lg">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${name} project link`}
+          className="image-container lg:w-full lg:h-16 overflow-hidden rounded-lg block"
+        >
           {isVideo(image) ? (
             <video
               src={image}
@@ -44,7 +48,7 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
               className="w-full h-full object-cover"
             />
           )}
-        </div>
+        </a>
       )}
 
       {/* Project Name and Category */}
@@ -52,35 +56,36 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
         <h3
           className="text-xl uppercase text-black font-['Integral']"
           style={{
-            color: isActive ? pageBGcolor : "black", // Set text color to pageBGcolor when active
+            color: isActive ? pageBGcolor : "black",
             transition: 'color 0.5s ease-in-out',
           }}
         >
           {name}
         </h3>
-     <div>
-     <p className="text-semibold text-zinc-400 mt-1" style={{ color: isActive && pageBGcolor }}>
-          {category}
-        </p>
+        <div>
+          <p className="text-semibold text-zinc-400 mt-1" style={{ color: isActive && pageBGcolor }}>
+            {category}
+          </p>
 
-        {/* GitHub Link */}
-        {github && (
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline my-2"
-            style={{
-              color: isActive ? pageBGcolor : "black", // Set GitHub link color to pageBGcolor when active
-              transition: 'color 0.5s ease-in-out',
-            }}
-          >
-            GitHub Repo
-          </a>
-        )}
-     </div>
+          {/* GitHub Link */}
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="my-2 pt-1 px-1 rounded "
+              style={{
+                color: isActive ? bgColor : "black",
+                transition: 'color 0.5s ease-in-out, background-color 0.5s ease-in-out',
+                backgroundColor: isActive ? pageBGcolor : 'white',
+              }}
+            >
+              GitHub Repo
+            </a>
+          )}
+        </div>
       </div>
-    </motion.a>
+    </motion.div>
   );
 };
 

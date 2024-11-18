@@ -41,7 +41,7 @@ const Projects = () => {
       ref={sectionRef}
       id="projects"
       className="projectContainer h-fit lg:h-screen lg:px-10 flex lg:flex-row flex-col lg:justify-between items-center uppercase font-['Aero']"
-      style={{ backgroundColor: activePageBGcolor, transition: 'background-color 2s ease-in-out' }}
+      style={{ backgroundColor: activePageBGcolor, transition: 'background-color 1.5s ease-in-out' }}
     >
       <ProjectTitle text="projects" textColor={activeBgColor} />
       <CategoryFilter
@@ -49,7 +49,7 @@ const Projects = () => {
         activeCategory={activeCategory}
         onCategorySelect={setActiveCategory}
         activeBgColor={activeBgColor}
-        inactiveBgColor={textColor}
+        inactiveBgColor={activePageBGcolor}
       />
       <ProjectList
         projects={filteredProjects}

@@ -7,7 +7,7 @@ const ProjectTitle = ({ text, textColor }) => {
   return (
     <h1
       className="mt-10 lg:-mt-5 lg:w-1/6 text-6xl lg:text-8xl flex lg:flex-col justify-center lg:leading-[4.3rem] font-extrabold transition-colors duration-500 ease-in-out"
-      style={{ color: textColor, transition: 'color 2s ease-in-out' }}
+      style={{ color: textColor, transition: 'color 1.5s ease-in-out' }}
     >
       {text.split('').map((item, index) => (
         <motion.span

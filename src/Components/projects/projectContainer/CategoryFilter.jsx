@@ -19,7 +19,7 @@ const CategoryFilter = ({
             backgroundColor: activeCategory === category ? activeBgColor : inactiveBgColor,
             color: activeCategory === category ? inactiveBgColor : activeBgColor,
             border: `2px solid ${activeBgColor}`,
-            transition: 'background-color 3s ease-in-out, color 3s ease-in-out, border 3s ease-in-out',
+            transition: 'background-color 1.5s ease-in-out, color 1.5s ease-in-out, border 1.5s ease-in-out',
           }}
           onClick={() => onCategorySelect(category)}
         >
