@@ -72,7 +72,7 @@ const About = () => {
         </style>
 
         {/* Animate each letter in "About Me" */}
-        <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
+        <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral'] inverted-selection">
           {"About me.".split("").map((letter, index) => (
             <motion.span
               ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
@@ -89,10 +89,10 @@ const About = () => {
         </h1>
 
         {/* About Me paragraph */}
-        <p className="my-5 ">
-         <div className='flex underlineCssAbout text-3xl'>   I’m&nbsp;
-          <p className="font-bold  overflow-hidden">  
-           <a href="https://www.instagram.com/_tush_ar._._/" className="">
+        <p className="my-5 inverted-selection">
+         <div className='flex underlineCssAbout text-3xl inverted-selection'>   I’m&nbsp;
+          <p className="font-bold  overflow-hidden inverted-selection">  
+           <a href="https://www.instagram.com/_tush_ar._._/" className="inverted-selection">
               Tushar Bhatt 
             </a>,</p> 
             </div>
@@ -100,7 +100,7 @@ const About = () => {
         </p>
 
         {/* Additional paragraph */}
-        <p className="my-5">
+        <p className="my-5 inverted-selection">
           Additionally, I'm exploring animation and motion libraries such as Framer Motion, GSAP, and Locomotive, as well as 3D rendering with React Three.
         </p>
 
@@ -108,7 +108,7 @@ const About = () => {
         <motion.p
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 800, damping: 20 }}
-          className="my-5 py-5 px-10 rounded-lg inverted-selection" // Add a unique class for custom selection
+          className="my-5 py-5 px-10 rounded-lg " // Add a unique class for custom selection
           style={{ backgroundColor: color, color: textColor }}
         >
           Please take a moment to explore my portfolio, where you'll find a curated selection of my projects. If you are interested in working together or have any inquiries, I would love to hear from you. Thank you for visiting my portfolio!
