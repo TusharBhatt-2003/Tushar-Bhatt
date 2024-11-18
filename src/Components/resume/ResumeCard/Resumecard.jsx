@@ -22,7 +22,7 @@ const ResumeCard = ({ title, items }) => {
           stiffness: 800,
           damping: 25 }
           }
-      className="resume-card paper  rounded-lg px-5 py-2 w-fit  h-fit inverted-selection overflow-hidden" // Add custom class name
+      className="resume-card paper relative  rounded-lg px-5 py-2 w-fit  h-fit inverted-selection overflow-hidden" // Add custom class name
       style={{ backgroundColor: textColor, color: color, borderColor: color,}}
     >  
       <h3 className="text-xl font-bold mb-2 inverted-selection">{title}</h3>
