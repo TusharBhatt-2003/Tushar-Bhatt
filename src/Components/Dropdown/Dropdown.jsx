@@ -31,8 +31,8 @@ function Dropdown() {
           y: 0,
           duration: 0.5,
           stagger: 0.1, // Animate letters one by one
-          ease: "bounce.out",
-        }
+          ease: 'bounce.out',
+        },
       );
     }
   }, [dropdownToggled]); // Run effect on toggle change
@@ -58,28 +58,43 @@ function Dropdown() {
       {dropdownToggled && ( // Conditionally render the menu items
         <div
           className="dropdown-menu paper absolute -right-3 top-16 flex justify-center text-center flex-col-reverse rounded-xl drop-shadow-2xl overflow-hidden"
-          style={{ backgroundColor: textColor, opacity: 0.9, color: color, borderColor: color }}
+          style={{
+            backgroundColor: textColor,
+            opacity: 0.9,
+            color: color,
+            borderColor: color,
+          }}
         >
           {menuItems.map((menu, index) => (
             <Link
               key={menu.id}
               to={menu.href} // Use 'to' instead of 'href' for react-scroll
               smooth={true} // Enable smooth scrolling
-              duration={1000} // Duration for smooth scrolling 
+              duration={1000} // Duration for smooth scrolling
             >
               <div
                 onClick={() => handleClick(menu.id)} // Set active item on click
                 onMouseEnter={() => handleMouseEnter(menu.id)} // Set hovered item on mouse enter
                 onMouseLeave={handleMouseLeave} // Reset hover item on mouse leave
-                className={`pb-1  pt-2 px-2 m-1 font-["Aero"] rounded-lg`}  // Always add hover effect
+                className={`pb-1  pt-2 px-2 m-1 font-["Aero"] rounded-lg`} // Always add hover effect
                 style={{
                   backgroundColor:
-                    activeItem === menu.id ? color : hoverItem === menu.id ? color : '',
-                  color: activeItem === menu.id ? textColor : hoverItem === menu.id ? textColor : '',
+                    activeItem === menu.id
+                      ? color
+                      : hoverItem === menu.id
+                        ? color
+                        : '',
+                  color:
+                    activeItem === menu.id
+                      ? textColor
+                      : hoverItem === menu.id
+                        ? textColor
+                        : '',
                   borderColor: hoverItem === menu.id ? color : '',
-                  opacity: hoverItem === menu.id && activeItem !== menu.id ? 0.2 : 1, // Opacity for hovered item
+                  opacity:
+                    hoverItem === menu.id && activeItem !== menu.id ? 0.2 : 1, // Opacity for hovered item
                 }}
-                ref={(el) => menuRefs.current[index] = el} // Assign individual refs to each menu item
+                ref={(el) => (menuRefs.current[index] = el)} // Assign individual refs to each menu item
               >
                 {menu.label}
               </div>

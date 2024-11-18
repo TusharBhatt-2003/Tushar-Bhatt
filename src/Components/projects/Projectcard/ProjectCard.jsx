@@ -1,6 +1,17 @@
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onMouseLeave, isActive, pageBGcolor, link }) => {
+const ProjectCard = ({
+  name,
+  image,
+  github,
+  category,
+  bgColor,
+  onMouseEnter,
+  onMouseLeave,
+  isActive,
+  pageBGcolor,
+  link,
+}) => {
   // Helper function to check if the file is a video
   const isVideo = (file) => {
     const videoExtensions = ['mp4', 'webm', 'ogg'];
@@ -13,10 +24,10 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
       aria-label={`Project card for ${name}`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.99 }}
-      transition={{ type: "spring", stiffness: 900, damping: 10 }}
+      transition={{ type: 'spring', stiffness: 900, damping: 10 }}
       className={`project-card lg:p-1 p-2 md:w-fit h-fit rounded-xl shadow-lg font-['Aero']`}
       style={{
-        backgroundColor: isActive ? bgColor : "white",
+        backgroundColor: isActive ? bgColor : 'white',
         transition: 'background-color 1.5s ease-in-out, color 1.5s ease-in-out',
         cursor: 'pointer',
       }}
@@ -56,14 +67,17 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
         <h3
           className="text-xl uppercase text-black font-['Integral']"
           style={{
-            color: isActive ? pageBGcolor : "black",
+            color: isActive ? pageBGcolor : 'black',
             transition: 'color 0.5s ease-in-out',
           }}
         >
           {name}
         </h3>
         <div>
-          <p className="text-semibold text-zinc-400 mt-1" style={{ color: isActive && pageBGcolor }}>
+          <p
+            className="text-semibold text-zinc-400 mt-1"
+            style={{ color: isActive && pageBGcolor }}
+          >
             {category}
           </p>
 
@@ -75,8 +89,9 @@ const ProjectCard = ({ name, image, github, category, bgColor, onMouseEnter, onM
               rel="noopener noreferrer"
               className="my-2 pt-1 px-1 rounded "
               style={{
-                color: isActive ? bgColor : "black",
-                transition: 'color 0.5s ease-in-out, background-color 0.5s ease-in-out',
+                color: isActive ? bgColor : 'black',
+                transition:
+                  'color 0.5s ease-in-out, background-color 0.5s ease-in-out',
                 backgroundColor: isActive ? pageBGcolor : 'white',
               }}
             >

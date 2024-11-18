@@ -3,141 +3,138 @@
 @tailwind utilities;
 
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    /* scroll-behavior: smooth; */
-  }
-
-  @font-face {
-    font-family: Integral;
-    src: url(assets/fonts/Fontspring-DEMO-integralcf-bold.otf);
-  }
-
-@font-face {
-    font-family: Bright;
-    src: url(assets/fonts/Bright.otf);
-}
-@font-face {
-    font-family: Kruti;
-    src: url(./assets//fonts/KRDEV030-BOLD.TTF);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* scroll-behavior: smooth; */
 }
 
 @font-face {
-    font-family: Schabo;
-    src: url(assets/fonts/SCHABO-Condensed.otf);
+  font-family: Integral;
+  src: url(assets/fonts/Fontspring-DEMO-integralcf-bold.otf);
 }
 
 @font-face {
-    font-family: Aero;
-    src: url(assets/fonts/POIAeronautTrial-Regular.otf);
+  font-family: Bright;
+  src: url(assets/fonts/Bright.otf);
+}
+@font-face {
+  font-family: Kruti;
+  src: url(./assets//fonts/KRDEV030-BOLD.TTF);
 }
 
+@font-face {
+  font-family: Schabo;
+  src: url(assets/fonts/SCHABO-Condensed.otf);
+}
+
+@font-face {
+  font-family: Aero;
+  src: url(assets/fonts/POIAeronautTrial-Regular.otf);
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-  
-  [data-scroll-container] {
-    height: 100%; /* Important for Locomotive to work properly */
-  }
-  
+
+[data-scroll-container] {
+  height: 100%; /* Important for Locomotive to work properly */
+}
+
 .underlineCssResume li {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .underlineCssResume li a {
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
 }
-
 
 .underlineCssResume li a:hover::after {
-    bottom: -10%;
-    left: 0;
-    border-radius: 10rem;
+  bottom: -10%;
+  left: 0;
+  border-radius: 10rem;
 }
 
-.underlineCssResume li a::after  {
-    content: '';
-    position: absolute;
-    width: 105%;
-    height: 1%;
-    background-color: var(--after-bg-color); /* Use the variable */
-    display: block;
-    left: -100%;
-    transition: .5s ease-in-out;
+.underlineCssResume li a::after {
+  content: '';
+  position: absolute;
+  width: 105%;
+  height: 1%;
+  background-color: var(--after-bg-color); /* Use the variable */
+  display: block;
+  left: -100%;
+  transition: 0.5s ease-in-out;
 }
 
 /* Add this CSS to your main stylesheet */
 
 .motion-btn {
-    position: relative;
-    overflow: hidden;
-    transition: all 0s ease;
-  }
-  
-  .motion-btn::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--after-bg-col); /* You can use your textColor here dynamically */
-    left: 0;
-    top: 100%;
-    z-index: 0;
-    border-radius: 120%;
-    transition: all 0.5s ease;
-    opacity: .7;
-  }
-  
-  .motion-btn:hover::after {
-    top: 0;
-    border-radius: 5px;
-  }
-  
-  .motion-btn > * {
-    position: relative;
-    z-index: 1; /* Ensure text/content stays above the background animation */
-  }
-  
+  position: relative;
+  overflow: hidden;
+  transition: all 0s ease;
+}
+
+.motion-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(
+    --after-bg-col
+  ); /* You can use your textColor here dynamically */
+  left: 0;
+  top: 100%;
+  z-index: 0;
+  border-radius: 120%;
+  transition: all 0.5s ease;
+  opacity: 0.7;
+}
+
+.motion-btn:hover::after {
+  top: 0;
+  border-radius: 5px;
+}
+
+.motion-btn > * {
+  position: relative;
+  z-index: 1; /* Ensure text/content stays above the background animation */
+}
 
 .underlineCssAbout p {
-    position: relative;
-    transition: all 0.9s ease;
-    overflow: hidden;
+  position: relative;
+  transition: all 0.9s ease;
+  overflow: hidden;
 }
 
 .underlineCssAbout p a {
-    text-decoration: none;
-    position: relative;
+  text-decoration: none;
+  position: relative;
 }
-
 
 .underlineCssAbout p a:hover::after {
-    bottom: -10%;
-    left: 0;
-    border-radius: 10rem;
-    overflow: hidden;
+  bottom: -10%;
+  left: 0;
+  border-radius: 10rem;
+  overflow: hidden;
 }
 
-.underlineCssAbout p a::after  {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    background-color: var(--after-bg-color); /* Use the variable */
-    display: block;
-    left: -100%;
-    transition: all .9s ease;
+.underlineCssAbout p a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background-color: var(--after-bg-color); /* Use the variable */
+  display: block;
+  left: -100%;
+  transition: all 0.9s ease;
 }
 
 nav {
-  position: relative;
- ; /* Ensure the pseudo-element stays inside the nav */
+  position: relative; /* Ensure the pseudo-element stays inside the nav */
 }
 
 nav::before {
@@ -150,7 +147,7 @@ nav::before {
   background-image: url('https://i.pinimg.com/736x/e9/db/e7/e9dbe7d0a101619d0ade7c9abb18b12c.jpg'); /* Example tiny noise PNG in Base64 */
   opacity: 0.05; /* Adjust the visibility of the noise */
   pointer-events: none; /* Allow clicks to pass through */
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   mix-blend-mode: multiply;
 }
 

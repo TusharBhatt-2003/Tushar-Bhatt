@@ -1,7 +1,4 @@
-import Buttons from "./Buttons";
-import ResumeContainer from "./ResumeContainer";
+import Buttons from './Buttons';
+import ResumeContainer from './ResumeContainer';
 
-export  {
-    Buttons,
-    ResumeContainer,
-};
+export { Buttons, ResumeContainer };

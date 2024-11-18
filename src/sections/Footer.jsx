@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useColor } from "../context/ColorContext";
-import { colors } from "../data/colorData"; // Import colors array
+import { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useColor } from '../context/ColorContext';
+import { colors } from '../data/colorData'; // Import colors array
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,13 +30,13 @@ const Footer = () => {
           opacity: 1,
           stagger: 0.5,
           duration: 1,
-          ease: "bounce",
+          ease: 'bounce',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top bottom", // Start animation when section is in view
-            toggleActions: "play none none none",
+            start: 'top bottom', // Start animation when section is in view
+            toggleActions: 'play none none none',
           },
-        }
+        },
       );
     }
   }, []);
@@ -52,11 +52,7 @@ const Footer = () => {
         onClick={handleColorChange}
       >
         Tushar
-        <p
-          className="text-lg font-['Aero'] mt-2"
-        >
-          Frontend Developer
-        </p>
+        <p className="text-lg font-['Aero'] mt-2">Frontend Developer</p>
       </h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-fit">
         {/* Navigation Links */}
@@ -81,11 +77,12 @@ const Footer = () => {
         <div
           className="w-full h-full lg:border-r-2"
           style={{ borderColor: color }}
-         
         >
-          <div className="address text-start mx-16 mt-5 lg:my-10 pb-5 lg:border-none border-b-2"
-             style={{ borderColor: color }}
-             ref={(el) => (textRefs.current[2] = el)}>
+          <div
+            className="address text-start mx-16 mt-5 lg:my-10 pb-5 lg:border-none border-b-2"
+            style={{ borderColor: color }}
+            ref={(el) => (textRefs.current[2] = el)}
+          >
             <p>
               Faridabad, Haryana <br /> Delhi NCR <br /> INDIA
             </p>
@@ -98,17 +95,17 @@ const Footer = () => {
         <div
           className="w-full h-full md:border-r-2"
           style={{ borderColor: color }}
-         
         >
-          <div className="social-media text-start mx-16 mt-5 lg:my-10 pb-5 md:border-none border-b-2"
-             style={{ borderColor: color }}
-             ref={(el) => (textRefs.current[3] = el)}
-             >
+          <div
+            className="social-media text-start mx-16 mt-5 lg:my-10 pb-5 md:border-none border-b-2"
+            style={{ borderColor: color }}
+            ref={(el) => (textRefs.current[3] = el)}
+          >
             <p>Follow Me On</p>
             <br />
-            <ul 
+            <ul
               className="flex flex-col underlineCssResume"
-              style={{ "--after-bg-color": color }}
+              style={{ '--after-bg-color': color }}
             >
               <li>
                 <a
@@ -143,62 +140,62 @@ const Footer = () => {
 
         {/* Tech Used Section */}
         <div className="w-full h-full">
-          <div className="contact text-start mx-16 mt-5 lg:my-10 pb-5 md:border-none border-b-2"
-           
-             style={{ borderColor: color }}>
-            <div 
-             ref={(el) => (textRefs.current[4] = el)}>
-            <p>Tech Used in This Website</p>
-            <ul 
-              className="flex flex-col underlineCssResume mt-5"
-              style={{ "--after-bg-color": color }}
-            >
-              <li>
-                <a
-                  href="https://vite.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  React (Vite)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://tailwindcss.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Tailwind CSS
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://locomotivemtl.github.io/locomotive-scroll/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Locomotive
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://gsap.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GSAP
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.framer.com/motion/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Framer Motion
-                </a>
-              </li>
-            </ul>
+          <div
+            className="contact text-start mx-16 mt-5 lg:my-10 pb-5 md:border-none border-b-2"
+            style={{ borderColor: color }}
+          >
+            <div ref={(el) => (textRefs.current[4] = el)}>
+              <p>Tech Used in This Website</p>
+              <ul
+                className="flex flex-col underlineCssResume mt-5"
+                style={{ '--after-bg-color': color }}
+              >
+                <li>
+                  <a
+                    href="https://vite.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    React (Vite)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://tailwindcss.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Tailwind CSS
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://locomotivemtl.github.io/locomotive-scroll/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Locomotive
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://gsap.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GSAP
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.framer.com/motion/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Framer Motion
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -206,9 +203,7 @@ const Footer = () => {
 
       {/* Footer Message */}
       <div className="h-40 flex flex-col justify-end mb-5">
-        <p>
-          Designed and Created by Tushar Bhatt
-        </p>
+        <p>Designed and Created by Tushar Bhatt</p>
       </div>
     </div>
   );

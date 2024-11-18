@@ -7,7 +7,7 @@ const HintPopup = ({ isVisible }) => {
         isVisible ? 'opacity-70' : 'opacity-0'
       }`}
     >
-    Change the color theme!
+      Change the color theme!
     </div>
   );
 };

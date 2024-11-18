@@ -4,70 +4,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
 @font-face {
-    font-family: Bright;
-    src: url(assets/fonts/Bright\ Melody\ Display\ Typeface.otf);
+  font-family: Bright;
+  src: url(assets/fonts/Bright\ Melody\ Display\ Typeface.otf);
 }
 
 @font-face {
-    font-family: 'round';
-    src: url('../assets/fonts/round8-four-webfont.eot');
-    src: url('../assets/fonts/round8-four-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../assets/fonts/round8-four-webfont.woff2') format('woff2'),
-         url('../assets/fonts/round8-four-webfont.woff') format('woff'),
-         url('../assets/fonts/round8-four-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'round';
+  src: url('../assets/fonts/round8-four-webfont.eot');
+  src:
+    url('../assets/fonts/round8-four-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/round8-four-webfont.woff2') format('woff2'),
+    url('../assets/fonts/round8-four-webfont.woff') format('woff'),
+    url('../assets/fonts/round8-four-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .logo {
-    font-family: "Bagel Fat One", system-ui;
+  font-family: 'Bagel Fat One', system-ui;
 }
 
 .underlineCss li {
-    position: relative;
-    transition: all 0.4s ease;
-    overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
 }
 
 .underlineCss li a {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
-
 
 .underlineCss li a:hover::after {
-    bottom: -10%;
-    left: 0;
-    border-radius: 10rem;
+  bottom: -10%;
+  left: 0;
+  border-radius: 10rem;
 }
 
-.underlineCss li a::after  {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    background-color: var(--after-bg-color); /* Use the variable */
-    display: block;
-    left: -100%;
-    transition: all .5s ease;
+.underlineCss li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background-color: var(--after-bg-color); /* Use the variable */
+  display: block;
+  left: -100%;
+  transition: all 0.5s ease;
 }
 
 .agdasima {
-    font-family: "Agdasima", sans-serif;
+  font-family: 'Agdasima', sans-serif;
 }
 
 .advent-pro {
-    font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
 }
 
-  /* Media Query for small screens (phones) */
+/* Media Query for small screens (phones) */
 @media (max-width: 40rem) {
-    /* nav li {
+  /* nav li {
         display: none;
     } */
-    .logo {
-        font-size: 2rem;
-    }
+  .logo {
+    font-size: 2rem;
+  }
 }
-

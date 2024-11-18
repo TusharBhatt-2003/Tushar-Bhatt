@@ -5,8 +5,8 @@ const ProjectDesc = ({
   description,
   technologies,
   category,
-  bgColor = "#ffffff", // Default background color if not provided
-  pageBGcolor = "#000000", // Default page background color if not provided
+  bgColor = '#ffffff', // Default background color if not provided
+  pageBGcolor = '#000000', // Default page background color if not provided
   link,
   github,
 }) => {
@@ -44,20 +44,33 @@ const ProjectDesc = ({
       {/* Content with the custom ::selection class */}
       <div
         className="inverted-selection"
-        style={{ color: pageBGcolor, transition: 'color 1.5s ease-in-out, background-color 1.5s ease-in-out'}} // Text color transition
+        style={{
+          color: pageBGcolor,
+          transition:
+            'color 1.5s ease-in-out, background-color 1.5s ease-in-out',
+        }} // Text color transition
       >
         <h2 className="text-3xl font-bold mb-4 font-['Integral'] inverted-selection">
           {name}
-        </h2> 
-        <p className="text-xs mb-4 inverted-selection font-['Aero']">{description}</p>
+        </h2>
+        <p className="text-xs mb-4 inverted-selection font-['Aero']">
+          {description}
+        </p>
         <p className="text-xs inverted-selection font-['Aero']">
-          <h1 className="text-md inverted-selection font-extrabold">Technologies: </h1> 
+          <h1 className="text-md inverted-selection font-extrabold">
+            Technologies:{' '}
+          </h1>
           {technologies}
         </p>
-        <a href={github} className="font-extrabold inverted-selection font-['Aero']">
+        <a
+          href={github}
+          className="font-extrabold inverted-selection font-['Aero']"
+        >
           Code
         </a>
-        <p className="text-xs mt-2 uppercase inverted-selection font-['Aero'] opacity-70 mb-5">{category}</p>
+        <p className="text-xs mt-2 uppercase inverted-selection font-['Aero'] opacity-70 mb-5">
+          {category}
+        </p>
       </div>
     </motion.div>
   );
