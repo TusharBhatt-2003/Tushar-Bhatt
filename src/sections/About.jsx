@@ -57,8 +57,8 @@ const About = () => {
       style={{ backgroundColor: textColor, color:  color, '--after-bg-color': color }}
     >
       <div
-        className="border-4 m-5 rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
-        style={{ borderColor: textColor }}
+        className="m-5 rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
+        // style={{ borderColor: textColor }}
          data-scroll data-section data-scroll-speed="1"
       >
         {/* Global style tag to apply specific ::selection styles */}
@@ -108,7 +108,7 @@ const About = () => {
         <motion.p
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 800, damping: 20 }}
-          className="my-5 py-5 px-10 rounded-lg " // Add a unique class for custom selection
+          className="my-5 py-5 paper relative overflow-hidden px-10 rounded-lg " // Add a unique class for custom selection
           style={{ backgroundColor: color, color: textColor }}
         >
           Please take a moment to explore my portfolio, where you'll find a curated selection of my projects. If you are interested in working together or have any inquiries, I would love to hear from you. Thank you for visiting my portfolio!

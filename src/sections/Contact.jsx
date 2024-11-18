@@ -118,7 +118,7 @@ function Contact() {
              </motion.a>
                        </div>
         </div>
-        <div className="py-5 m-5 rounded-3xl px-8 lg:px-10 lg:py-5 w-fit lg:h-fit"
+        <div className="py-5 m-5 paper relative overflow-hidden rounded-3xl px-8 lg:px-10 lg:py-5 w-fit lg:h-fit"
              style={{ backgroundColor: textColor, color: color }}>
           <h1 className="text-4xl">
             Collab?

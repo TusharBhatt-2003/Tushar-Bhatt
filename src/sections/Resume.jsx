@@ -1,21 +1,18 @@
 import { useColor } from "../context/ColorContext";
-import ResumeCard from '../Components/ResumeCard/Resumecard';
-import resumeData from '../data/resumeData';
-import { motion } from 'framer-motion';
+import { ResumeContainer, Buttons } from '../Components/resume/index.js'
 import { useEffect, useRef } from 'react';
+import { motion } from "framer-motion";
 import gsap from 'gsap';
-
-function Resume() {
+const Resume = () => {
   const { color, textColor } = useColor();
+  const sectionRef = useRef(null);
   const letterRefs = useRef([]); // Reference for each letter
-  const sectionRef = useRef(null); // Reference for the entire resume section
-
-  // Animation for letters when the resume section is in view
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Animate the "Resume." text when the section is visible
+          // Animate the "About Me" text when the section is visible
           gsap.fromTo(
             letterRefs.current,
             { opacity: 0, y: 50 }, // Initial state: letters start lower with 0 opacity
@@ -24,7 +21,7 @@ function Resume() {
               y: 0,
               duration: 1.5,
               stagger: 0.1, // Animate letters one by one
-              ease: "elastic.out(1, 0.3)" 
+              ease: "elastic.out(1, 0.3)",
             }
           );
         }
@@ -40,89 +37,34 @@ function Resume() {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
-
   return (
     <div
-     id="resume"
-     ref={sectionRef} // Attach the section reference for the IntersectionObserver
-     className='h-fit w-screen flex justify-center items-center py-20 font-["Aero"]'
-     style={{ backgroundColor: color, color: textColor }}
+      id="resume"
+      ref={sectionRef}
+      className="h-screen w-screen grid place-content-center py-20 font-['Aero']"
+      style={{ color: textColor }}
     >
-      <div className="m-5  rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
-           style={{  backgroundColor: textColor }}>
-        <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral']">
-        {/* Animate each letter in "Resume" */}
-        {"Resume.".split("").map((letter, index) => (
+      <div className="m-5 flex flex-col justify-evenly rounded-3xl px-4 lg:px-10 lg:w-[60vw] h-[80vh]">
+             <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral'] inverted-selection">
+          {"resume.".split("").map((letter, index) => (
             <motion.span
               ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
               key={index}
-              className="cursor-pointer font-bold mb-5"
+              className="cursor-pointer mb-5 font-bold"
               style={{
                 display: "inline-block", // Ensure inline display
-                marginRight: letter === " " ? "1rem" : "0",
-                color: color
-                 // Add space between "About" and "Me"
+                marginRight: letter === " " ? "1rem" : "0", // Add space between "About" and "Me"
               }}
             >
               {letter}
             </motion.span>
           ))}
         </h1>
-        <div className="resume-container  flex flex-col md:grid md:grid-cols-2  gap-4">
-          <ResumeCard title="Education" items={resumeData.education} />
-          <ResumeCard title="Courses" items={resumeData.courses} />
-          <ResumeCard title="Skills" items={resumeData.skills} /> 
-          <ResumeCard title="Certificates" items={resumeData.certificates} />
-        </div>
-        <div className="flex justify-around items-center select-none">
-            <motion.a
-              href="/TusharBhatt_CV.pdf" // Link to the CV PDF file in the public folder
-              target="_blank" // Open the PDF in a new tab
-              rel="noopener noreferrer" // Security measure when opening new tab
-              whileHover={{ 
-                scale: 1.1,
-                backgroundColor: textColor, // Change background color to textColor
-                color: color, // Make text transparent
-                borderColor: color, // Make border transparent
-                 }}
-              whileTap={{ scale: 0.5 }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 25,
-                mass: 1,
-              }}
-              className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
-              style={{ borderColor: color, color: color }}
-            >
-              My CV
-            </motion.a>
-            <motion.a
-              href="/TusharBhatt_FrontEndDeveloper_Resume.pdf" // Link to the CV PDF file in the public folder
-              target="_blank" // Open the PDF in a new tab
-              rel="noopener noreferrer" // Security measure when opening new tab
-              whileHover={{ 
-                scale: 1.1,
-                backgroundColor: textColor, // Change background color to textColor
-                color: color, // Make text transparent
-                borderColor: color, // Make border transparent
-                 }}
-              whileTap={{ scale: 0.5 }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 25,
-                mass: 1,
-              }}
-              className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
-              style={{ borderColor: color, color: color }}
-            >
-             My Resume
-            </motion.a>
-          </div>
+        <ResumeContainer />
+        <Buttons color={color} textColor={textColor} />
       </div>
     </div>
   );
-}
+};
 
 export default Resume;

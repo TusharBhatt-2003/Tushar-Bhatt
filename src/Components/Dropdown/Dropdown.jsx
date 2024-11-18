@@ -57,7 +57,7 @@ function Dropdown() {
       </button>
       {dropdownToggled && ( // Conditionally render the menu items
         <div
-          className="dropdown-menu absolute -right-3 top-16 flex justify-center text-center flex-col-reverse rounded-xl drop-shadow-2xl overflow-hidden"
+          className="dropdown-menu paper absolute -right-3 top-16 flex justify-center text-center flex-col-reverse rounded-xl drop-shadow-2xl overflow-hidden"
           style={{ backgroundColor: textColor, opacity: 0.9, color: color, borderColor: color }}
         >
           {menuItems.map((menu, index) => (
@@ -71,7 +71,7 @@ function Dropdown() {
                 onClick={() => handleClick(menu.id)} // Set active item on click
                 onMouseEnter={() => handleMouseEnter(menu.id)} // Set hovered item on mouse enter
                 onMouseLeave={handleMouseLeave} // Reset hover item on mouse leave
-                className={`pb-1 pt-2 px-2 m-1 font-["Aero"] rounded-lg`}  // Always add hover effect
+                className={`pb-1  pt-2 px-2 m-1 font-["Aero"] rounded-lg`}  // Always add hover effect
                 style={{
                   backgroundColor:
                     activeItem === menu.id ? color : hoverItem === menu.id ? color : '',

@@ -24,7 +24,7 @@ const ProjectDesc = ({
           restDelta: 0.001,
         },
       }}
-      className="project-desc self-center space-y-5 px-10 py-5 h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
+      className="project-desc paper overflow-hidden self-center space-y-5 px-10 py-5 h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
       style={{
         backgroundColor: bgColor,
         transition: 'background-color 1.5s ease-in-out, color 1.5s ease-in-out', // Smooth background transition
