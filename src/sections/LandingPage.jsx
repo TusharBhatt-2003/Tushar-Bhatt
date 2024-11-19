@@ -22,6 +22,8 @@ const LandingPage = () => {
   const [currentLanguage, setCurrentLanguage] = useState('japanese');
   const letterRefs = useRef([]);
   const sectionRef = useRef(null);
+  const initialAnimationRef1 = useRef(null);
+  const initialAnimationRef2 = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [showHint, setShowHint] = useState(false);
 
@@ -65,16 +67,17 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-    // Initial animation on page load
+    // Initial animation on page load for both sections
     gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0, y: 0, scale: .1 },
+      [initialAnimationRef1.current, initialAnimationRef2.current],
+      { opacity: 0, y: 50, scale: 0.1 },
       {
         opacity: 1,
         y: 0,
         scale: 1,
         duration: 1.5,
         ease: 'power4.out',
+        stagger: 0.3, // Stagger the animation between the two elements
       }
     );
   }, []); // This runs only once, when the component mounts
@@ -92,7 +95,7 @@ const LandingPage = () => {
       ref={sectionRef}
       className="w-screen h-screen flex flex-col lg:flex-row items-center justify-evenly"
     >
-      <div className="lg:w-[40vw]">
+      <div ref={initialAnimationRef1} className="lg:w-[40vw]">
         <Hero
           currentLanguage={currentLanguage}
           translations={translations}
@@ -103,7 +106,7 @@ const LandingPage = () => {
         />
         <LocationInfo textColor={textColor} />
       </div>
-      <div className="lg:w-[60vw] flex flex-col items-center text-center">
+      <div ref={initialAnimationRef2} className="lg:w-[60vw] flex flex-col items-center text-center">
         <ParagraphSection
           paragraphs={paragraphs}
           currentColorIndex={currentColorIndex}
