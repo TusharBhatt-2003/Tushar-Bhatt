@@ -72,6 +72,7 @@ const LandingPage = () => {
 
   return (
     <div
+    id='landingPage'
       ref={sectionRef}
       className="w-screen h-screen flex flex-col lg:flex-row items-center justify-evenly"
     >
