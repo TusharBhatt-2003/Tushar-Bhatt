@@ -1,5 +1,7 @@
 // Color and paragraph data
 export const colors = [
+  { bgColor: '#ece6d3', textColor: '#771011' }, // Red Cream
+  { bgColor: '#6a6f4c', textColor: '#cbb89d' }, // Forest Green
   { bgColor: '#000000', textColor: '#F5F0E3' }, // Black
   { bgColor: '#ebebdf', textColor: '#000000' }, // White Grey
   { bgColor: '#E7D7C2', textColor: '#4342A5' },
@@ -16,8 +18,6 @@ export const colors = [
   { bgColor: '#f6f1dc', textColor: '#173773' }, // Cream & Blue
   { bgColor: '#1D2173', textColor: '#FEFFDC' }, // Blue
   { bgColor: '#534859', textColor: '#fbf0e8' }, // Purple
-  { bgColor: '#ece6d3', textColor: '#771011' }, // Red Cream
-  { bgColor: '#6a6f4c', textColor: '#cbb89d' }, // Forest Green
   { bgColor: '#000000', textColor: '#9C3A83' }, // Light Pink
   { bgColor: '#f2f2e6', textColor: '#ed6767' }, // Orange
   { bgColor: '#f8f7ef', textColor: '#ff5394' }, // Pink White
