@@ -4,7 +4,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import projectData from '../data/projectData';
 import { motion } from 'framer-motion';
 import { useColor } from '../context/ColorContext';
-import { ProjectList, ProjectDescription } from '../Components/projects/projectContainer/index.js'
+import {
+  ProjectList,
+  ProjectDescription,
+} from '../Components/projects/projectContainer/index.js';
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger with GSAP
 
 const Projects = () => {

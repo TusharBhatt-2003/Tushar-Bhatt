@@ -2,6 +2,12 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useColor } from '../context/ColorContext';
 import { motion } from 'framer-motion';
+import {
+  aboutMeNote,
+  aboutMeParagraph,
+  aboutMeParagraph2,
+  aboutName,
+} from '../const';
 
 const About = () => {
   const { color, textColor } = useColor(); // Context values for color
@@ -104,26 +110,16 @@ const About = () => {
                 href="https://www.instagram.com/_tush_ar._._/"
                 className="inverted-selection"
               >
-                Tushar Bhatt
+                {aboutName}
               </a>
               ,
             </p>
           </div>
-          21-year-old front-end developer currently residing in Faridabad.
-          Freshly graduated with a BCA from MDU, I’ve been honing my skills in
-          web development and problem-solving. With a strong foundation in HTML,
-          CSS, and JavaScript, I’ve also delved into popular frameworks like
-          React, Vite, Tailwind, and Bootstrap. Eager to expand my expertise,
-          I’m currently diving into the MERN stack to become a well-rounded
-          full-stack developer.
+          {aboutMeParagraph}
         </p>
 
         {/* Additional paragraph */}
-        <p className="my-5 inverted-selection">
-          Additionally, I'm exploring animation and motion libraries such as
-          Framer Motion, GSAP, and Locomotive, as well as 3D rendering with
-          React Three.
-        </p>
+        <p className="my-5 inverted-selection">{aboutMeParagraph2}</p>
 
         {/* Last paragraph with inverted selection */}
         <motion.p
@@ -132,10 +128,7 @@ const About = () => {
           className="my-5 py-5 paper relative overflow-hidden px-10 rounded-lg " // Add a unique class for custom selection
           style={{ backgroundColor: color, color: textColor }}
         >
-          Please take a moment to explore my portfolio, where you'll find a
-          curated selection of my projects. If you are interested in working
-          together or have any inquiries, I would love to hear from you. Thank
-          you for visiting my portfolio!
+          {aboutMeNote}
         </motion.p>
       </div>
     </div>

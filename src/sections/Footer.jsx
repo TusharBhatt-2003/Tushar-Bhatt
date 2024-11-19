@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useColor } from '../context/ColorContext';
 import { colors } from '../data/colorData'; // Import colors array
+import { addressData, navLinks, socialLinks, techUsed } from '../const';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,11 +66,11 @@ const Footer = () => {
             style={{ borderColor: color }}
             ref={(el) => (textRefs.current[1] = el)}
           >
-            <a href="#landingPage">Home</a>
-            <a href="#aboutme">About Me</a>
-            <a href="#resume">Resume</a>
-            <a href="#projects">Projects</a>
-            <a href="#contactme">Contact Me</a>
+            {navLinks.map((link, index) => (
+              <a key={index} href={link.href} className="">
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -83,11 +84,9 @@ const Footer = () => {
             style={{ borderColor: color }}
             ref={(el) => (textRefs.current[2] = el)}
           >
-            <p>
-              Faridabad, Haryana <br /> Delhi NCR <br /> INDIA
-            </p>
-            <br />
-            <p>Not giving you the whole address</p>
+            {addressData.map((item, index) => (
+              <p key={index}>{item.line}</p>
+            ))}
           </div>
         </div>
 
@@ -107,33 +106,13 @@ const Footer = () => {
               className="flex flex-col underlineCssResume"
               style={{ '--after-bg-color': color }}
             >
-              <li>
-                <a
-                  href="https://github.com/TusharBhatt-2003"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/tushar-bhatt-05b8b11a5/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/_tush_ar._._/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Instagram
-                </a>
-              </li>
+              {socialLinks.map((link, index) => (
+                <li key={index}>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -150,51 +129,17 @@ const Footer = () => {
                 className="flex flex-col underlineCssResume mt-5"
                 style={{ '--after-bg-color': color }}
               >
-                <li>
-                  <a
-                    href="https://vite.dev/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    React (Vite)
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Tailwind CSS
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://locomotivemtl.github.io/locomotive-scroll/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Locomotive
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://gsap.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GSAP
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.framer.com/motion/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Framer Motion
-                  </a>
-                </li>
+                {techUsed.map((tech, index) => (
+                  <li key={index}>
+                    <a
+                      href={tech.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {tech.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
