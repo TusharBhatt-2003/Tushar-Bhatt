@@ -8,6 +8,7 @@ import {
   Button,
   LocationInfo,
 } from '../Components/Landing/index.js';
+
 const translations = {
   english: { text: 'TUSHAR', font: 'Bagel Fat One' },
   japanese: { text: 'タシャール', font: 'Rampart One' },
@@ -63,6 +64,21 @@ const LandingPage = () => {
     return () => clearInterval(languageInterval);
   }, []);
 
+  useEffect(() => {
+    // Initial animation on page load
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0, y: 0, scale: .1 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1.5,
+        ease: 'power4.out',
+      }
+    );
+  }, []); // This runs only once, when the component mounts
+
   const handleColorChange = () => {
     const nextColorIndex = (currentColorIndex + 1) % colors.length;
     setCurrentColorIndex(nextColorIndex);
@@ -72,7 +88,7 @@ const LandingPage = () => {
 
   return (
     <div
-    id='landingPage'
+      id="landingPage"
       ref={sectionRef}
       className="w-screen h-screen flex flex-col lg:flex-row items-center justify-evenly"
     >
