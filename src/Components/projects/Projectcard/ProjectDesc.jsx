@@ -63,10 +63,12 @@ const ProjectDesc = ({
           {technologies}
         </p>
         <a
+         target="_blank"
+         rel="noopener noreferrer"
           href={github}
           className="font-extrabold inverted-selection font-['Aero']"
         >
-          Code
+          GitHub Repo
         </a>
         <p className="text-xs mt-2 uppercase inverted-selection font-['Aero'] opacity-70 mb-5">
           {category}
