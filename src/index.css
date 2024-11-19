@@ -170,4 +170,5 @@ nav {
   top: 0;
   left: 0;
   mix-blend-mode: multiply;
+  z-index: -1;
 }

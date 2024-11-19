@@ -24,7 +24,7 @@ const ProjectDesc = ({
           restDelta: 0.001,
         },
       }}
-      className="project-desc paper overflow-hidden self-center space-y-5 px-10 py-5 h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
+      className="project-desc z-0 paper overflow-hidden self-center space-y-5 px-10  h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
       style={{
         backgroundColor: bgColor,
         transition: 'background-color 1.5s ease-in-out, color 1.5s ease-in-out', // Smooth background transition
@@ -56,9 +56,9 @@ const ProjectDesc = ({
         <p className="text-xs mb-4 inverted-selection font-['Aero']">
           {description}
         </p>
-        <p className="text-xs inverted-selection font-['Aero']">
+        <p className="text-xs mb-2 inverted-selection font-['Aero']">
           <h1 className="text-md inverted-selection font-extrabold">
-            Technologies:{' '}
+            Technologies:
           </h1>
           {technologies}
         </p>
@@ -68,7 +68,7 @@ const ProjectDesc = ({
           href={github}
           className="font-extrabold inverted-selection font-['Aero']"
         >
-          GitHub Repo
+          GitHub Rep
         </a>
         <p className="text-xs mt-2 uppercase inverted-selection font-['Aero'] opacity-70 mb-5">
           {category}
