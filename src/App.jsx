@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar.jsx';
 import LandingPage from './sections/LandingPage';
 import About from './sections/About';
@@ -7,24 +8,19 @@ import Resume from './sections/Resume';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
-import Loader from './Components/Loader'; // Import the Loader component
+import Loader from './Components/Loader';
+import Theme from './Page/Theme'; // Import Theme page
 import './App.css';
 import { useColor } from './context/ColorContext';
 
 const App = () => {
   const { color, textColor } = useColor();
-
-  // State to manage the loading state of the app
   const [loading, setLoading] = useState(true);
-  const [locomotiveScroll, setLocomotiveScroll] = useState(null); // Add state to manage LocomotiveScroll instance
+  const [locomotiveScroll, setLocomotiveScroll] = useState(null);
 
   useEffect(() => {
-    // Set a loading timeout to simulate loading process
-    const loadingTimeout = setTimeout(() => {
-      setLoading(false); // Once done, set loading to false to hide the Loader
-    }, 3000); // Adjust the time as necessary
+    const loadingTimeout = setTimeout(() => setLoading(false), 3000);
 
-    // Initialize LocomotiveScroll only after loading is complete
     if (!loading) {
       const scrollInstance = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
@@ -33,16 +29,12 @@ const App = () => {
       setLocomotiveScroll(scrollInstance);
     }
 
-    // Cleanup function to destroy LocomotiveScroll on unmount
     return () => {
-      clearTimeout(loadingTimeout); // Clear the timeout
-      if (locomotiveScroll) {
-        locomotiveScroll.destroy();
-      }
+      clearTimeout(loadingTimeout);
+      if (locomotiveScroll) locomotiveScroll.destroy();
     };
-  }, [loading]); // Dependency array includes loading state
+  }, [loading]);
 
-  // Convert hex or CSS color names to rgba with desired opacity
   const rgbaColor = (color, opacity = 0.7) => {
     const tempDiv = document.createElement('div');
     tempDiv.style.color = color;
@@ -55,32 +47,45 @@ const App = () => {
   return (
     <>
       {loading ? (
-        <Loader /> // Show the Loader component when loading is true
+        <Loader />
       ) : (
-        <div
-          className="w-full h-full"
-          data-scroll-container
-          style={{ backgroundColor: color, color: textColor }}
-        >
-          {/* Dynamic style element for ::selection with opacity control */}
-          <style>
-            {`
-              ::selection {
-                background: ${rgbaColor(textColor, 0.7)}; /* Use rgba to control opacity */
-                color: ${color};
-              }
-            `}
-          </style>
+        <Router>
+          <div
+            className="w-full h-full"
+            data-scroll-container
+            style={{ backgroundColor: color, color: textColor }}
+          >
+            <style>
+              {`
+                ::selection {
+                  background: ${rgbaColor(textColor, 0.7)};
+                  color: ${color};
+                }
+              `}
+            </style>
 
-          {/* Main Content */}
-          <NavBar />
-          <LandingPage />
-          <About />
-          <Resume />
-          <Projects />
-          <Contact />
-          <Footer />
-        </div>
+            <NavBar />
+
+            <Routes>
+              {/* Main Content */}
+              <Route
+                path="/"
+                element={
+                  <>
+                    <LandingPage />
+                    <About />
+                    <Resume />
+                    <Projects />
+                    <Contact />
+                    <Footer />
+                  </>
+                }
+              />
+              {/* Theme Page */}
+              <Route path="/theme" element={<Theme />} />
+            </Routes>
+          </div>
+        </Router>
       )}
     </>
   );

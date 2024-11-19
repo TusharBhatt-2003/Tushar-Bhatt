@@ -5,13 +5,18 @@ import { useColor } from '../context/ColorContext';
 import { colors } from '../data/colorData'; // Import colors array
 import Dropdown from './Dropdown/Dropdown';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
+import { T } from '../const';
+import HomeButton from './HomeButton';
+import { useLocation } from 'react-router-dom';
+
+
 
 export default function NavBar() {
   const { textColor, color, changeColor } = useColor(); // Destructure changeColor from context
   const [showHomeLink, setShowHomeLink] = useState(false); // State to track Home link visibility
   const homeLinkRef = React.useRef(null); // Reference for the Home link
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
-
+  const location = useLocation();
   const handleColorChange = () => {
     const nextColorIndex = (currentColorIndex + 1) % colors.length;
     setCurrentColorIndex(nextColorIndex);
@@ -90,7 +95,7 @@ export default function NavBar() {
       <div onClick={handleColorChange}>
         {' '}
         {/* Add onClick event to logo */}
-        <h1 className="logo text-2xl cursor-pointer select-none">Tushar</h1>
+        <h1 className="logo text-2xl cursor-pointer select-none">{T}</h1>
       </div>
       <ul
         className="md:flex text-xl font-thin space-x-4 pt-1 justify-center select-none hidden"
@@ -153,7 +158,12 @@ export default function NavBar() {
           </Link>
         </li>
       </ul>
-      <Dropdown />
+       
+         {location.pathname === '/theme' ? (
+          <HomeButton />      
+      ) : (
+        <Dropdown /> 
+      )}
     </nav>
   );
 }

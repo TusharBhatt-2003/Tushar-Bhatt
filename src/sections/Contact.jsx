@@ -1,4 +1,4 @@
-import GithubIcon from '../assets/logos/github-logo-fill';
+import GithubIcon from '../assets/logos/githubLogo';
 import Insta from '../assets/logos/insta';
 import E_mail_logo from '../assets/logos/e-mail-logo';
 import Linkedin from '../assets/logos/linkedin';

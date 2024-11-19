@@ -1,5 +1,5 @@
 // Constants for the whole webpage
-
+const T = 'Tushar'
 // About Me Section
 const aboutName = 'Tushar Bhatt';
 
@@ -68,6 +68,7 @@ const techUsed = [
 ];
 
 export {
+  T,
   aboutName,
   aboutMeParagraph,
   aboutMeParagraph2,

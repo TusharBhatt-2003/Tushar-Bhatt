@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import GithubIcon from '../../assets/logos/github-logo-fill';
+import GithubIcon from '../../assets/logos/githubLogo';
 
 const Buttons = ({ color, textColor, isHovered, setIsHovered }) => {
   return (

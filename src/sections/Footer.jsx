@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useColor } from '../context/ColorContext';
 import { colors } from '../data/colorData'; // Import colors array
-import { addressData, navLinks, socialLinks, techUsed } from '../const';
+import { addressData, navLinks, socialLinks, T, techUsed } from '../const';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +52,7 @@ const Footer = () => {
         className="font-['Bagel_Fat_One'] mt-5 w-fit self-center text-7xl mb-24 select-none drop-shadow cursor-pointer"
         onClick={handleColorChange}
       >
-        Tushar
+        {T}
         <p className="text-lg font-['Aero'] mt-2">Frontend Developer</p>
       </h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-fit">
