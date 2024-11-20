@@ -1,5 +1,5 @@
 // Constants for the whole webpage
-const T = 'Tushar'
+const T = 'Tushar';
 // About Me Section
 const aboutName = 'Tushar Bhatt';
 
@@ -22,11 +22,11 @@ you for visiting my portfolio!`;
 
 // Footer section
 const navLinks = [
-  { href: '#landingPage', label: 'Home' },
-  { href: '#aboutme', label: 'About Me' },
-  { href: '#resume', label: 'Resume' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contactme', label: 'Contact Me' },
+  { id: 'landingPage', label: 'Home' },
+  { id: 'aboutme', label: 'About me' },
+  { id: 'resume', label: 'Resume' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'contactme', label: 'Contact' },
 ];
 
 const addressData = [

@@ -78,7 +78,7 @@ const LandingPage = () => {
         duration: 1.5,
         ease: 'power4.out',
         stagger: 0.3, // Stagger the animation between the two elements
-      }
+      },
     );
   }, []); // This runs only once, when the component mounts
 
@@ -106,7 +106,10 @@ const LandingPage = () => {
         />
         <LocationInfo textColor={textColor} />
       </div>
-      <div ref={initialAnimationRef2} className="lg:w-[60vw] flex flex-col items-center text-center">
+      <div
+        ref={initialAnimationRef2}
+        className="lg:w-[60vw] flex flex-col items-center text-center"
+      >
         <ParagraphSection
           paragraphs={paragraphs}
           currentColorIndex={currentColorIndex}

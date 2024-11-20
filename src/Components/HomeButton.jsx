@@ -14,9 +14,10 @@ const HomeButton = () => {
   return (
     <button
       onClick={handleHomeClick}
-      style={{bottom: '20px', right: '20px' }} // Position the button at the bottom-right corner
+      style={{ bottom: '20px', right: '20px' }} // Position the button at the bottom-right corner
     >
-      <HomeBTN color={textColor} size="40"/> {/* Pass the textColor to HomeBTN */}
+      <HomeBTN color={textColor} size="40" />{' '}
+      {/* Pass the textColor to HomeBTN */}
     </button>
   );
 };

@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useColor } from '../context/ColorContext';
 import { colors } from '../data/colorData'; // Import colors array
 import { addressData, navLinks, socialLinks, T, techUsed } from '../const';
+import { Link } from 'react-scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,10 +67,18 @@ const Footer = () => {
             style={{ borderColor: color }}
             ref={(el) => (textRefs.current[1] = el)}
           >
-            {navLinks.map((link, index) => (
-              <a key={index} href={link.href} className="">
-                {link.label}
-              </a>
+            {navLinks.map((item) => (
+              <p key={item.id}>
+                <Link
+                  to={item.id}
+                  smooth={true}
+                  duration={500}
+                  offset={-50}
+                  className="cursor-pointer"
+                >
+                  {item.label}
+                </Link>
+              </p>
             ))}
           </div>
         </div>

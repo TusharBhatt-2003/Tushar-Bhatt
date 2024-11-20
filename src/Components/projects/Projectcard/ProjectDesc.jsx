@@ -63,8 +63,8 @@ const ProjectDesc = ({
           {technologies}
         </p>
         <a
-         target="_blank"
-         rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
           href={github}
           className="font-extrabold inverted-selection font-['Aero']"
         >

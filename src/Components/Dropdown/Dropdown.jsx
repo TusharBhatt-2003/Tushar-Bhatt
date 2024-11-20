@@ -32,7 +32,7 @@ function Dropdown() {
           duration: 0.5,
           stagger: 0.1,
           ease: 'bounce.out',
-        }
+        },
       );
     }
   }, [dropdownToggled]);
@@ -85,17 +85,19 @@ function Dropdown() {
                         activeItem === menu.id
                           ? color
                           : hoverItem === menu.id
-                          ? color
-                          : '',
+                            ? color
+                            : '',
                       color:
                         activeItem === menu.id
                           ? textColor
                           : hoverItem === menu.id
-                          ? textColor
-                          : '',
+                            ? textColor
+                            : '',
                       borderColor: hoverItem === menu.id ? color : '',
                       opacity:
-                        hoverItem === menu.id && activeItem !== menu.id ? 0.8 : 1,
+                        hoverItem === menu.id && activeItem !== menu.id
+                          ? 0.8
+                          : 1,
                     }}
                     ref={(el) => (menuRefs.current[index] = el)}
                   >
@@ -115,7 +117,6 @@ function Dropdown() {
                 backgroundColor: color,
                 color: textColor,
                 borderRadius: '50%',
-               
               }}
             >
               <ThemeIcon color={textColor} />
