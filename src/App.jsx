@@ -52,7 +52,7 @@ const App = () => {
         <Router>
           <div
             className="w-full h-full"
-            data-scroll-container
+          
             style={{ backgroundColor: color, color: textColor }}
           >
             <style>

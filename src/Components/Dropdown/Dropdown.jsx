@@ -58,7 +58,7 @@ function Dropdown() {
       {dropdownToggled && (
         <div className="absolute top-16 -right-4 flex flex-col items-center justify-center gap-5">
           <div
-            className="flex flex-col items-center text-center rounded-xl drop-shadow-2xl select-none"
+            className="flex flex-col paper overflow-hidden items-center text-center rounded-xl drop-shadow-2xl select-none"
             style={{
               backgroundColor: textColor,
               opacity: 0.9,

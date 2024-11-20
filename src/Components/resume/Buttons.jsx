@@ -53,7 +53,7 @@ const Buttons = ({ color, textColor }) => {
           target="_blank"
           rel="noopener noreferrer"
           ref={(el) => (buttonRefs.current[index] = el)} // Attach ref to each button
-          className="border-2 rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
+          className="border-2  rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center"
           style={{ borderColor: textColor, color: textColor }}
         >
           {text}
