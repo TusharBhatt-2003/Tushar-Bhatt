@@ -59,7 +59,7 @@ const ThemePage = () => {
         Select a <br />
         Theme
       </h1>
-        <div className="flex flex-col items-center justify-center cursor-pointer select-none"
+        <div className="flex lg:hidden flex-col items-center justify-center cursor-pointer select-none"
           onClick={handleCatClick} // Add onClick handler for the cat click
         >
         <p className='pl-20'>Meow*</p>
