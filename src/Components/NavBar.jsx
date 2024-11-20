@@ -123,7 +123,7 @@ export default function NavBar() {
         </ul>
       )}
 
-      {location.pathname === '/theme' ? <HomeButton /> : <Dropdown />}
+      {location.pathname != '/' ? <HomeButton /> : <Dropdown />}
     </nav>
   );
 }

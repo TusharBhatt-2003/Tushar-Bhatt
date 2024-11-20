@@ -7,6 +7,7 @@ import Projects from '../sections/Projects';
 import Contact from '../sections/Contact';
 import Theme from '../pages/Theme'; // Import the Theme page
 import Footer from '../sections/Footer';
+import CatGame from '../easterEggs/CatGame';
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/theme" element={<Theme />} />
+        <Route path="/cat-game" element={<CatGame />} />
       </Routes>
       <Footer />
     </>
