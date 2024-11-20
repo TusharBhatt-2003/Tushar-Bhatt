@@ -52,6 +52,16 @@ body {
   height: 100%; /* Important for Locomotive to work properly */
 }
 
+/* Example of hide-scrollbar class */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;      /* Firefox */
+}
+
+
 .underlineCssResume li {
   position: relative;
   overflow: hidden;
