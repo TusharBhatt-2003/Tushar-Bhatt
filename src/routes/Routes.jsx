@@ -7,7 +7,7 @@ import Projects from '../sections/Projects';
 import Contact from '../sections/Contact';
 import Theme from '../pages/Theme'; // Import the Theme page
 import Footer from '../sections/Footer';
-import CatGame from '../easterEggs/CatGame';
+import CatGame from '../easterEggs/Game/CatGame';
 
 const AppRoutes = () => {
   return (

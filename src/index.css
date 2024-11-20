@@ -43,6 +43,16 @@ body {
   src: url(assets/fonts/MarselTRIAL-Black-BF6618a1b3729b1.otf);
 }
 
+@font-face {
+  font-family: Bigger;
+  src: url(assets/fonts/BiggerDisplay.otf);
+}
+
+@font-face {
+  font-family: GameOver;
+  src: url(assets/fonts/Mladen.ttf);
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
   display: none;

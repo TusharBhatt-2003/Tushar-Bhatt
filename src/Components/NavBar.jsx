@@ -89,7 +89,7 @@ export default function NavBar() {
         <h1 className="logo text-2xl cursor-pointer select-none">{T}</h1>
       </div>
 
-      {location.pathname !== '/theme' && (
+      {location.pathname === '/' && (
         <ul
           className="md:flex text-xl font-thin space-x-4 pt-1 justify-center select-none hidden"
           style={{ color: textColor }}

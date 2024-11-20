@@ -12,7 +12,7 @@ import Loader from './Components/Loader';
 import Theme from './Page/Theme'; // Import Theme page
 import './App.css';
 import { useColor } from './context/ColorContext';
-import CatGame from './easterEggs/CatGame.jsx';
+import CatGame from './easterEggs/Game/CatGame.jsx';
 
 const App = () => {
   const { color, textColor } = useColor();

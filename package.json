@@ -19,8 +19,10 @@
     "hamburger-react": "^2.5.1",
     "locomotive-scroll": "^5.0.0-beta.21",
     "lucide-react": "^0.447.0",
+    "phaser": "^3.87.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-draggable": "^4.4.6",
     "react-router-dom": "^6.28.0",
     "react-scroll": "^1.9.0",
     "tushar": "file:"
