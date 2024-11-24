@@ -13,10 +13,10 @@ const Hero = ({
   return (
     <>
       <div className="md:ml-10 w-fit lg:w-full flex flex-col justify-center lg:items-start items-center">
-        <h1 className="text-5xl lg:text-6xl font-bold font-['Bright'] drop-shadow-2xl">
+        <h1 className="text-5xl lg:text-6xl font-bold font-['Bright']">
           Hey There!
         </h1>
-        <h1 className="text-4xl lg:text-5xl mt-7 md:mt-5 drop-shadow-2xl">
+        <h1 className="text-4xl lg:text-5xl mt-7 md:mt-5">
           I'm{' '}
           {translations[currentLanguage].text
             .split(currentLanguage === 'hindi' ? ' ' : '')

@@ -55,7 +55,7 @@ const ProjectList = ({
             ))}
         </div>
       </div>
-      <div className="hidden  projectWindow md:flex flex-wrap justify-center gap-4 md:w-[60vw] px-5 select-none lg:pb-0 pb-10">
+      <div className="hidden  projectWindow md:flex flex-wrap justify-center gap-2 md:w-[60vw] px-5 select-none lg:pb-0 pb-10">
         {projects.map((project, index) => (
           <ProjectCard
             ref={(el) => (cardRefs.current[index] = el)}

@@ -102,8 +102,7 @@ export default function NavBar() {
               <Link
                 to={item.id}
                 smooth={true}
-                duration={500}
-                offset={-50}
+                duration={1500}
                 className="cursor-pointer"
               >
                 {item.label}
@@ -114,7 +113,7 @@ export default function NavBar() {
             <li
               className="cursor-pointer"
               style={{
-              color: textColor,
+                color: textColor,
               }}
             >
               <ThemeIcon color={textColor} size={20} />

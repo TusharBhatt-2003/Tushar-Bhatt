@@ -8,8 +8,12 @@ import Bomb from '../../assets/logos/Bomb';
 const CatGame = () => {
   const { textColor, color } = useColor();
 
-  const [ratQueue, setRatQueue] = useState(() => Array(3).fill().map(getRandomRat)); // Initialize with 3 rats
-  const [bombQueue, setBombQueue] = useState(() => Array(3).fill().map(getRandomBomb)); // Initialize with 3 bombs
+  const [ratQueue, setRatQueue] = useState(() =>
+    Array(3).fill().map(getRandomRat),
+  ); // Initialize with 3 rats
+  const [bombQueue, setBombQueue] = useState(() =>
+    Array(3).fill().map(getRandomBomb),
+  ); // Initialize with 3 bombs
   const [catPosition, setCatPosition] = useState(0); // Store cat's X position
   const [score, setScore] = useState(0);
   const [lives, setLives] = useState(7); // Cat starts with 7 lives
@@ -75,7 +79,10 @@ const CatGame = () => {
         return prevQueue.map((bomb) => {
           const newBombY = bomb.y + 5;
 
-          if (newBombY > window.innerHeight - 70 && Math.abs(catPosition - bomb.x) < 50) {
+          if (
+            newBombY > window.innerHeight - 70 &&
+            Math.abs(catPosition - bomb.x) < 50
+          ) {
             // Bomb hits the cat
             setLives((prevLives) => {
               const updatedLives = Math.max(prevLives - 1, 0);
@@ -104,7 +111,7 @@ const CatGame = () => {
     // Limit the cat's movement to stay within screen width
     const restrictedPosition = Math.min(
       Math.max(newPosition, 0), // Prevent moving off the left
-      screenWidth - 80 // Prevent moving off the right, considering the cat's size
+      screenWidth - 80, // Prevent moving off the right, considering the cat's size
     );
     setCatPosition(restrictedPosition);
   };
@@ -128,31 +135,42 @@ const CatGame = () => {
       className="w-full h-screen flex flex-col justify-between relative overflow-hidden"
       style={{ color: textColor }}
     >
-  {!gameStarted && (
-  <div className="w-full h-full flex flex-col justify-evenly items-center">
-    {/* Game Rules */}
-    <div className="text-start text-2xl font-['themeFont']  max-w-[80%]">
-      <h2 className="text-6xl text-center font-['Bigger'] uppercase mb-5">Game Rules</h2>
-      <p className="mb-2">1. Control the cat to catch falling rats and avoid bombs.</p>
-      <p className="mb-2">2. Each rat caught will increase your score. Big rats give more points!</p>
-      <p className="mb-2">3. Bombs will subtract one life each time they hit the cat.</p>
-      <p className="mb-4">4. You have 7 lives to start with. Game over when all lives are lost.</p>
-    </div>
+      {!gameStarted && (
+        <div className="w-full h-full flex flex-col justify-evenly items-center">
+          {/* Game Rules */}
+          <div className="text-start text-2xl font-['themeFont']  max-w-[80%]">
+            <h2 className="text-6xl text-center font-['Bigger'] uppercase mb-5">
+              Game Rules
+            </h2>
+            <p className="mb-2">
+              1. Control the cat to catch falling rats and avoid bombs.
+            </p>
+            <p className="mb-2">
+              2. Each rat caught will increase your score. Big rats give more
+              points!
+            </p>
+            <p className="mb-2">
+              3. Bombs will subtract one life each time they hit the cat.
+            </p>
+            <p className="mb-4">
+              4. You have 7 lives to start with. Game over when all lives are
+              lost.
+            </p>
+          </div>
 
-    {/* Play Game Button */}
-    <button
-      onClick={startGame}
-      className="font-['Bigger'] p-4 pt-5 rounded-lg text-4xl uppercase"
-      style={{
-        color: color,
-        backgroundColor: textColor
-      }}
-    >
-      Play Game
-    </button>
-  </div>
-)}
-
+          {/* Play Game Button */}
+          <button
+            onClick={startGame}
+            className="font-['Bigger'] p-4 pt-5 rounded-lg text-4xl uppercase"
+            style={{
+              color: color,
+              backgroundColor: textColor,
+            }}
+          >
+            Play Game
+          </button>
+        </div>
+      )}
 
       {/* If the game has started, show the game UI */}
       {gameStarted && (
@@ -168,7 +186,7 @@ const CatGame = () => {
             </div>
             {isGameOver && (
               <div className="mt-10 text-center">
-                <p className="text-3xl font-['GameOver']">Game Over!</p>
+                <p className="text-xl font-['GameOver']">Game Over!</p>
                 <button
                   onClick={handleGameOver}
                   className="px-6 pt-5 mt-10 font-['Bigger'] uppercase py-3 text-6xl border rounded-lg"
@@ -215,12 +233,16 @@ const CatGame = () => {
                     height: '30px',
                   }}
                 >
-                  <Bomb color={textColor} size="30" /> {/* Use Bomb component here */}
+                  <Bomb color={textColor} size="30" />{' '}
+                  {/* Use Bomb component here */}
                 </div>
               ))}
 
             {/* Draggable cat */}
-            <DraggableCat position={catPosition} onPositionChange={handleCatPositionChange} />
+            <DraggableCat
+              position={catPosition}
+              onPositionChange={handleCatPositionChange}
+            />
           </div>
         </>
       )}

@@ -4,7 +4,6 @@ import { gsap } from 'gsap';
 import { colors } from '../../data/colorData';
 import ThemeCard from './ThemeCard';
 
-
 const ThemeCardContainer = ({ textColor, handleThemeChange }) => {
   const cardRefs = useRef([]);
 
@@ -20,7 +19,7 @@ const ThemeCardContainer = ({ textColor, handleThemeChange }) => {
         duration: 5,
         stagger: 0.08,
         ease: 'elastic.out(1.1, 1)',
-      }
+      },
     );
   }, []);
 

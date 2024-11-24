@@ -20,7 +20,7 @@ const ThemePage = () => {
 
   // Function to handle cat click
   const handleCatClick = () => {
-    setClickCount(prevCount => {
+    setClickCount((prevCount) => {
       const newCount = prevCount + 1;
       if (newCount === 6) {
         navigate('/cat-game'); // Navigate to the cat game after 6 clicks
@@ -59,16 +59,26 @@ const ThemePage = () => {
         Select a <br />
         Theme
       </h1>
-        <div className="flex lg:hidden flex-col items-center justify-center cursor-pointer select-none"
-          onClick={handleCatClick} // Add onClick handler for the cat click
-        >
-        <p className='pl-20'>Meow*</p>
-          <Cat color={textColor} size="80" className="my-custom-class drop-shadow" />
-        </div>
+      <div
+        className="flex lg:hidden flex-col items-center justify-center cursor-pointer select-none"
+        onClick={handleCatClick} // Add onClick handler for the cat click
+      >
+        <p className="pl-20">Meow*</p>
+        <Cat
+          color={textColor}
+          size="80"
+          className="my-custom-class drop-shadow"
+        />
+      </div>
       <div>
         {/* Use the ThemeCardContainer component */}
-        <ThemeCardContainer textColor={textColor} handleThemeChange={handleThemeChange} />
-        <p className="text-xl text-center my-6 font-['themeFont']">There are {colors.length} themes available.</p>
+        <ThemeCardContainer
+          textColor={textColor}
+          handleThemeChange={handleThemeChange}
+        />
+        <p className="text-xl text-center my-6 font-['themeFont']">
+          There are {colors.length} themes available.
+        </p>
       </div>
     </div>
   );

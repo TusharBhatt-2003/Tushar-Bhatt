@@ -61,13 +61,11 @@ const Projects = () => {
     [projectData],
   );
 
-  const activeFilteredBgColor = activeProject
-    ? activeProject.bgColor
-    : textColor;
+  const activeFilteredBgColor = activeProject ? activeProject.bgColor : color;
 
   const activeFilteredPageBGcolor = activeProject
     ? activeProject.pageBGcolor
-    : color;
+    : textColor;
 
   // GSAP Animation for letters and project cards
 
@@ -193,6 +191,7 @@ const Projects = () => {
               damping: 10,
               bounce: 100,
             }}
+            whileHover={{ scale: 0.8 }} // Hover animation with scaling and slight rotation
             whileTap={{ scale: 0.6 }}
             aria-label={`View ${category} projects`} // Added ARIA label for accessibility
             className="p-2 pt-3 flex flex-col justify-center text-center rounded-lg text-sm font-bold transition-colors duration-500 ease-in-out"

@@ -56,8 +56,8 @@ body {
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
   display: none;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;      /* Firefox *
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox *
 }
 
 [data-scroll-container] {
@@ -69,10 +69,9 @@ body {
   display: none;
 }
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
-
 
 .underlineCssResume li {
   position: relative;
@@ -202,9 +201,8 @@ nav {
   top: 0;
   left: 0;
   mix-blend-mode: multiply;
-  z-index: -1;
+  z-index: 0;
 }
-
 
 .motion-btn {
   position: relative;

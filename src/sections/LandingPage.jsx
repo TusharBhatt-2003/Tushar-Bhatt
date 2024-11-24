@@ -70,14 +70,14 @@ const LandingPage = () => {
     // Initial animation on page load for both sections
     gsap.fromTo(
       [initialAnimationRef1.current, initialAnimationRef2.current],
-      { opacity: 0, y: 50, scale: 0.1 },
+      { opacity: 1, y: 100, scale: 0.5 },
       {
         opacity: 1,
         y: 0,
         scale: 1,
         duration: 1.5,
-        ease: 'power4.out',
-        stagger: 0.3, // Stagger the animation between the two elements
+        ease: 'elastic(2, 1.5)',
+        stagger: 0, // Stagger the animation between the two elements
       },
     );
   }, []); // This runs only once, when the component mounts
@@ -95,7 +95,13 @@ const LandingPage = () => {
       ref={sectionRef}
       className="w-screen h-screen flex flex-col lg:flex-row items-center justify-evenly"
     >
-      <div ref={initialAnimationRef1} className="lg:w-[40vw]">
+      <div
+        ref={initialAnimationRef1}
+        className="lg:w-[40vw]"
+        data-scroll
+        data-section
+        data-scroll-speed="-1"
+      >
         <Hero
           currentLanguage={currentLanguage}
           translations={translations}
@@ -109,6 +115,9 @@ const LandingPage = () => {
       <div
         ref={initialAnimationRef2}
         className="lg:w-[60vw] flex flex-col items-center text-center"
+        data-scroll
+        data-section
+        data-scroll-speed="1"
       >
         <ParagraphSection
           paragraphs={paragraphs}

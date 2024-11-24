@@ -33,6 +33,8 @@ const ProjectCard = ({
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      data-scroll
+      data-scroll-speed="0"
     >
       {/* Project Media (Image or Video) */}
       {image && (
@@ -54,6 +56,9 @@ const ProjectCard = ({
             />
           ) : (
             <img
+              data-scroll
+              data-scroll-speed="-1"
+              loading="lazy"
               src={image}
               alt={name}
               className="w-full h-full object-cover"

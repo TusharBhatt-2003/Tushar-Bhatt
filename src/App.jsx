@@ -53,7 +53,6 @@ const App = () => {
         <Router>
           <div
             className="w-full h-full"
-          
             style={{ backgroundColor: color, color: textColor }}
           >
             <style>
@@ -84,7 +83,8 @@ const App = () => {
               />
               {/* Theme Page */}
               <Route path="/theme" element={<Theme />} />
-              <Route path="/cat-game" element={<CatGame />} /> {/* The Cat Game page */}
+              <Route path="/cat-game" element={<CatGame />} />{' '}
+              {/* The Cat Game page */}
             </Routes>
           </div>
         </Router>

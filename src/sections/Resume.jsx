@@ -44,7 +44,12 @@ const Resume = () => {
       className="h-screen w-screen grid place-content-center py-20 font-['Aero'] overflow-hidden"
       style={{ color: textColor }}
     >
-      <div className="m-5 flex flex-col justify-evenly rounded-3xl px-4 lg:px-10 lg:w-[60vw] h-[80vh]">
+      <div
+        className="m-5 flex flex-col justify-evenly rounded-3xl px-4 lg:px-10 lg:w-[60vw] h-[80vh]"
+        data-scroll
+        data-section
+        data-scroll-speed="0"
+      >
         <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral'] inverted-selection">
           {'resume.'.split('').map((letter, index) => (
             <motion.span
@@ -61,7 +66,13 @@ const Resume = () => {
           ))}
         </h1>
         <ResumeContainer />
-        <Buttons color={color} textColor={textColor} />
+        <Buttons
+          data-scroll
+          data-section
+          data-scroll-speed="2"
+          color={color}
+          textColor={textColor}
+        />
       </div>
     </div>
   );
