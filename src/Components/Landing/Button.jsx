@@ -15,14 +15,15 @@ const Buttons = ({ color, textColor, isHovered, setIsHovered }) => {
         }}
         whileTap={{ scale: 0.9 }}
         transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-        className="mt-10 justify-center motion-btn flex items-center text-center border-2 rounded-lg text-xl select-none"
+        className="mt-10 z-10 sparkal justify-center motion-btn flex items-center text-center border-2 rounded-lg text-xl select-none"
         style={{
           '--after-bg-col': textColor,
           borderColor: textColor,
           color: textColor,
+          backgroundColor: color,
         }}
       >
-        <p className="px-3 py-2">Projects</p>
+        <p className="px-3 py-2 z-[9999]">Projects</p>
       </motion.a>
       <motion.a
         onHoverStart={() => setIsHovered(true)}

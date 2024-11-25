@@ -53,14 +53,14 @@ const ThemePage = () => {
   return (
     <div
       style={{ backgroundColor: color, color: textColor }}
-      className="w-full h-screen lg:h-fit pt-10 flex flex-col items-center justify-between"
+      className="w-full h-screen  pt-10 flex flex-col items-center justify-between"
     >
       <h1 className="text-4xl text-center md:text-5xl mt-10 mb-8 font-['Integral']">
         Select a <br />
         Theme
       </h1>
       <div
-        className="flex lg:hidden flex-col items-center justify-center cursor-pointer select-none"
+        className="flex flex-col items-center justify-center cursor-pointer my-10 select-none"
         onClick={handleCatClick} // Add onClick handler for the cat click
       >
         <p className="pl-20">Meow*</p>
@@ -70,15 +70,15 @@ const ThemePage = () => {
           className="my-custom-class drop-shadow"
         />
       </div>
+      <p className="text-xl text-center my-6 font-['themeFont']">
+          There are {colors.length} themes available.
+        </p>
       <div>
         {/* Use the ThemeCardContainer component */}
         <ThemeCardContainer
           textColor={textColor}
           handleThemeChange={handleThemeChange}
-        />
-        <p className="text-xl text-center my-6 font-['themeFont']">
-          There are {colors.length} themes available.
-        </p>
+        />   
       </div>
     </div>
   );

@@ -98,9 +98,6 @@ const LandingPage = () => {
       <div
         ref={initialAnimationRef1}
         className="lg:w-[40vw]"
-        data-scroll
-        data-section
-        data-scroll-speed="-1"
       >
         <Hero
           currentLanguage={currentLanguage}
@@ -115,9 +112,7 @@ const LandingPage = () => {
       <div
         ref={initialAnimationRef2}
         className="lg:w-[60vw] flex flex-col items-center text-center"
-        data-scroll
-        data-section
-        data-scroll-speed="1"
+
       >
         <ParagraphSection
           paragraphs={paragraphs}

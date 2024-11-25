@@ -20,6 +20,18 @@ curated selection of my projects. If you are interested in working
 together or have any inquiries, I would love to hear from you. Thank
 you for visiting my portfolio!`;
 
+// resume button
+const buttonData = [
+  {
+    text: 'My CV',
+    href: '/TusharBhatt_CV.pdf',
+  },
+  {
+    text: 'My Resume',
+    href: '/TusharBhatt_FrontEndDeveloper_Resume.pdf',
+  },
+];
+
 // Footer section
 const navLinks = [
   { id: 'landingPage', label: 'Home' },
@@ -76,5 +88,6 @@ export {
   navLinks,
   addressData,
   socialLinks,
-  techUsed,
+  techUsed, 
+  buttonData,
 };

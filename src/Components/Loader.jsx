@@ -71,7 +71,7 @@ const Loader = () => {
         >
           {textData[currentIndex].text}
         </motion.div>
-        <div className="w-1/2 h-2 mt-32 rounded-3xl overflow-hidden">
+        <div className="w-1/2 lg:w-1/4 h-2 mt-32 rounded-3xl overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${loadingPercentage}%` }}

@@ -14,7 +14,7 @@ const ThemeCard = ({ theme, index, handleThemeChange, cardRef }) => {
       }}
       ref={cardRef}
       key={index}
-      className="flex z-[999] rounded-3xl  p-7 h-fit lg:w-[20vw] lg:h-[20vh] flex-col items-center justify-center lg:py-6 lg:px-7 lg:rounded-xl"
+      className="flex z-[999] rounded-3xl  p-7 h-fit lg:w-[15vw] lg:h-[15vh] flex-col items-center justify-center lg:py-6 lg:px-7 lg:rounded-xl"
       style={{
         borderColor: theme.textColor,
         backgroundColor: theme.bgColor,
