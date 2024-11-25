@@ -8,6 +8,7 @@ import Contact from '../sections/Contact';
 import Theme from '../pages/Theme'; // Import the Theme page
 import Footer from '../sections/Footer';
 import CatGame from '../easterEggs/Game/CatGame';
+import Me from '../Page/Me';
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/theme" element={<Theme />} />
         <Route path="/cat-game" element={<CatGame />} />
+        <Route path="/me" element={<Me />} />
       </Routes>
       <Footer />
     </>

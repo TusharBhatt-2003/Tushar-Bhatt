@@ -13,6 +13,7 @@ import Theme from './Page/Theme'; // Import Theme page
 import './App.css';
 import { useColor } from './context/ColorContext';
 import CatGame from './easterEggs/Game/CatGame.jsx';
+import Me from './Page/Me.jsx';
 
 const App = () => {
   const { color, textColor } = useColor();
@@ -83,8 +84,8 @@ const App = () => {
               />
               {/* Theme Page */}
               <Route path="/theme" element={<Theme />} />
-              <Route path="/cat-game" element={<CatGame />} />{' '}
-              {/* The Cat Game page */}
+              <Route path="/cat-game" element={<CatGame />} />
+              <Route path="/me" element={<Me />} />
             </Routes>
           </div>
         </Router>

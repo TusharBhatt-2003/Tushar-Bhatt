@@ -208,7 +208,7 @@ nav {
   background-image: url('https://i.pinimg.com/originals/c2/8e/8b/c28e8b21c44f7a14f4a86077d15d23d8.gif');
   background-repeat: repeat;
   background-size: cover;
-  opacity: .5;
+  opacity: 0.5;
   content: '';
   position: absolute;
   width: 100%;
@@ -224,7 +224,7 @@ nav {
   background-image: url('https://i.pinimg.com/originals/cd/f4/95/cdf4951a69fe542e2b7d6a07aa234a1b.gif');
   background-repeat: repeat;
   background-size: cover;
-  opacity: .1;
+  opacity: 0.1;
   content: '';
   position: absolute;
   width: 100%;
@@ -235,7 +235,6 @@ nav {
   z-index: 1;
   filter: invert(0) brightness(100) contrast(100);
 }
-
 
 .motion-btn {
   position: relative;

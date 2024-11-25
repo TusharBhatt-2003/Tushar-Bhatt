@@ -1,3 +1,4 @@
+import image from './assets/images/me.jpg';
 // Constants for the whole webpage
 const T = 'Tushar';
 // About Me Section
@@ -79,6 +80,10 @@ const techUsed = [
   { name: 'Framer Motion', href: 'https://www.framer.com/motion/' },
 ];
 
+const meImage =
+  image ||
+  'https://i.pinimg.com/736x/25/2a/76/252a7687712617700986fa5489b18a1f.jpg';
+
 export {
   T,
   aboutName,
@@ -88,6 +93,7 @@ export {
   navLinks,
   addressData,
   socialLinks,
-  techUsed, 
+  techUsed,
   buttonData,
+  meImage,
 };

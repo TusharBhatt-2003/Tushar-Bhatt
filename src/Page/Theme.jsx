@@ -71,14 +71,14 @@ const ThemePage = () => {
         />
       </div>
       <p className="text-xl text-center my-6 font-['themeFont']">
-          There are {colors.length} themes available.
-        </p>
+        There are {colors.length} themes available.
+      </p>
       <div>
         {/* Use the ThemeCardContainer component */}
         <ThemeCardContainer
           textColor={textColor}
           handleThemeChange={handleThemeChange}
-        />   
+        />
       </div>
     </div>
   );

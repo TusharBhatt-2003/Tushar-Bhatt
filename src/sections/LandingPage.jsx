@@ -95,10 +95,7 @@ const LandingPage = () => {
       ref={sectionRef}
       className="w-screen h-screen flex flex-col lg:flex-row items-center justify-evenly"
     >
-      <div
-        ref={initialAnimationRef1}
-        className="lg:w-[40vw]"
-      >
+      <div ref={initialAnimationRef1} className="lg:w-[40vw]">
         <Hero
           currentLanguage={currentLanguage}
           translations={translations}
@@ -112,7 +109,6 @@ const LandingPage = () => {
       <div
         ref={initialAnimationRef2}
         className="lg:w-[60vw] flex flex-col items-center text-center"
-
       >
         <ParagraphSection
           paragraphs={paragraphs}

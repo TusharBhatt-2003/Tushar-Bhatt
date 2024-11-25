@@ -34,24 +34,31 @@ const Buttons = ({ color, textColor }) => {
     return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
 
- 
-
   return (
     <div className="flex justify-evenly items-center select-none">
       {buttonData.map(({ text, href }, index) => (
         <motion.a
-          whileHover={{ scale: 1.5, color: color, backgroundColor: textColor, borderColor: color}}
+          whileHover={{
+            scale: 1.5,
+            color: color,
+            backgroundColor: textColor,
+            borderColor: color,
+          }}
           whileTap={{ scale: 0.9 }}
-          transition={{ type: 'twin', damping: 5, duration: .5}}
+          transition={{ type: 'twin', damping: 5, duration: 0.5 }}
           key={text}
           href={href}
           target="_blank"
           rel="noopener noreferrer"
           ref={(el) => (buttonRefs.current[index] = el)} // Attach ref to each button
           className="border-2 shine rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center overflow-hidden"
-          style={{ borderColor: textColor, color: textColor, backgroundColor: color,}}
+          style={{
+            borderColor: textColor,
+            color: textColor,
+            backgroundColor: color,
+          }}
         >
-         <p className='z-[99]'> {text}</p>
+          <p className="z-[99]"> {text}</p>
         </motion.a>
       ))}
     </div>

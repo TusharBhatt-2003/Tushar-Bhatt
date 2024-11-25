@@ -60,8 +60,8 @@ const ThemeCardContainer = ({ textColor, handleThemeChange }) => {
       }}
     >
       <div
-         ref={containerRef}
-         data-scroll-container
+        ref={containerRef}
+        data-scroll-container
         className="lg:justify-center lg:items-center lg:py-5 flex lg:flex-wrap hide-scrollbar w-[99vw] lg:w-[80vw] gap-2 border-b pb-2"
       >
         {colors.map((theme, index) => (
