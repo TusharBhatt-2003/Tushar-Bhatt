@@ -14,10 +14,11 @@ function AnimatedText({
 
   useEffect(() => {
     const defaultConfig = {
-      initial: { opacity: 0, y: 50 },
+      initial: { opacity: 1, y: 100, scale: 0 },
       animation: {
         opacity: 1,
         y: 0,
+        scale: 1,
         duration: 1.5,
         stagger: 0.1,
         ease: 'elastic.out(1, 0.3)',

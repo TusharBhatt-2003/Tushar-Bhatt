@@ -78,12 +78,14 @@ const Projects = () => {
           gsap.fromTo(
             letterRefs.current,
 
-            { opacity: 0, y: 1000 }, // Initial state: letters start lower with 0 opacity
+            { opacity: 1, y: 250, scale: 0 }, // Initial state: letters start lower with 0 opacity
 
             {
               opacity: 1,
 
               y: 0,
+
+              scale: 1,
 
               duration: 2,
 
@@ -96,18 +98,20 @@ const Projects = () => {
           gsap.fromTo(
             Object.values(catagoryRefs.current),
 
-            { opacity: 0, y: -1000 }, // Initial state: letters start lower with 0 opacity
+            { opacity: 1, y: -250, scale: 0 }, // Initial state: letters start lower with 0 opacity
 
             {
               opacity: 1,
 
               y: 0,
 
-              duration: 2.5,
+              scale: 1,
+
+              duration: 1,
 
               stagger: 0.1, // Animate letters one by one
 
-              ease: 'bounce.out',
+              ease: 'elastic(1.5, .5)',
             },
           );
 
@@ -131,7 +135,7 @@ const Projects = () => {
         }
       },
 
-      { threshold: 0.5 }, // Trigger animation when 50% of the section is visible
+      { threshold: 0.1 }, // Trigger animation when 50% of the section is visible
     );
 
     if (sectionRef.current) {
@@ -180,7 +184,7 @@ const Projects = () => {
 
       {/* Category Filter Buttons */}
 
-      <div className="categoryButtons p-5 w-full lg:w-1/6 flex justify-center lg:justify-start flex-wrap gap-2 select-none">
+      <div className="categoryButtons  p-5 w-full lg:w-1/6 flex justify-center lg:justify-start flex-wrap gap-2 select-none">
         {categories.map((category, index) => (
           <motion.button
             ref={(el) => (catagoryRefs.current[category] = el)} // Assign ref to object
