@@ -147,7 +147,7 @@ const Projects = () => {
     <div
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       id="projects"
-      className="projectContainer h-fit lg:h-screen lg:px-10 flex lg:flex-row flex-col lg:justify-between items-center uppercase font-['Aero']"
+      className="projectContainer overflow-hidden p-5 h-fit lg:h-screen lg:px-10 flex lg:flex-row flex-col lg:justify-between items-center uppercase font-['Aero']"
       style={{
         backgroundColor: activeFilteredPageBGcolor,
         transition: 'background-color 1.5s ease-in-out',
@@ -156,7 +156,7 @@ const Projects = () => {
       {/* Title Section */}
 
       <h1
-        className="mt-10 lg:-mt-5 lg:w-1/6 text-6xl lg:text-8xl flex lg:flex-col justify-center lg:leading-[4.3rem] font-extrabold transition-colors duration-500 ease-in-out"
+        className="mt-10 p-10 lg:-mt-5 lg:w-1/6 text-6xl lg:text-8xl flex lg:flex-col justify-center lg:leading-[4.3rem] font-extrabold transition-colors duration-500 ease-in-out"
         style={{
           color: activeFilteredBgColor,
           transition: 'color 1.5s ease-in-out',
@@ -180,7 +180,7 @@ const Projects = () => {
 
       {/* Category Filter Buttons */}
 
-      <div className="categoryButtons py-5 w-full lg:w-1/6 flex justify-center lg:justify-start flex-wrap gap-2 select-none">
+      <div className="categoryButtons p-5 w-full lg:w-1/6 flex justify-center lg:justify-start flex-wrap gap-2 select-none">
         {categories.map((category, index) => (
           <motion.button
             ref={(el) => (catagoryRefs.current[category] = el)} // Assign ref to object

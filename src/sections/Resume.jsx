@@ -3,6 +3,7 @@ import { ResumeContainer, Buttons } from '../Components/resume/index.js';
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
+import AnimatedText from '../Components/AnimatedText.jsx';
 const Resume = () => {
   const { color, textColor } = useColor();
   const sectionRef = useRef(null);
@@ -44,35 +45,10 @@ const Resume = () => {
       className="h-screen w-screen grid place-content-center py-20 font-['Aero'] overflow-hidden"
       style={{ color: textColor }}
     >
-      <div
-        className="m-5 flex flex-col justify-evenly rounded-3xl px-4 lg:px-10 lg:w-[60vw] h-[80vh]"
-        data-scroll
-        data-section
-        data-scroll-speed="0"
-      >
-        <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral'] inverted-selection">
-          {'resume.'.split('').map((letter, index) => (
-            <motion.span
-              ref={(el) => (letterRefs.current[index] = el)} // Assign each letter ref
-              key={index}
-              className="cursor-pointer mb-5 font-bold"
-              style={{
-                display: 'inline-block', // Ensure inline display
-                marginRight: letter === ' ' ? '1rem' : '0', // Add space between "About" and "Me"
-              }}
-            >
-              {letter}
-            </motion.span>
-          ))}
-        </h1>
+      <div className="m-5 flex flex-col justify-evenly rounded-3xl px-4 lg:px-10 lg:w-[60vw] h-[80vh]">
+        <AnimatedText text="Resume." textColor={textColor} />
         <ResumeContainer />
-        <Buttons
-          data-scroll
-          data-section
-          data-scroll-speed="2"
-          color={color}
-          textColor={textColor}
-        />
+        <Buttons color={color} textColor={textColor} />
       </div>
     </div>
   );

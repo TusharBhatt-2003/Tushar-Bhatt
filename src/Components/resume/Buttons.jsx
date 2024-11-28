@@ -19,19 +19,9 @@ const Buttons = ({ color, textColor }) => {
           opacity: 1,
           duration: 1,
           ease: 'power3.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 100%', // Start animation when the button is near the viewport
-            end: 'top 10%',
-            scrub: true, // Smooth scrolling
-            toggleActions: 'play reverse play reverse', // Play animation and reverse it on scroll
-          },
         },
       );
     });
-
-    // Clean up ScrollTrigger instances
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
 
   return (
@@ -51,7 +41,7 @@ const Buttons = ({ color, textColor }) => {
           target="_blank"
           rel="noopener noreferrer"
           ref={(el) => (buttonRefs.current[index] = el)} // Attach ref to each button
-          className="border-2 shine rounded-lg w-fit my-5 px-2 pt-1 flex justify-center items-center overflow-hidden"
+          className="border-2 shine rounded-lg w-fit px-2 pt-1 flex justify-center items-center overflow-hidden"
           style={{
             borderColor: textColor,
             color: textColor,

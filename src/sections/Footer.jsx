@@ -56,14 +56,14 @@ const Footer = () => {
         {T}
         <p className="text-lg font-['Aero'] mt-2">Frontend Developer</p>
       </h1>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-fit">
+      <div className="grid  grid-cols-2 lg:grid-cols-4 w-full  h-full">
         {/* Navigation Links */}
         <div
-          className="nav w-full h-full md:border-r-2"
+          className="nav   h-full border-r-2 grid place-content-center lg:border-r-2 lg:border-b-0 border-b-2"
           style={{ borderColor: color }}
         >
           <div
-            className="flex flex-col text-start mx-16 mt-5 lg:my-10 pb-5 lg:border-none border-b-2"
+            className="flex h-full w-full flex-col  text-start justify-center lg:my-10 pb-5 "
             style={{ borderColor: color }}
             ref={(el) => (textRefs.current[1] = el)}
           >
@@ -85,11 +85,11 @@ const Footer = () => {
 
         {/* Address Section */}
         <div
-          className="w-full h-full lg:border-r-2"
+          className="w-full h-full  grid place-content-center lg:border-r-2 lg:border-b-0 border-b-2 "
           style={{ borderColor: color }}
         >
           <div
-            className="address text-start mx-16 mt-5 lg:my-10 pb-5 lg:border-none border-b-2"
+            className="address  h-full text-start "
             style={{ borderColor: color }}
             ref={(el) => (textRefs.current[2] = el)}
           >
@@ -101,11 +101,11 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div
-          className="w-full h-full md:border-r-2"
+          className="w-full h-full border-r-2 grid place-content-center"
           style={{ borderColor: color }}
         >
           <div
-            className="social-media text-start mx-16 mt-5 lg:my-10 pb-5 md:border-none border-b-2"
+            className="social-media  h-full text-start"
             style={{ borderColor: color }}
             ref={(el) => (textRefs.current[3] = el)}
           >
@@ -127,13 +127,15 @@ const Footer = () => {
         </div>
 
         {/* Tech Used Section */}
-        <div className="w-full h-full">
+        <div className="w-full h-full grid place-content-center">
           <div
-            className="contact text-start mx-16 mt-5 lg:my-10 pb-5 md:border-none border-b-2"
+            className="contact  h-full pt-10 text-start"
             style={{ borderColor: color }}
           >
             <div ref={(el) => (textRefs.current[4] = el)}>
-              <p>Tech Used in This Website</p>
+              <p>
+                Tech Used in <br /> This Website :
+              </p>
               <ul
                 className="flex flex-col underlineCssResume mt-5"
                 style={{ '--after-bg-color': color }}

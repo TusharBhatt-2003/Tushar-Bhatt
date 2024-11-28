@@ -1,4 +1,8 @@
 import image from './assets/images/me.jpg';
+import E_mail_logo from './assets/logos/e-mail-logo';
+import GithubIcon from './assets/logos/githubLogo';
+import Insta from './assets/logos/insta';
+import Linkedin from './assets/logos/linkedin';
 // Constants for the whole webpage
 const T = 'Tushar';
 // About Me Section
@@ -84,6 +88,59 @@ const meImage =
   image ||
   'https://i.pinimg.com/736x/25/2a/76/252a7687712617700986fa5489b18a1f.jpg';
 
+// Contact Section
+const contactData = {
+  title: 'Contact Me.',
+  message: `Feel free to reach out for collaborations.`,
+  formFields: [
+    {
+      label: 'Name',
+      type: 'text',
+      name: 'from_name',
+      required: true,
+      placeholder: 'Bat Man',
+    },
+    {
+      label: 'Email',
+      type: 'email',
+      name: 'email',
+      required: true,
+      placeholder: 'bruce@wayne.com',
+    },
+    {
+      label: 'Message',
+      type: 'textarea',
+      name: 'message',
+      required: true,
+      placeholder: `I'm Batman`,
+    },
+  ],
+  submitButton: 'Send Message',
+};
+
+const SocialMediaLinks = [
+  {
+    href: 'mailto:tusharbhatt968@gmail.com',
+    className: 'email',
+    component: (color, size) => <E_mail_logo color={color} size={size} />,
+  },
+  {
+    href: 'https://www.instagram.com/_tush_ar._._/',
+    className: 'insta',
+    component: (color, size) => <Insta color={color} size={size} />,
+  },
+  {
+    href: 'https://www.linkedin.com/in/tushar-bhatt-05b8b11a5/',
+    className: 'linkedin',
+    component: (color, size) => <Linkedin color={color} size={size} />,
+  },
+  {
+    href: 'https://github.com/TusharBhatt-2003',
+    className: 'GitHub',
+    component: (color, size) => <GithubIcon color={color} size={size} />,
+  },
+];
+
 export {
   T,
   aboutName,
@@ -96,4 +153,6 @@ export {
   techUsed,
   buttonData,
   meImage,
+  contactData,
+  SocialMediaLinks,
 };

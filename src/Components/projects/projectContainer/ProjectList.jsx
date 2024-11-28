@@ -8,9 +8,9 @@ const ProjectList = ({
 }) => {
   return (
     <>
-      <div className="md:hidden projectWindow flex justify-center gap-4 md:w-[60vw] px-5 select-none lg:pb-0 pb-10">
+      <div className="md:hidden projectWindow flex justify-center gap-2 px-5 select-none lg:pb-0 pb-10">
         {/* Column 1 */}
-        <div className="flex flex-col w-1/2 gap-4">
+        <div className="flex flex-col w-1/2 gap-2">
           {projects
             .filter((_, index) => index % 2 === 0) // Projects for Column 1
             .map((project, index) => (
@@ -33,7 +33,7 @@ const ProjectList = ({
         </div>
 
         {/* Column 2 */}
-        <div className="flex flex-col w-1/2 gap-y-4">
+        <div className="flex flex-col w-1/2 gap-2">
           {projects
             .filter((_, index) => index % 2 !== 0) // Projects for Column 2
             .map((project, index) => (

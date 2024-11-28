@@ -8,6 +8,7 @@ import {
   aboutMeParagraph2,
   aboutName,
 } from '../const';
+import AnimatedText from '../Components/AnimatedText';
 
 const About = () => {
   const { color, textColor } = useColor(); // Context values for color
@@ -89,21 +90,7 @@ const About = () => {
           `}
         </style>
 
-        <h1 className="my-5 text-4xl lg:text-6xl font-bold font-['Integral'] inverted-selection">
-          {'About me.'.split('').map((letter, index) => (
-            <motion.span
-              ref={(el) => (letterRefs.current[index] = el)}
-              key={index}
-              className="cursor-pointer mb-5 font-bold"
-              style={{
-                display: 'inline-block',
-                marginRight: letter === ' ' ? '1rem' : '0',
-              }}
-            >
-              {letter}
-            </motion.span>
-          ))}
-        </h1>
+        <AnimatedText text="About Me." textColor={textColor} />
 
         <p className="my-5 inverted-selection">
           <div className="flex underlineCssAbout text-3xl inverted-selection">
