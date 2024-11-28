@@ -53,7 +53,7 @@ const ThemePage = () => {
   return (
     <div
       style={{ backgroundColor: color, color: textColor }}
-      className="w-full h-screen  pt-10 flex flex-col items-center justify-between"
+      className="w-full h-screen lg:h-fit pt-10 flex flex-col items-center justify-between"
     >
       <h1 className="text-4xl text-center md:text-5xl mt-10 mb-8 font-['Integral']">
         Select a <br />
