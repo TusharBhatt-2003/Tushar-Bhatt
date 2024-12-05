@@ -102,7 +102,7 @@ export default function NavBar() {
               <Link
                 to={item.id}
                 smooth={true}
-                duration={1500}
+                duration={5500}
                 className="cursor-pointer"
               >
                 {item.label}

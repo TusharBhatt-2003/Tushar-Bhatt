@@ -201,7 +201,7 @@ nav {
   top: 0;
   left: 0;
   mix-blend-mode: multiply;
-  z-index: 0;
+  z-index: -1;
 }
 
 .sparkal::before {

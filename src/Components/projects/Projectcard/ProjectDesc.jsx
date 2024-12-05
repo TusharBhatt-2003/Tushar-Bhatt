@@ -24,7 +24,7 @@ const ProjectDesc = ({
           restDelta: 0.001,
         },
       }}
-      className="project-desc z-0 paper overflow-hidden self-center space-y-5 px-10  h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
+      className="project-desc paper overflow-hidden self-center space-y-5 px-10  h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
       style={{
         backgroundColor: bgColor,
         transition: 'background-color 1.5s ease-in-out, color 1.5s ease-in-out', // Smooth background transition
@@ -50,7 +50,7 @@ const ProjectDesc = ({
             'color 1.5s ease-in-out, background-color 1.5s ease-in-out',
         }} // Text color transition
       >
-        <h2 className="text-3xl font-bold mb-4 font-['Integral'] inverted-selection">
+        <h2 className="text-3xl  z-[9999] font-bold mb-4 font-['Integral'] inverted-selection">
           {name}
         </h2>
         <p className="text-xs mb-4 inverted-selection font-['Aero']">
