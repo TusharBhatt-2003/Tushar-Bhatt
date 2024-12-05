@@ -54,7 +54,7 @@ const ThemeCardContainer = ({ textColor, handleThemeChange }) => {
 
   return (
     <div
-      className="scrollable-container lg:h-[40vh] lg:border-4 overflow-y-auto lg:overflow-x-hidden mb-5"
+      className="scrollable-container lg:h-[40vh] lg:border-4 overflow-y-auto lg:overflow-x-hidden mb-5 rounded-3xl"
       style={{
         borderColor: textColor,
       }}
