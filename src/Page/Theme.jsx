@@ -53,32 +53,34 @@ const ThemePage = () => {
   return (
     <div
       style={{ backgroundColor: color, color: textColor }}
-      className="w-full h-screen  pt-10 flex flex-col items-center justify-between"
+      className="w-full h-screen  pt-10 flex flex-col items-center justify-around lg:justify-normal"
     >
       <h1 className="text-4xl text-center md:text-5xl mt-10 mb-8 font-['Integral']">
         Select a <br />
         Theme
       </h1>
-      <div
-        className="flex flex-col items-center justify-center cursor-pointer my-10 select-none"
-        onClick={handleCatClick} // Add onClick handler for the cat click
-      >
-        <p className="pl-20">Meow*</p>
-        <Cat
-          color={textColor}
-          size="80"
-          className="my-custom-class drop-shadow"
-        />
-      </div>
-      <p className="text-xl text-center my-6 font-['themeFont']">
-        There are {colors.length} themes available.
-      </p>
-      <div>
-        {/* Use the ThemeCardContainer component */}
-        <ThemeCardContainer
-          textColor={textColor}
-          handleThemeChange={handleThemeChange}
-        />
+      <div className="lg:flex-row-reverse gap-10 lg:flex items-center justify-around lg:w-full">
+        <div
+          className="flex flex-col items-center justify-center cursor-pointer my-10"
+          onClick={handleCatClick} // Add onClick handler for the cat click
+        >
+          <p className="pl-20">Meow*</p>
+          <Cat
+            color={textColor}
+            size="80"
+            className="my-custom-class drop-shadow"
+          />
+          <p className="text-xl text-center my-6 font-['themeFont']">
+            There are {colors.length} themes available.
+          </p>
+        </div>
+        <div className="">
+          {/* Use the ThemeCardContainer component */}
+          <ThemeCardContainer
+            textColor={textColor}
+            handleThemeChange={handleThemeChange}
+          />
+        </div>
       </div>
     </div>
   );

@@ -8,13 +8,7 @@ const T = 'Tushar';
 // About Me Section
 const aboutName = 'Tushar Bhatt';
 
-const aboutMeParagraph = `21-year-old front-end developer currently residing in Faridabad.
-Freshly graduated with a BCA degree from MDU, I’ve been honing my skills in
-web development and problem-solving. With a strong foundation in HTML,
-CSS, and JavaScript, I’ve also delved into popular frameworks like
-React, Vite, Tailwind, and Bootstrap. Eager to expand my expertise,
-I’m currently diving into the MERN stack to become a well-rounded
-full-stack developer.`;
+const aboutMeParagraph = `21-year-old a Frontend Developer, specialize in building clean, responsive interfaces using HTML, CSS, JavaScript, and React. My experience includes translating UI/UX designs into functional code and optimizing web performance for seamless user experiences. With a working knowledge of the MERN stack, I can collaborate effectively on full-stack projects, bridging the gap between frontend and backend. I also bring an understanding of project workflows, making it easier to align development with team goals and deadlines.`;
 
 const aboutMeParagraph2 = `Additionally, I'm exploring animation and motion libraries such as
 Framer Motion, GSAP, and Locomotive, as well as 3D rendering with
