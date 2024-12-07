@@ -184,7 +184,7 @@ nav::before {
 
 nav {
   /* Existing styles */
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(5px);
 }
 
 .paper::before {
