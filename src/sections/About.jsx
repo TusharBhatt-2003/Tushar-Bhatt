@@ -76,7 +76,7 @@ const About = () => {
       }}
     >
       <div
-        className="m-5 rounded-3xl px-4 lg:px-10 lg:py-5 lg:w-[60vw] lg:h-fit"
+        className="m-5  lg:px-10 lg:py-5 md:w-[70vw] lg:w-[60vw] lg:h-fit"
         data-scroll
         data-section
         data-scroll-speed="1"
@@ -92,7 +92,7 @@ const About = () => {
 
         <AnimatedText text="About Me." textColor={textColor} />
 
-        <p className="my-5 inverted-selection">
+        <p className="my-8 inverted-selection">
           <div className="flex underlineCssAbout text-3xl inverted-selection">
             I’m&nbsp;
             <p className="font-bold overflow-hidden inverted-selection">
@@ -108,7 +108,7 @@ const About = () => {
           {aboutMeParagraph}
         </p>
 
-        <p className="my-5 inverted-selection">{aboutMeParagraph2}</p>
+        <p className="my-10 inverted-selection">{aboutMeParagraph2}</p>
 
         {/* Last paragraph with GSAP animation */}
         <motion.p

@@ -20,10 +20,10 @@ const resumeData = {
     { title: 'HTML, CSS' },
     { title: 'Tailwind CSS' },
     { title: 'JavaScript' },
-    { title: 'React (Vite), Next.js, React Three Fiber' },
+    { title: 'React (Vite), Next.js, React Three Fiber.' },
     { title: 'Figma' },
     { title: 'Locomotive, GSAP, Framer Motion.' },
-    { title: 'Some Knowledge of UI/UX Designing.' },
+    { title: 'UI/UX Designing.' },
     { title: 'Photoshop' },
   ],
   certificates: [

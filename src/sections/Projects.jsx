@@ -135,7 +135,7 @@ const Projects = () => {
         }
       },
 
-      { threshold: 0.1 }, // Trigger animation when 50% of the section is visible
+      { threshold: 0.01 }, // Trigger animation when 50% of the section is visible
     );
 
     if (sectionRef.current) {

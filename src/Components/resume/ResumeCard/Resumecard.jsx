@@ -5,7 +5,7 @@ const ResumeCard = ({ title, items }) => {
   const { color, textColor } = useColor();
 
   return (
-    <div className="">
+    <>
       {/* Style tag for custom ::selection styles */}
       <style>
         {`
@@ -18,7 +18,7 @@ const ResumeCard = ({ title, items }) => {
       <motion.div
         whileHover={{ scale: 1.05 }}
         transition={{ type: 'spring', stiffness: 800, damping: 25 }}
-        className="resume-card paper relative  rounded-lg px-5 py-2 w-fit  h-fit inverted-selection overflow-hidden" // Add custom class name
+        className="resume-card paper relative  rounded-lg px-5 py-5 w-fit  h-fit inverted-selection overflow-hidden" // Add custom class name
         style={{ backgroundColor: textColor, color: color, borderColor: color }}
       >
         <h3 className="text-xl font-bold mb-2 inverted-selection">{title}</h3>
@@ -46,7 +46,7 @@ const ResumeCard = ({ title, items }) => {
           ))}
         </ul>
       </motion.div>
-    </div>
+    </>
   );
 };
 
