@@ -163,7 +163,7 @@ const projectData = [
     github: 'https://github.com/TusharBhatt-2003/Ghibli-Movies',
     technologies: 'HTML, CSS, JavaScript',
     category: 'UI',
-    featured: true,
+    featured: false,
     bgColor: '#29392C',
     pageBGcolor: '#C39890',
   },
@@ -337,6 +337,19 @@ const projectData = [
     featured: true,
     bgColor: '#CFFFF5',
     pageBGcolor: 'black',
+  },
+  {
+    name: 'Blog Page',
+    image: 'https://www.svgrepo.com/show/144580/blog.svg',
+    description:
+      'This was the first assignment that was given by the Weframe-Tech, to understand how Builder.io works, and create drag and droppable custom components',
+    link: 'https://builder-io-assignment-eeq1.vercel.app/home',
+    github: 'https://github.com/TusharBhatt-2003/Builder.ioAssignment',
+    technologies: 'Next.js, TypeScript, Tailwind CSS, Builder.io',
+    category: 'Internship Assignments',
+    featured: true,
+    bgColor: '#FFD880',
+    pageBGcolor: '#FC8059 ',
   },
 ];
 

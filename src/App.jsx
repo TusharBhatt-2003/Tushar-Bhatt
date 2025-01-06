@@ -14,6 +14,7 @@ import './App.css';
 import { useColor } from './context/ColorContext';
 import CatGame from './easterEggs/Game/CatGame.jsx';
 import Me from './Page/Me.jsx';
+import Work from './sections/Work.jsx';
 
 const App = () => {
   const { color, textColor } = useColor();
@@ -75,6 +76,7 @@ const App = () => {
                   <>
                     <LandingPage />
                     <About />
+                    <Work />
                     <Resume />
                     <Projects />
                     <Contact />

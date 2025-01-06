@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Insta({ color = '#000', className = '', size = '24' }) {
   return (
     <svg
