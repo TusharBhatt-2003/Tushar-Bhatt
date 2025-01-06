@@ -16,15 +16,26 @@ export default function Work() {
       }}
     >
       <div className="mb-20 mt-5">
-        <AnimatedText text="Work Experience." textColor={textColor} />
+        <AnimatedText text="Work " textColor={textColor} />
+        <AnimatedText text="Experience. " textColor={textColor} />
       </div>
 
-      <div className="flex">
-        <div>
-          <WeframeTechLogo color={color} />
+      <div className="md:grid grid-cols-2 md:my-20 space-y-10">
+        <div className="w-full grid place-content-center">
+          <div
+            className="p-5 rounded-xl"
+            style={{
+              backgroundColor: `rgba(${parseInt(color.slice(1, 3), 16)}, ${parseInt(
+                color.slice(3, 5),
+                16,
+              )}, ${parseInt(color.slice(5, 7), 16)}, 0.5)`, // Adjusts opacity to 15%
+            }}
+          >
+            <WeframeTechLogo color={textColor} />
+          </div>
         </div>
         <div
-          className="shadow-md rounded-lg p-6 w-full max-w-md"
+          className="rounded-xl p-6 w-full max-w-md"
           style={{
             backgroundColor: `rgba(${parseInt(color.slice(1, 3), 16)}, ${parseInt(
               color.slice(3, 5),
@@ -32,8 +43,8 @@ export default function Work() {
             )}, ${parseInt(color.slice(5, 7), 16)}, 0.15)`, // Adjusts opacity to 15%
           }}
         >
-          <h2 className="text-2xl font-semibold ">
-            Internship at
+          <h2 className="text-2xl font-semibold">
+            Internship at{' '}
             <a
               href="https://www.weframetech.com/"
               target="_blank"
@@ -42,25 +53,30 @@ export default function Work() {
               Weframe Tech
             </a>
           </h2>
-          <p className=" mt-2">
-            Currently working as an intern at{' '}
-            <a
-              href="https://www.weframetech.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-extrabold hover:opacity-60"
-            >
-              Weframe Tech
-            </a>
-            , contributing to the development of modern headless CMS solutions
-            using cutting-edge technologies like Builder.io, Medusajs,
-            Directus.io in Next.js.
-          </p>
-          <p className=" mt-2">
-            Responsibilities include developing dynamic and scalable web
-            applications and delivering tailored solutions for diverse client
-            needs.
-          </p>
+          <ul className="list-disc pl-5">
+            <li className="mt-2">
+              Currently working as an intern at{' '}
+              <a
+                href="https://www.weframetech.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-extrabold hover:opacity-60"
+              >
+                Weframe Tech
+              </a>{' '}
+              Contributing to the development of modern headless CMS solutions
+              using cutting-edge technologies like Builder.io, Medusajs,
+              Directus.io in Next.js.
+            </li>
+            <li className="mt-2">
+              Responsibilities include developing dynamic and scalable web
+              applications and delivering tailored solutions for diverse client
+              needs.
+            </li>
+            <li className="font-bold text-lg">
+              Since December 2024 for a 6-month duration.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
