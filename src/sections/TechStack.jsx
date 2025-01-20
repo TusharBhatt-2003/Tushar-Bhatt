@@ -1,5 +1,5 @@
 import { useColor } from '../context/ColorContext';
-import Html from '../assets/techStack/html';
+import Html from '../assets/techStack/Html';
 import Css from '../assets/techStack/Css';
 import TailwindCss from '../assets/techStack/TailwindCss';
 import JavaScript from '../assets/techStack/JavaScript';
