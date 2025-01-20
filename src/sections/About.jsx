@@ -68,7 +68,7 @@ const About = () => {
     <div
       id="aboutme"
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
-      className="h-screen w-screen flex flex-col justify-center items-center font-['Aero']"
+      className="h-screen  w-screen flex flex-col justify-center items-center font-['Aero']"
       style={{
         backgroundColor: textColor,
         color: color,
@@ -76,7 +76,7 @@ const About = () => {
       }}
     >
       <div
-        className="m-5  lg:px-10 lg:py-5 md:w-[70vw] lg:w-[60vw] lg:h-fit"
+        className="m-5 container lg:px-10 lg:py-5 md:w-[70vw] lg:w-[60vw] lg:h-fit"
         data-scroll
         data-section
         data-scroll-speed="1"

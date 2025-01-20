@@ -10,11 +10,11 @@ function Contact() {
   return (
     <div
       id="contactme"
-      className='h-fit w-screen flex flex-col lg:flex-row justify-center items-center font-["Aero"] mb-10'
+      className='h-fit container w-screen flex flex-col lg:flex-row justify-center items-center font-["Aero"] mb-10'
       style={{ backgroundColor: color, color: textColor }}
     >
       <ContactEmail />
-      <div className="flex flex-col items-center md:flex-row lg:flex-col lg:w-1/2 md:w-full md:justify-evenly md:items-baseline">
+      <div className="flex  flex-col items-center md:flex-row lg:flex-col lg:w-1/2  md:justify-evenly md:items-baseline">
         <div className=" flex flex-col lg:w-full lg:items-center lg:justify-center gap-5">
           <AnimatedText text="Find Me." textColor={textColor} />
           <SocialMedia textColor={textColor} />

@@ -139,7 +139,7 @@ const ContactEmail = () => {
                 <textarea
                   placeholder={field.placeholder}
                   name={field.name}
-                  className="w-[50vw] lg:w-[25vw]  form-field rounded-md outline-none p-2 placeholderStyle"
+                  className="w-fit form-field rounded-md outline-none p-2 placeholderStyle"
                   required={field.required}
                   value={formData[field.name] || ''}
                   onChange={handleChange}
@@ -150,7 +150,7 @@ const ContactEmail = () => {
                   placeholder={field.placeholder}
                   type={field.type}
                   name={field.name}
-                  className={`w-[50vw] lg:w-[25vw]  rounded-md form-field  outline-none p-2 placeholderStyle`}
+                  className={`w-fit rounded-md form-field  outline-none p-2 placeholderStyle`}
                   required={field.required}
                   value={formData[field.name] || ''}
                   onChange={handleChange}

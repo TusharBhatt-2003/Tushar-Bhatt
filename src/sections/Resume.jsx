@@ -42,7 +42,7 @@ const Resume = () => {
     <div
       id="resume"
       ref={sectionRef}
-      className="h-screen w-screen grid place-content-center py-20 font-['Aero'] overflow-hidden"
+      className="h-screen  w-screen grid place-content-center py-20 font-['Aero'] overflow-hidden"
       style={{ color: textColor }}
     >
       <div className="m-5 flex flex-col justify-evenly rounded-3xl px-4 lg:px-10 lg:w-[60vw] h-[80vh]">

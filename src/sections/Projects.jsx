@@ -151,7 +151,7 @@ const Projects = () => {
     <div
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
       id="projects"
-      className="projectContainer overflow-hidden p-5 h-fit lg:h-screen lg:px-10 flex lg:flex-row flex-col lg:justify-between items-center uppercase font-['Aero']"
+      className="projectContainer  overflow-hidden p-5 h-fit lg:h-screen lg:px-10 flex lg:flex-row flex-col lg:justify-between items-center uppercase font-['Aero']"
       style={{
         backgroundColor: activeFilteredPageBGcolor,
         transition: 'background-color 1.5s ease-in-out',

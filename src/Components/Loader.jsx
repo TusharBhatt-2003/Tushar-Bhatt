@@ -23,9 +23,9 @@ const Loader = () => {
 
     const percentageInterval = setInterval(() => {
       setLoadingPercentage((prevPercentage) => {
-        if (prevPercentage >= 101) {
+        if (prevPercentage >= 100) {
           clearInterval(percentageInterval);
-          return 101;
+          return 100;
         }
         return prevPercentage + 1;
       });

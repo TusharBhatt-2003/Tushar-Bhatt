@@ -93,7 +93,7 @@ const LandingPage = () => {
     <div
       id="landingPage"
       ref={sectionRef}
-      className="w-screen h-screen flex flex-col lg:flex-row items-center justify-evenly"
+      className="w-screen container h-screen flex flex-col lg:flex-row items-center justify-evenly"
     >
       <div ref={initialAnimationRef1} className="lg:w-[40vw]">
         <Hero
