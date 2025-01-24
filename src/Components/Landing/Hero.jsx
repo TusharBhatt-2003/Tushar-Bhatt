@@ -1,4 +1,3 @@
-import React from 'react';
 import HintPopup from './popUps/HintPopup';
 import { motion } from 'framer-motion';
 const Hero = ({
@@ -41,7 +40,7 @@ const Hero = ({
                   damping: 10,
                 }}
               >
-                {letter}
+                <span key={index}>{letter}</span>
               </motion.span>
             ))}
         </h1>
