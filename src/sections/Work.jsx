@@ -44,7 +44,7 @@ export default function Work() {
           }}
         >
           <h2 className="text-2xl font-semibold">
-            Internship at{' '}
+            Training at{' '}
             <a
               href="https://www.weframetech.com/"
               target="_blank"
@@ -55,7 +55,7 @@ export default function Work() {
           </h2>
           <ul className="list-disc pl-5">
             <li className="mt-2">
-              Currently working as an intern at{' '}
+              Completed 1 month training at{' '}
               <a
                 href="https://www.weframetech.com/"
                 target="_blank"
@@ -69,13 +69,10 @@ export default function Work() {
               Directus.io in Next.js.
             </li>
             <li className="mt-2">
-              Responsibilities include developing dynamic and scalable web
-              applications and delivering tailored solutions for diverse client
-              needs.
+              Learned developing dynamic and scalable web applications and
+              delivering tailored solutions for diverse client needs.
             </li>
-            <li className="font-bold text-lg">
-              Since December 2024 for a 6-month duration.
-            </li>
+            <li className="font-bold text-lg">From 24 Dec, To 24 Jan .</li>
           </ul>
         </div>
       </div>
