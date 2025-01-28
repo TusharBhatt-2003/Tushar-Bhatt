@@ -91,11 +91,12 @@ export default function NavBar() {
 
       {location.pathname === '/' && (
         <ul
-          className="md:flex text-xl font-thin space-x-4 pt-1 justify-center select-none hidden"
+          className="text-xl flex font-thin space-x-4 pt-1 justify-center select-none "
           style={{ color: textColor }}
         >
           {navLinks.map((item) => (
             <li
+              className="md:flex hidden"
               key={item.id}
               ref={item.id === 'landingPage' ? homeLinkRef : null}
             >
@@ -122,7 +123,7 @@ export default function NavBar() {
         </ul>
       )}
 
-      {location.pathname != '/' ? <HomeButton /> : <Dropdown />}
+      {location.pathname != '/' ? <HomeButton /> : ''}
     </nav>
   );
 }

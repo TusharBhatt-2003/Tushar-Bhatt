@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
   /* scroll-behavior: smooth; */
 }
 
@@ -168,6 +169,19 @@ nav {
   position: relative; /* Ensure the pseudo-element stays inside the nav */
 }
 
+.mobile-nav:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.pinimg.com/736x/85/fb/ce/85fbceb25101eb2e3fba7a7ffcb20bae.jpg'); /* Example tiny noise PNG in Base64 */
+  opacity: 0.1; /* Adjust the visibility of the noise */
+  pointer-events: none; /* Allow clicks to pass through */
+  border-radius: 0.5rem;
+  mix-blend-mode: multiply;
+}
 nav::before {
   content: '';
   position: absolute;
@@ -182,6 +196,7 @@ nav::before {
   mix-blend-mode: multiply;
 }
 
+.mobile-nav,
 nav {
   /* Existing styles */
   backdrop-filter: blur(5px);

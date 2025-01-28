@@ -16,6 +16,7 @@ import CatGame from './easterEggs/Game/CatGame.jsx';
 import Me from './Page/Me.jsx';
 import Work from './sections/Work.jsx';
 import TechStack from './sections/TechStack.jsx';
+import Dropdown from './Components/Dropdown/Dropdown.jsx';
 
 const App = () => {
   const { color, textColor } = useColor();
@@ -75,6 +76,7 @@ const App = () => {
                 path="/"
                 element={
                   <>
+                    <Dropdown />
                     <LandingPage />
                     <About />
                     <TechStack />
