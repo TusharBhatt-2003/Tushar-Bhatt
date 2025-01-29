@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
+  cursor: url('https://i.pinimg.com/736x/e3/73/a1/e373a133c7901309891d546199657c7d.jpg'),
+    auto;
   /* scroll-behavior: smooth; */
 }
 

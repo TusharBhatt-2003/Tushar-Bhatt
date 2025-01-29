@@ -19,10 +19,20 @@ function Collab({ color, textColor }) {
     );
   }, []);
 
+  const hexToRgba = (hex, alpha) => {
+    hex = hex.replace(/^#/, '');
+    let r = parseInt(hex.substring(0, 2), 16);
+    let g = parseInt(hex.substring(2, 4), 16);
+    let b = parseInt(hex.substring(4, 6), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  };
+
+  const backgroundColorWithOpacity = hexToRgba(textColor, 0.5);
+
   return (
     <div
-      className="collab py-5 self-center mt-10 select-none paper z-0 relative overflow-hidden rounded-xl px-8 lg:px-10 lg:py-5 w-fit lg:h-fit"
-      style={{ backgroundColor: textColor, color: color }}
+      className="collab py-5 backdrop-blur self-center mt-10 select-none paper z-0 relative overflow-hidden rounded-xl px-8 lg:px-10 lg:py-5 w-fit lg:h-fit"
+      style={{ backgroundColor: backgroundColorWithOpacity, color: color }}
     >
       <h1 className="text-4xl">Collab?</h1>
       <p className="text-3xl">Let me know</p>

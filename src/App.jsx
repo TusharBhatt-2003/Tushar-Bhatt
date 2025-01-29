@@ -17,6 +17,7 @@ import Me from './Page/Me.jsx';
 import Work from './sections/Work.jsx';
 import TechStack from './sections/TechStack.jsx';
 import Dropdown from './Components/Dropdown/Dropdown.jsx';
+import CustomCursor from './Components/CustomCursor.jsx';
 
 const App = () => {
   const { color, textColor } = useColor();
@@ -56,7 +57,7 @@ const App = () => {
       ) : (
         <Router>
           <div
-            className="w-full h-full"
+            className="w-full overflow-hidden h-full"
             style={{ backgroundColor: color, color: textColor }}
           >
             <style>
@@ -69,7 +70,7 @@ const App = () => {
             </style>
 
             <NavBar />
-
+            <CustomCursor />
             <Routes>
               {/* Main Content */}
               <Route

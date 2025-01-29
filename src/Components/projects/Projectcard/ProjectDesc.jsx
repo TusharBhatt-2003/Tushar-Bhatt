@@ -10,6 +10,16 @@ const ProjectDesc = ({
   link,
   github,
 }) => {
+  const hexToRgba = (hex, alpha) => {
+    hex = hex.replace(/^#/, '');
+    let r = parseInt(hex.substring(0, 2), 16);
+    let g = parseInt(hex.substring(2, 4), 16);
+    let b = parseInt(hex.substring(4, 6), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  };
+
+  const backgroundColorWithOpacity = hexToRgba(bgColor, 0.8);
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -24,9 +34,9 @@ const ProjectDesc = ({
           restDelta: 0.001,
         },
       }}
-      className="project-desc paper overflow-hidden self-center space-y-5 px-10  h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
+      className="project-desc backdrop-blur paper overflow-hidden self-center space-y-5 px-10  h-fit w-fit rounded-3xl shadow-lg" // Tailwind CSS classes for transition
       style={{
-        backgroundColor: bgColor,
+        backgroundColor: backgroundColorWithOpacity,
         transition: 'background-color 1.5s ease-in-out, color 1.5s ease-in-out', // Smooth background transition
       }}
     >

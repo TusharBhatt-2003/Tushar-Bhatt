@@ -198,12 +198,10 @@ const Projects = () => {
             whileHover={{ scale: 0.8 }} // Hover animation with scaling and slight rotation
             whileTap={{ scale: 0.6 }}
             aria-label={`View ${category} projects`} // Added ARIA label for accessibility
-            className="p-2 pt-3 flex flex-col justify-center text-center rounded-lg text-sm font-bold transition-colors duration-500 ease-in-out"
+            className="p-2 paper backdrop-blur pt-3 flex flex-col justify-center text-center rounded-lg text-sm font-bold transition-colors duration-500 ease-in-out"
             style={{
               backgroundColor:
-                activeCategory === category
-                  ? activeFilteredBgColor
-                  : activeFilteredPageBGcolor,
+                activeCategory === category ? activeFilteredBgColor : '',
 
               color:
                 activeCategory === category

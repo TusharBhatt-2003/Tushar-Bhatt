@@ -1,6 +1,9 @@
 import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function AnimatedText({
   text,
@@ -9,60 +12,49 @@ function AnimatedText({
   textStyle = '',
   containerStyle = '',
 }) {
-  const letterRefs = useRef([]);
   const sectionRef = useRef(null);
+  const letterRefs = useRef([]);
 
   useEffect(() => {
-    const defaultConfig = {
-      initial: { opacity: 1, y: 100, scale: 0 },
-      animation: {
+    if (!sectionRef.current) return;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 80%', // Adjust this based on when you want the animation to start
+        once: true, // Ensures animation runs only once
+      },
+    });
+
+    tl.fromTo(
+      letterRefs.current,
+      { opacity: 1, scale: 0, y: 50 },
+      {
         opacity: 1,
-        y: 0,
         scale: 1,
-        duration: 1.5,
+        y: 0,
         stagger: 0.1,
-        ease: 'elastic.out(1, 0.3)',
+        duration: 1,
+        ease: 'elastic(1, .3)',
       },
-      threshold: 0.5,
-    };
-
-    const { initial, animation, threshold } = {
-      ...defaultConfig,
-      ...animationConfig,
-    };
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          gsap.fromTo(letterRefs.current, initial, animation);
-        }
-      },
-      { threshold },
     );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-
-    return () => observer.disconnect();
-  }, [animationConfig]);
+  }, []);
 
   return (
     <div
-      className={`w-fit h-fit ${containerStyle}`}
       ref={sectionRef}
+      className={`w-fit h-fit ${containerStyle}`}
       style={{ borderColor: textColor }}
     >
       <h1
-        className={`text-4xl lg:text-6xl font-bold font-['Integral'] ${textStyle}`}
+        className={`text-4xl lg:text-6xl font-bold font-['Integral']  ${textStyle}`}
       >
         {text.split('').map((letter, index) => (
           <motion.span
             key={index}
             ref={(el) => (letterRefs.current[index] = el)}
-            className="cursor-pointer"
-            style={{
-              display: 'inline-block',
-              marginRight: letter === ' ' ? '1rem' : '0',
-            }}
+            className="cursor-pointer inline-block"
+            style={{ marginRight: letter === ' ' ? '1rem' : '0' }}
           >
             {letter}
           </motion.span>

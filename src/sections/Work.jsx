@@ -35,7 +35,7 @@ export default function Work() {
           </div>
         </div>
         <div
-          className="rounded-xl p-6 w-full max-w-md"
+          className="rounded-xl paper backdrop-blur p-6 w-full max-w-md"
           style={{
             backgroundColor: `rgba(${parseInt(color.slice(1, 3), 16)}, ${parseInt(
               color.slice(3, 5),

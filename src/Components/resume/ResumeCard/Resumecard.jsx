@@ -3,6 +3,15 @@ import { motion } from 'framer-motion';
 
 const ResumeCard = ({ title, items }) => {
   const { color, textColor } = useColor();
+  const hexToRgba = (hex, alpha) => {
+    hex = hex.replace(/^#/, '');
+    let r = parseInt(hex.substring(0, 2), 16);
+    let g = parseInt(hex.substring(2, 4), 16);
+    let b = parseInt(hex.substring(4, 6), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  };
+
+  const backgroundColorWithOpacity = hexToRgba(textColor, 0.5);
 
   return (
     <>
@@ -18,8 +27,12 @@ const ResumeCard = ({ title, items }) => {
       <motion.div
         whileHover={{ scale: 1.05 }}
         transition={{ type: 'spring', stiffness: 800, damping: 25 }}
-        className="resume-card paper relative  rounded-lg px-5 py-5 w-fit  h-fit inverted-selection overflow-hidden" // Add custom class name
-        style={{ backgroundColor: textColor, color: color, borderColor: color }}
+        className="resume-card paper backdrop-blur relative  rounded-lg px-5 py-5 w-fit  h-fit inverted-selection overflow-hidden" // Add custom class name
+        style={{
+          backgroundColor: backgroundColorWithOpacity,
+          color: color,
+          borderColor: color,
+        }}
       >
         <h3 className="text-xl font-bold mb-2 inverted-selection">{title}</h3>
         <ul
