@@ -80,5 +80,4 @@ export const paragraphs = [
   'Designing with empathy, considering how each interaction impacts the overall user journey.',
   'Turning constraints into opportunities, using limitations as a catalyst for creativity and innovation.',
   'Discovering new possibilities through experimental design, constantly seeking to innovate and inspire.',
-  'Bringing harmony to chaos, organizing elements to create balanced compositions that draw users in.',
 ];
