@@ -1,38 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import '../css/welcome.css';
 import { useColor } from '../context/ColorContext';
-import { colors } from '../data/colorData'; // Import colors array
-import Dropdown from './Dropdown/Dropdown';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import { colors } from '../data/colorData';
+import { Link } from 'react-scroll';
 import { navLinks, T } from '../const';
 import HomeButton from './HomeButton';
 import { useLocation, Link as RouterLink } from 'react-router-dom';
 import { ThemeIcon } from '../assets/logos';
 
 export default function NavBar() {
-  const { textColor, color, changeColor } = useColor();
+  const { textColor, color, changeColor, currentColorIndex } = useColor();
   const [showHomeLink, setShowHomeLink] = useState(false);
-  const homeLinkRef = React.useRef(null);
-  const [currentColorIndex, setCurrentColorIndex] = useState(0);
+  const homeLinkRef = useRef(null);
   const location = useLocation();
-
-  const handleColorChange = () => {
-    const nextColorIndex = (currentColorIndex + 1) % colors.length;
-    setCurrentColorIndex(nextColorIndex);
-    const { bgColor, textColor } = colors[nextColorIndex];
-    changeColor(bgColor, textColor);
-  };
 
   useEffect(() => {
     const landingPage = document.getElementById('landingPage');
 
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setShowHomeLink(false);
-      } else {
-        setShowHomeLink(true);
-      }
+      setShowHomeLink(!entry.isIntersecting);
     });
 
     if (landingPage) {
@@ -85,13 +72,16 @@ export default function NavBar() {
         backgroundColor: backgroundColorWithOpacity,
       }}
     >
-      <div onClick={handleColorChange}>
+      <div onClick={changeColor}>
         <h1 className="logo text-2xl cursor-pointer select-none">{T}</h1>
+        <p className="text-sm">
+          Color {currentColorIndex + 1} / {colors.length}
+        </p>
       </div>
 
       {location.pathname === '/' && (
         <ul
-          className="text-xl flex font-thin space-x-4 pt-1 justify-center select-none "
+          className="text-xl flex font-thin space-x-4 pt-1 justify-center select-none"
           style={{ color: textColor }}
         >
           {navLinks.map((item) => (
@@ -111,19 +101,14 @@ export default function NavBar() {
             </li>
           ))}
           <RouterLink to="/theme">
-            <li
-              className="cursor-pointer"
-              style={{
-                color: textColor,
-              }}
-            >
+            <li className="cursor-pointer" style={{ color: textColor }}>
               <ThemeIcon color={textColor} size={20} />
             </li>
           </RouterLink>
         </ul>
       )}
 
-      {location.pathname != '/' ? <HomeButton /> : ''}
+      {location.pathname !== '/' && <HomeButton />}
     </nav>
   );
 }

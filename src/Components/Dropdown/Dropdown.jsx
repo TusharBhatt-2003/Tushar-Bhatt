@@ -1,15 +1,11 @@
 import { useState, useRef } from 'react';
 import { useColor } from '../../context/ColorContext';
-import { gsap } from 'gsap';
 import { Link as ScrollLink } from 'react-scroll'; // For smooth scrolling
-import { Link as RouterLink } from 'react-router-dom'; // For routing
-import { ThemeIcon } from '../../assets/logos/index';
 import { motion } from 'framer-motion';
 
 function Dropdown() {
   const { color, textColor } = useColor();
   const [activeItem, setActiveItem] = useState(null);
-  const [hoverItem, setHoverItem] = useState(null);
   const menuRefs = useRef([]);
 
   const menuItems = [
@@ -19,13 +15,6 @@ function Dropdown() {
     { id: 2, label: 'About', href: 'aboutme' },
   ];
 
-  const handleMouseEnter = (id) => {
-    setHoverItem(id);
-  };
-
-  const handleMouseLeave = () => {
-    setHoverItem(null);
-  };
   const hexToRgba = (hex, alpha) => {
     hex = hex.replace(/^#/, '');
     let r = parseInt(hex.substring(0, 2), 16);
@@ -48,7 +37,7 @@ function Dropdown() {
           }}
         >
           {/* Menu Items */}
-          <div className="dropdown-menu flex flex-row-reverse  w-full">
+          <div className="dropdown-menu flex flex-row-reverse justify-center items-center  w-full">
             {menuItems.map((menu, index) => (
               <ScrollLink
                 key={menu.id}
@@ -57,25 +46,12 @@ function Dropdown() {
                 duration={1000}
               >
                 <motion.div
-                  onMouseEnter={() => handleMouseEnter(menu.id)}
-                  onMouseLeave={handleMouseLeave}
-                  className={`p-2 font-["Aero"] rounded-full`}
+                  onClick={() => setActiveItem(menu.id)}
+                  className={`p-2 font-["Aero"] flex justify-center items-center rounded-full border-2 border-transparent`}
                   style={{
-                    backgroundColor:
-                      activeItem === menu.id
-                        ? color
-                        : hoverItem === menu.id
-                          ? color
-                          : '',
-                    color:
-                      activeItem === menu.id
-                        ? textColor
-                        : hoverItem === menu.id
-                          ? textColor
-                          : '',
-                    borderColor: hoverItem === menu.id ? color : '',
-                    opacity:
-                      hoverItem === menu.id && activeItem !== menu.id ? 0.8 : 1,
+                    backgroundColor: activeItem === menu.id ? textColor : '',
+                    color: activeItem === menu.id ? color : '',
+                    borderColor: activeItem === menu.id ? color : '',
                   }}
                   ref={(el) => (menuRefs.current[index] = el)}
                   initial={{ scale: 1 }} // Initial state
@@ -90,7 +66,7 @@ function Dropdown() {
                     damping: 10, // Controls bounce duration
                   }}
                 >
-                  <p className="text-xl font-black">{menu.label}</p>
+                  <p className="text-xl font-medium ">{menu.label}</p>
                 </motion.div>
               </ScrollLink>
             ))}

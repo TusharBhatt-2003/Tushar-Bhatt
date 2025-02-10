@@ -1,5 +1,7 @@
 // Color and paragraph data
 export const colors = [
+  { bgColor: '#EEEADF', textColor: '#5B8DC8' },
+  { bgColor: '#FEFCED', textColor: '#0137E4' },
   { bgColor: '#000000', textColor: '#F5F0E3' }, // Black
   { bgColor: '#ebebdf', textColor: '#000000' }, // White Grey
   { bgColor: '#ece6d3', textColor: '#771011' }, // Red Cream
@@ -77,4 +79,6 @@ export const paragraphs = [
   'Exploring new trends in web design, while maintaining a focus on user experience and accessibility.',
   'Designing with empathy, considering how each interaction impacts the overall user journey.',
   'Turning constraints into opportunities, using limitations as a catalyst for creativity and innovation.',
+  'Discovering new possibilities through experimental design, constantly seeking to innovate and inspire.',
+  'Bringing harmony to chaos, organizing elements to create balanced compositions that draw users in.',
 ];

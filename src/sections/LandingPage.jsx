@@ -26,6 +26,7 @@ const LandingPage = () => {
   const initialAnimationRef2 = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [showHint, setShowHint] = useState(false);
+  console.log('Current Color Index:', currentColorIndex);
 
   // GSAP Animation on mount and language change
   useEffect(() => {
