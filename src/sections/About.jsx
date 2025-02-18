@@ -75,12 +75,7 @@ const About = () => {
         '--after-bg-color': color,
       }}
     >
-      <div
-        className="m-5 container lg:px-10 lg:py-5 md:w-[70vw] lg:w-[60vw] lg:h-fit"
-        data-scroll
-        data-section
-        data-scroll-speed="1"
-      >
+      <div className="m-5 container lg:px-10 lg:py-5 md:w-[70vw] lg:w-[60vw] lg:h-fit">
         <style>
           {`
             .inverted-selection::selection {
