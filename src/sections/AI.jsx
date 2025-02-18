@@ -16,7 +16,7 @@ export default function AI() {
 
   return (
     <section
-      className="relative h-screen font-['Aero'] rounded-xxl flex flex-col justify-center items-center py-16 px-6"
+      className="relative h-screen font-['Aero'] flex flex-col justify-center items-center"
       style={{
         backgroundColor: color,
         color: textColor,

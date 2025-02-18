@@ -68,7 +68,7 @@ const About = () => {
     <div
       id="aboutme"
       ref={sectionRef} // Attach the section reference for the IntersectionObserver
-      className="h-full  w-screen flex flex-col justify-center items-center font-['Aero']"
+      className="h-full pt-16 flex flex-col justify-center items-center font-['Aero']"
       style={{
         backgroundColor: textColor,
         color: color,

@@ -38,24 +38,18 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      className="hidden lg:block absolute drop-shadow-2xl "
-      whileTap={{ scale: 0 }}
+      className="hidden lg:block absolute drop-shadow-2xl pointer-events-none"
       animate={{
         x: mousePos.x - 16, // Adjust to center the cursor on mouse position
         y: mousePos.y - 16, // Adjust to center the cursor on mouse position
       }}
       transition={{
-        type: 'spring', // Smooth animation
-        stiffness: 900,
-        damping: 20,
+        type: 'tween', // Using tween for smoother effect
+        ease: 'easeOut',
+        duration: 0.3,
       }}
     >
       <Catcursor color={colorOpacity} textColor={textColorOpacity} />
-      {/* <div className='h-5 w-5 border-4 border-double rounded-full'
-            style={{
-          backgroundColor: colorOpacity,
-          borderColor: textColorOpacity
-        }}></div> */}
     </motion.div>
   );
 };

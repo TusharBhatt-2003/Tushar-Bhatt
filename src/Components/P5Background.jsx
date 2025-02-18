@@ -53,7 +53,10 @@ const P5Background = () => {
   }, [color, textColor]);
 
   return (
-    <div ref={sketchRef} className="absolute top-0 left-0 w-full h-full"></div>
+    <div
+      ref={sketchRef}
+      className="absolute top-0 bottom-0 right-0 left-0 w-full h-full z-[0]"
+    ></div>
   );
 };
 
