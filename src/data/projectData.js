@@ -66,18 +66,18 @@ const projectData = [
     bgColor: 'white',
     pageBGcolor: 'black',
   },
-  {
-    name: 'Animated Nav Bar',
-    image: navBar,
-    description:
-      'A minimalistic and beautiful animated navigation bar featuring a smooth, fluid jelly-like bubble animation on the icons. This project combines simplicity with an eye-catching design, creating an engaging user experience.',
-    link: 'https://tusharbhatt-2003.github.io/Animated-Nav-Bar/',
-    github: 'https://github.com/TusharBhatt-2003/Animated-Nav-Bar',
-    technologies: 'HTML, CSS, JavaScript',
-    category: 'UI',
-    bgColor: '#D1C9FF',
-    pageBGcolor: '#FFF8EB',
-  },
+  // {
+  //   name: 'Animated Nav Bar',
+  //   image: navBar,
+  //   description:
+  //     'A minimalistic and beautiful animated navigation bar featuring a smooth, fluid jelly-like bubble animation on the icons. This project combines simplicity with an eye-catching design, creating an engaging user experience.',
+  //   link: 'https://tusharbhatt-2003.github.io/Animated-Nav-Bar/',
+  //   github: 'https://github.com/TusharBhatt-2003/Animated-Nav-Bar',
+  //   technologies: 'HTML, CSS, JavaScript',
+  //   category: 'UI',
+  //   bgColor: '#D1C9FF',
+  //   pageBGcolor: '#FFF8EB',
+  // },
   {
     name: 'Responsive Web Page',
     image: grids,
@@ -90,19 +90,19 @@ const projectData = [
     bgColor: '#F5F5F5',
     pageBGcolor: 'black',
   },
-  {
-    name: 'Sign Up . Log In',
-    image:
-      'https://i.pinimg.com/564x/1a/c0/d6/1ac0d6106f215d16abaffa20a8e7ab76.jpg',
-    description:
-      'This webpage is a responsive sign-up form with input validation for first name, email, password, and password confirmation. The page features a visually appealing design with custom icons and animations, ensuring a user-friendly experience. It also includes error messaging to guide users during form submission.',
-    link: 'https://tusharbhatt-2003.github.io/SignUp-Login/',
-    github: 'https://github.com/TusharBhatt-2003/SignUp-Login',
-    technologies: 'HTML, CSS & JavaScript',
-    category: 'UI',
-    bgColor: '#E6D8D5',
-    pageBGcolor: '#C87ABA',
-  },
+  // {
+  //   name: 'Sign Up . Log In',
+  //   image:
+  //     'https://i.pinimg.com/564x/1a/c0/d6/1ac0d6106f215d16abaffa20a8e7ab76.jpg',
+  //   description:
+  //     'This webpage is a responsive sign-up form with input validation for first name, email, password, and password confirmation. The page features a visually appealing design with custom icons and animations, ensuring a user-friendly experience. It also includes error messaging to guide users during form submission.',
+  //   link: 'https://tusharbhatt-2003.github.io/SignUp-Login/',
+  //   github: 'https://github.com/TusharBhatt-2003/SignUp-Login',
+  //   technologies: 'HTML, CSS & JavaScript',
+  //   category: 'UI',
+  //   bgColor: '#E6D8D5',
+  //   pageBGcolor: '#C87ABA',
+  // },
   {
     name: 'Password Generator',
     image:
@@ -130,30 +130,30 @@ const projectData = [
     bgColor: '#CE87FF',
     pageBGcolor: '#FFFFFF',
   },
-  {
-    name: 'Dummy Studio',
-    image: 'https://tusharbhatt-2003.github.io/SUNDOWN/assets/logo.svg',
-    description: 'This page is a remake of Sundown Studio.',
-    link: 'https://tusharbhatt-2003.github.io/SUNDOWN/',
-    github: 'https://github.com/TusharBhatt-2003/SUNDOWN',
-    technologies:
-      'HTML, CSS, Javascript, Locomotive Scroll, Swiper, Lenis, GitHub Pages',
-    category: 'Remake',
-    bgColor: '#E6E1FE',
-    pageBGcolor: '#26008F',
-  },
-  {
-    name: 'Glass Morphism',
-    image:
-      'https://i.pinimg.com/564x/b1/ab/dc/b1abdca30fe519eae39f34f69b902c93.jpg',
-    description: 'A sign in page with glass UI and moving background.',
-    link: 'https://tusharbhatt-2003.github.io/Glass-Effect/',
-    github: 'https://github.com/TusharBhatt-2003/Glass-Effect',
-    technologies: 'HTML, CSS',
-    category: 'UI',
-    bgColor: '#AE7627',
-    pageBGcolor: '#D9D7D8',
-  },
+  // {
+  //   name: 'Dummy Studio',
+  //   image: 'https://tusharbhatt-2003.github.io/SUNDOWN/assets/logo.svg',
+  //   description: 'This page is a remake of Sundown Studio.',
+  //   link: 'https://tusharbhatt-2003.github.io/SUNDOWN/',
+  //   github: 'https://github.com/TusharBhatt-2003/SUNDOWN',
+  //   technologies:
+  //     'HTML, CSS, Javascript, Locomotive Scroll, Swiper, Lenis, GitHub Pages',
+  //   category: 'Remake',
+  //   bgColor: '#E6E1FE',
+  //   pageBGcolor: '#26008F',
+  // },
+  // {
+  //   name: 'Glass Morphism',
+  //   image:
+  //     'https://i.pinimg.com/564x/b1/ab/dc/b1abdca30fe519eae39f34f69b902c93.jpg',
+  //   description: 'A sign in page with glass UI and moving background.',
+  //   link: 'https://tusharbhatt-2003.github.io/Glass-Effect/',
+  //   github: 'https://github.com/TusharBhatt-2003/Glass-Effect',
+  //   technologies: 'HTML, CSS',
+  //   category: 'UI',
+  //   bgColor: '#AE7627',
+  //   pageBGcolor: '#D9D7D8',
+  // },
   {
     name: 'Ghibli Movies',
     image:
@@ -179,41 +179,41 @@ const projectData = [
     bgColor: '#86C7D6',
     pageBGcolor: '#FAF5E0',
   },
-  {
-    name: 'Docs.',
-    image: docs,
-    description: 'Bouncy Drag And Drop Elements.',
-    link: 'https://docs-28k2lamr0-tusharbhatt968-gmailcoms-projects.vercel.app/',
-    github: 'https://github.com/TusharBhatt-2003/Docs.',
-    technologies: 'React (Vite), Tailwind CSS, Framer Motion',
-    category: 'UI',
-    bgColor: '#515709',
-    pageBGcolor: '#FFFCEB',
-  },
-  {
-    name: 'Restaurant Website',
-    image:
-      'https://i.pinimg.com/originals/ae/3d/62/ae3d6215a590f15a8ef3928789829ec9.gif',
-    description: 'Responsive and appealing Restaurant.',
-    link: 'https://restaurant-website-swart-nu.vercel.app/',
-    github: 'https://github.com/TusharBhatt-2003/Restaurant-Website-',
-    technologies: 'React (Vite) & CSS',
-    category: 'CSS',
-    bgColor: '#FEA401',
-    pageBGcolor: '#08183B',
-  },
-  {
-    name: 'GPT.3 Blog',
-    image:
-      'https://i.pinimg.com/564x/fd/22/27/fd22270b02ab43eaffc61b72e3dd4010.jpg',
-    description: 'Responsive Blog Page',
-    link: 'https://gpt-3-blog-mnq2s821x-tusharbhatt968-gmailcoms-projects.vercel.app/',
-    github: 'https://github.com/TusharBhatt-2003/GPT-3-Blog',
-    technologies: 'React (Vite) & CSS',
-    category: 'CSS',
-    bgColor: '#66FFC8',
-    pageBGcolor: '#010535',
-  },
+  // {
+  //   name: 'Docs.',
+  //   image: docs,
+  //   description: 'Bouncy Drag And Drop Elements.',
+  //   link: 'https://docs-28k2lamr0-tusharbhatt968-gmailcoms-projects.vercel.app/',
+  //   github: 'https://github.com/TusharBhatt-2003/Docs.',
+  //   technologies: 'React (Vite), Tailwind CSS, Framer Motion',
+  //   category: 'UI',
+  //   bgColor: '#515709',
+  //   pageBGcolor: '#FFFCEB',
+  // },
+  // {
+  //   name: 'Restaurant Website',
+  //   image:
+  //     'https://i.pinimg.com/originals/ae/3d/62/ae3d6215a590f15a8ef3928789829ec9.gif',
+  //   description: 'Responsive and appealing Restaurant.',
+  //   link: 'https://restaurant-website-swart-nu.vercel.app/',
+  //   github: 'https://github.com/TusharBhatt-2003/Restaurant-Website-',
+  //   technologies: 'React (Vite) & CSS',
+  //   category: 'CSS',
+  //   bgColor: '#FEA401',
+  //   pageBGcolor: '#08183B',
+  // },
+  // {
+  //   name: 'GPT.3 Blog',
+  //   image:
+  //     'https://i.pinimg.com/564x/fd/22/27/fd22270b02ab43eaffc61b72e3dd4010.jpg',
+  //   description: 'Responsive Blog Page',
+  //   link: 'https://gpt-3-blog-mnq2s821x-tusharbhatt968-gmailcoms-projects.vercel.app/',
+  //   github: 'https://github.com/TusharBhatt-2003/GPT-3-Blog',
+  //   technologies: 'React (Vite) & CSS',
+  //   category: 'CSS',
+  //   bgColor: '#66FFC8',
+  //   pageBGcolor: '#010535',
+  // },
   {
     name: 'Theme Changer',
     image:
@@ -240,20 +240,20 @@ const projectData = [
     bgColor: '#8E877C',
     pageBGcolor: '#7F4F26',
   },
-  {
-    name: 'Tuskie',
-    image:
-      'https://i.pinimg.com/originals/7e/ea/32/7eea322895edc3529a6e1df8d456fc7a.gif',
-    description: 'A remake of ochi designs with Visualy appealing animations.',
-    link: 'https://tushkie.vercel.app/',
-    github: 'https://github.com/TusharBhatt-2003/Tushkie',
-    technologies:
-      'React (Vite), Tailwind CSS, Framer motion, Locomotive Scroll & GSAP',
-    category: 'Remake',
-    // featured: true,
-    bgColor: '#034A07',
-    pageBGcolor: '#FFE19B',
-  },
+  // {
+  //   name: 'Tuskie',
+  //   image:
+  //     'https://i.pinimg.com/originals/7e/ea/32/7eea322895edc3529a6e1df8d456fc7a.gif',
+  //   description: 'A remake of ochi designs with Visualy appealing animations.',
+  //   link: 'https://tushkie.vercel.app/',
+  //   github: 'https://github.com/TusharBhatt-2003/Tushkie',
+  //   technologies:
+  //     'React (Vite), Tailwind CSS, Framer motion, Locomotive Scroll & GSAP',
+  //   category: 'Remake',
+  //   // featured: true,
+  //   bgColor: '#034A07',
+  //   pageBGcolor: '#FFE19B',
+  // },
   {
     name: 'iPhone 15 Pro',
     image:
