@@ -1,4 +1,3 @@
-import AnimatedText from '../Components/AnimatedText';
 import P5Background from '../Components/P5Background';
 import { useColor } from '../context/ColorContext';
 
@@ -13,7 +12,7 @@ export default function AI() {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   };
 
-  const backgroundColorWithOpacity = hexToRgba(textColor, 0.4);
+  const backgroundColorWithOpacity = hexToRgba(textColor, 0.7);
 
   return (
     <section
@@ -23,10 +22,7 @@ export default function AI() {
         color: textColor,
       }}
     >
-      {/* P5Background component */}
       <P5Background />
-      {/* <AnimatedText text="Leveraging AI for Efficiency." textColor={textColor} /> */}
-
       <p
         className="text-5xl font-['Bright'] border-2 my-5 text-center p-5 rounded-xl backdrop-blur"
         style={{
