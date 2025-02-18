@@ -22,6 +22,7 @@
     "hamburger-react": "^2.5.1",
     "locomotive-scroll": "^5.0.0-beta.21",
     "lucide-react": "^0.447.0",
+    "p5": "^1.11.3",
     "phaser": "^3.87.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

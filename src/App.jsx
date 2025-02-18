@@ -18,6 +18,7 @@ import Work from './sections/Work.jsx';
 import TechStack from './sections/TechStack.jsx';
 import Dropdown from './Components/Dropdown/Dropdown.jsx';
 import CustomCursor from './Components/CustomCursor.jsx';
+import AI from './sections/AI.jsx';
 
 const App = () => {
   const { color, textColor } = useColor();
@@ -79,6 +80,7 @@ const App = () => {
                   <>
                     <Dropdown />
                     <LandingPage />
+                    <AI />
                     <About />
                     <TechStack />
                     <Work />
