@@ -1,6 +1,11 @@
 // File: projectData.js
 // Import the images object
-import { quizGame, navBar, grids, docs } from '../assets/images/index';
+import {
+  quizGame,
+  // navBar,
+  grids,
+  // docs
+} from '../assets/images/index';
 
 const projectData = [
   {
@@ -41,19 +46,19 @@ const projectData = [
     bgColor: '#F4F4DC',
     pageBGcolor: '#F45F5F',
   },
-  {
-    name: 'To Do App',
-    image:
-      'https://i.pinimg.com/564x/50/0f/8d/500f8dd0ae4daa0e98ee0d9f41eeb443.jpg',
-    description:
-      'A basic to-Do list app with the feature of changing themes (Light & Dark). The user can mark the tasks that he/she have completed and also clear them and filter the completed task and incompleted task.',
-    link: 'https://tusharbhatt-2003.github.io/To---Do-List-App/',
-    github: 'https://github.com/TusharBhatt-2003/To---Do-List-App',
-    technologies: 'JavaScript & CSS',
-    category: 'To-Do',
-    bgColor: '#F5F5F5',
-    pageBGcolor: '#7D7D85',
-  },
+  // {
+  //   name: 'To Do App',
+  //   image:
+  //     'https://i.pinimg.com/564x/50/0f/8d/500f8dd0ae4daa0e98ee0d9f41eeb443.jpg',
+  //   description:
+  //     'A basic to-Do list app with the feature of changing themes (Light & Dark). The user can mark the tasks that he/she have completed and also clear them and filter the completed task and incompleted task.',
+  //   link: 'https://tusharbhatt-2003.github.io/To---Do-List-App/',
+  //   github: 'https://github.com/TusharBhatt-2003/To---Do-List-App',
+  //   technologies: 'JavaScript & CSS',
+  //   category: 'To-Do',
+  //   bgColor: '#F5F5F5',
+  //   pageBGcolor: '#7D7D85',
+  // },
   {
     name: 'To Do List',
     image:
@@ -125,7 +130,7 @@ const projectData = [
     github: 'https://github.com/TusharBhatt-2003/Grapes',
     technologies:
       'React (Vite), TinyMCE, Vercel, React Router, Redux, Appwrite, Tailwind CSS',
-    category: 'Database',
+    category: 'Full-Stack',
     featured: true,
     bgColor: '#CE87FF',
     pageBGcolor: '#FFFFFF',
@@ -214,32 +219,32 @@ const projectData = [
   //   bgColor: '#66FFC8',
   //   pageBGcolor: '#010535',
   // },
-  {
-    name: 'Theme Changer',
-    image:
-      'https://i.pinimg.com/564x/4d/36/fc/4d36fcf93fbe892841186f8db0cde507.jpg',
-    description: 'Change the Theme From Different Colors',
-    link: 'https://tusharbhatt-2003.github.io/BG-Color-Changing/',
-    github: 'https://github.com/TusharBhatt-2003/BG-Color-Changing',
-    technologies: 'React (Vite) & Tailwind CSS',
-    category: 'Fuctionality',
-    bgColor: '#FE6150',
-    pageBGcolor: '#FCFBF7',
-  },
-  {
-    name: 'Mac Book',
-    image:
-      'https://i.pinimg.com/originals/5e/e0/cb/5ee0cbb531b8fab27efccf073e075965.gif',
-    description:
-      "Showcasing an Apple Mac Book Using 3D Rendering, On Scrolling the Laptop's lid opens",
-    link: 'https://mac-book-flame.vercel.app/',
-    github: 'https://github.com/TusharBhatt-2003/Mac-Book',
-    technologies: 'React Three Fiber & Tailwind CSS',
-    category: '3D',
-    // featured: true,
-    bgColor: '#8E877C',
-    pageBGcolor: '#7F4F26',
-  },
+  // {
+  //   name: 'Theme Changer',
+  //   image:
+  //     'https://i.pinimg.com/564x/4d/36/fc/4d36fcf93fbe892841186f8db0cde507.jpg',
+  //   description: 'Change the Theme From Different Colors',
+  //   link: 'https://tusharbhatt-2003.github.io/BG-Color-Changing/',
+  //   github: 'https://github.com/TusharBhatt-2003/BG-Color-Changing',
+  //   technologies: 'React (Vite) & Tailwind CSS',
+  //   category: 'Fuctionality',
+  //   bgColor: '#FE6150',
+  //   pageBGcolor: '#FCFBF7',
+  // },
+  // {
+  //   name: 'Mac Book',
+  //   image:
+  //     'https://i.pinimg.com/originals/5e/e0/cb/5ee0cbb531b8fab27efccf073e075965.gif',
+  //   description:
+  //     "Showcasing an Apple Mac Book Using 3D Rendering, On Scrolling the Laptop's lid opens",
+  //   link: 'https://mac-book-flame.vercel.app/',
+  //   github: 'https://github.com/TusharBhatt-2003/Mac-Book',
+  //   technologies: 'React Three Fiber & Tailwind CSS',
+  //   category: '3D',
+  //   // featured: true,
+  //   bgColor: '#8E877C',
+  //   pageBGcolor: '#7F4F26',
+  // },
   // {
   //   name: 'Tuskie',
   //   image:
@@ -257,7 +262,7 @@ const projectData = [
   {
     name: 'iPhone 15 Pro',
     image:
-      'https://v1.pinimg.com/videos/mc/expMp4/ee/ea/6c/eeea6cfd868d12cbda36b7a111d1142c_t1.mp4',
+      'https://i.pinimg.com/originals/a8/3a/00/a83a0019c161ead6c905658449ed0776.gif',
     description:
       'A appealing iPhone 15 Pro Web Page with animated text, Video carousel, responsive Hero & Highlights section & 3D model of iPhone 15 pro and Max.',
     link: 'https://iphone-15-pro-steel.vercel.app/',
@@ -282,20 +287,20 @@ const projectData = [
     bgColor: 'white',
     pageBGcolor: 'black',
   },
-  {
-    name: 'Employee Management System',
-    image:
-      'https://i.pinimg.com/control/564x/0f/93/44/0f9344cfbcfc32363bf2edc92edd1414.jpg',
-    description:
-      'an intuitive platform for organizations to manage employee tasks and roles efficiently. Designed for both administrators and employees, the system offers a comprehensive view of task assignments, statuses, and overall employee performance.',
-    link: 'https://ems-five-zeta.vercel.app/',
-    github: 'https://github.com/TusharBhatt-2003/EMS',
-    technologies: 'React (Vite), Tailwind CSS',
-    category: 'Fuctionality',
-    featured: false,
-    bgColor: '#302C29',
-    pageBGcolor: '#EAEAEA',
-  },
+  // {
+  //   name: 'Employee Management System',
+  //   image:
+  //     'https://i.pinimg.com/control/564x/0f/93/44/0f9344cfbcfc32363bf2edc92edd1414.jpg',
+  //   description:
+  //     'an intuitive platform for organizations to manage employee tasks and roles efficiently. Designed for both administrators and employees, the system offers a comprehensive view of task assignments, statuses, and overall employee performance.',
+  //   link: 'https://ems-five-zeta.vercel.app/',
+  //   github: 'https://github.com/TusharBhatt-2003/EMS',
+  //   technologies: 'React (Vite), Tailwind CSS',
+  //   category: 'Fuctionality',
+  //   featured: false,
+  //   bgColor: '#302C29',
+  //   pageBGcolor: '#EAEAEA',
+  // },
   {
     name: 'Resume Builder Application',
     image:
@@ -350,6 +355,21 @@ const projectData = [
     featured: true,
     bgColor: '#FFD880',
     pageBGcolor: '#FC8059 ',
+  },
+  {
+    name: 'Nebula',
+    image:
+      'https://i.pinimg.com/originals/24/9f/75/249f7534252de05916bd4ce4e9347529.gif',
+    description:
+      'A next-gen social media platform where creativity meets connection. Share your thoughts, photos, and videos effortlessly while engaging with a like-minded community. With a sleek UI and seamless user experience, Nebula makes social networking more immersive and interactive than ever. 🚀✨',
+    link: 'https://nebula-socialmedia.vercel.app/',
+    github: 'https://github.com/TusharBhatt-2003/NEBULA',
+    technologies:
+      'Next.js, TypeScript, Tailwind CSS, MongoDB, Motion.div, Gsap',
+    category: 'Full-Stack',
+    featured: true,
+    bgColor: 'purple',
+    pageBGcolor: 'black',
   },
 ];
 

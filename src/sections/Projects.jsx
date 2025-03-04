@@ -31,11 +31,11 @@ const Projects = () => {
     (project) => project.name === activeProjectName,
   );
 
-  const activeBgColor = activeProject ? activeProject.bgColor : color;
+  // const activeBgColor = activeProject ? activeProject.bgColor : color;
 
-  const activePageBGcolor = activeProject
-    ? activeProject.pageBGcolor
-    : textColor || color;
+  // const activePageBGcolor = activeProject
+  //   ? activeProject.pageBGcolor
+  //   : textColor || color;
 
   // Memoize filtered projects to avoid recalculating on every render
 
@@ -198,7 +198,7 @@ const Projects = () => {
             whileHover={{ scale: 0.8 }} // Hover animation with scaling and slight rotation
             whileTap={{ scale: 0.6 }}
             aria-label={`View ${category} projects`} // Added ARIA label for accessibility
-            className="p-2 paper backdrop-blur pt-3 flex flex-col justify-center text-center rounded-lg text-sm font-bold transition-colors duration-500 ease-in-out"
+            className="p-2  backdrop-blur pt-3 flex flex-col justify-center text-center rounded-lg text-sm font-bold transition-colors duration-500 ease-in-out"
             style={{
               backgroundColor:
                 activeCategory === category ? activeFilteredBgColor : '',
