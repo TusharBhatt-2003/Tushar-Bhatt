@@ -27,7 +27,7 @@ function Collab({ color, textColor }) {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   };
 
-  const backgroundColorWithOpacity = hexToRgba(textColor, 0.5);
+  const backgroundColorWithOpacity = hexToRgba(textColor, 1);
 
   return (
     <div
