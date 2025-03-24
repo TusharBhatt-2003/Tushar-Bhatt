@@ -11,7 +11,7 @@ const ResumeCard = ({ title, items }) => {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   };
 
-  const backgroundColorWithOpacity = hexToRgba(textColor, 0.5);
+  const backgroundColorWithOpacity = hexToRgba(textColor, 0.8);
 
   return (
     <>
